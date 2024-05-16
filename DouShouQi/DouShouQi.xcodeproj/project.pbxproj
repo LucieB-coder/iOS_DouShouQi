@@ -89,6 +89,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC684A32BF5FCB1000798B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AC684A52BF5FCD2000798B8 /* Pages */,
+				5AC684A42BF5FCC8000798B8 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AC684A42BF5FCC8000798B8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5AC684A52BF5FCD2000798B8 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		EC4FBDF12BF5FA9D00F5410C = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +136,7 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
+				5AC684A32BF5FCB1000798B8 /* Views */,
 				EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */,
 				EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */,
 				EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */,
