@@ -14,8 +14,8 @@
 		EC4FBE0F2BF5FA9E00F5410C /* DouShouQiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE0E2BF5FA9E00F5410C /* DouShouQiTests.swift */; };
 		EC4FBE192BF5FA9E00F5410C /* DouShouQiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE182BF5FA9E00F5410C /* DouShouQiUITests.swift */; };
 		EC4FBE1B2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */; };
-		EC4FBE292BF5FAB700F5410C /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE282BF5FAB700F5410C /* DSQ.xcframework */; };
-		EC4FBE2A2BF5FAB700F5410C /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE282BF5FAB700F5410C /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; };
+		EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC4FBE2A2BF5FAB700F5410C /* DSQ.xcframework in Embed Frameworks */,
+				EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,7 +60,7 @@
 		EC4FBE142BF5FA9E00F5410C /* DouShouQiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouShouQiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBE182BF5FA9E00F5410C /* DouShouQiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITests.swift; sourceTree = "<group>"; };
 		EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EC4FBE282BF5FAB700F5410C /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DSQ.xcframework; path = ../../SwiftUI_ARKit_2024/XCFramework/DSQ.xcframework; sourceTree = "<group>"; };
+		EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4FBE292BF5FAB700F5410C /* DSQ.xcframework in Frameworks */,
+				EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 				EC4FBE0D2BF5FA9E00F5410C /* DouShouQiTests */,
 				EC4FBE172BF5FA9E00F5410C /* DouShouQiUITests */,
 				EC4FBDFB2BF5FA9D00F5410C /* Products */,
-				EC4FBE272BF5FAB700F5410C /* Frameworks */,
+				EC4FBE2C2BF6003F00F5410C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,10 +170,10 @@
 			path = DouShouQiUITests;
 			sourceTree = "<group>";
 		};
-		EC4FBE272BF5FAB700F5410C /* Frameworks */ = {
+		EC4FBE2C2BF6003F00F5410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC4FBE282BF5FAB700F5410C /* DSQ.xcframework */,
+				EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
