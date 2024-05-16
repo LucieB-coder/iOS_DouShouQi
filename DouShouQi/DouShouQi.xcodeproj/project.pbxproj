@@ -16,6 +16,7 @@
 		EC4FBE1B2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */; };
 		EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; };
 		EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE302BF60A4700F5410C /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EC4FBE182BF5FA9E00F5410C /* DouShouQiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITests.swift; sourceTree = "<group>"; };
 		EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
+		EC4FBE302BF60A4700F5410C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */,
 				EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */,
 				EC4FBE032BF5FA9E00F5410C /* Preview Content */,
+				EC4FBE302BF60A4700F5410C /* Colors.swift */,
 			);
 			path = DouShouQi;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
+				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
