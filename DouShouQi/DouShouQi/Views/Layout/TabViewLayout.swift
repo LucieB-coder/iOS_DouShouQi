@@ -43,7 +43,7 @@ struct TabViewLayout: View {
     }
 }
 
-struct HistoricComponent_Previews: PreviewProvider {
+struct TabViewLayout_Previews: PreviewProvider {
     static var previews : some View {
         TabViewLayout()
     }
