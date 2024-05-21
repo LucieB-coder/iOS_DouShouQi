@@ -17,6 +17,8 @@
 		EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; };
 		EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE302BF60A4700F5410C /* Colors.swift */; };
+		EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */; };
+		EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE382BFC94E800F5410C /* MenuPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 		EC4FBE302BF60A4700F5410C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewLayout.swift; sourceTree = "<group>"; };
+		EC4FBE382BFC94E800F5410C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,29 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5AC684A32BF5FCB1000798B8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5AC684A52BF5FCD2000798B8 /* Pages */,
-				5AC684A42BF5FCC8000798B8 /* Components */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		5AC684A42BF5FCC8000798B8 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		5AC684A52BF5FCD2000798B8 /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pages;
-			sourceTree = "<group>";
-		};
 		EC4FBDF12BF5FA9D00F5410C = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +119,7 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
-				5AC684A32BF5FCB1000798B8 /* Views */,
+				EC4FBE322BFC93FC00F5410C /* Views */,
 				EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */,
 				EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */,
 				EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */,
@@ -179,6 +160,39 @@
 				EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC4FBE322BFC93FC00F5410C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC4FBE352BFC941000F5410C /* Layout */,
+				EC4FBE342BFC940B00F5410C /* Components */,
+				EC4FBE332BFC940400F5410C /* Pages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC4FBE332BFC940400F5410C /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				EC4FBE382BFC94E800F5410C /* MenuPage.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		EC4FBE342BFC940B00F5410C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EC4FBE352BFC941000F5410C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +328,9 @@
 			files = (
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
+				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
+				EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
