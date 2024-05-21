@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
+		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
+		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4FBE382BFC94E800F5410C /* MenuPage.swift */,
+				5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				EC4FBE3A2BFC9A1E00F5410C /* MenuItem.swift */,
+				5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -345,7 +351,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */,
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
+				5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */,
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
 				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
