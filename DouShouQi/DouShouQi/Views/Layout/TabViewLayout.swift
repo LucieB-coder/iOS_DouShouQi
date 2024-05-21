@@ -28,12 +28,8 @@ struct TabViewLayout: View {
                     Image(systemName: "star")
                     Text("Classement")
                 }
-            Text("Page Profil")
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profil")
-                }
-            Text("Menu")
+
+            MenuPage()
                 .tabItem {
                     Image(systemName: "line.3.horizontal")
                     Text("Menu")

@@ -7,16 +7,38 @@
 
 import SwiftUI
 
+
+struct MenuItemData: Identifiable, Hashable {
+    var id = UUID()
+    var image: Image
+    var label: String
+    
+    static func == (lhs: MenuItemData, rhs: MenuItemData) -> Bool {
+            return lhs.id == rhs.id
+        }
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+}
+
 struct MenuPage: View {
+    var items: [MenuItemData] = [
+        MenuItemData(image: Image(systemName: "gearshape.fill"), label: "Paramètres"),
+        MenuItemData(image: Image(systemName: "person.fill"), label: "Profil")
+    ]
     var body: some View {
-        VStack{
-            ZStack{
-                Rectangle().fill(.pinkPrimary).frame(height: 80)
-                Text("Menu".uppercased()).font(.largeTitle)
+        NavigationStack {
+            List(items, id: \.self) { item in
+                NavigationLink(value: item) {
+                    MenuItem(image: item.image, label: item.label)
+                }
             }
-            MenuItem(image: Image(systemName: "person"), label: "Profil").padding().cornerRadius(50)
-            Spacer()
-        }.background(Colors.background)
+            .navigationTitle("Menu")
+            .navigationDestination(for: String.self) { item in
+                TabViewLayout()
+            }
+        }
     }
 }
 

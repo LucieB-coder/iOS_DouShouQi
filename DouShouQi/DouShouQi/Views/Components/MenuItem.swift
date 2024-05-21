@@ -11,18 +11,14 @@ struct MenuItem: View {
     var image: Image;
     var label : String;
     var body: some View {
-        NavigationStack {
-            NavigationLink(destination: TabViewLayout()) {
-                HStack {
-                    image
-                    Text(label)
-                }
-                .padding()
-                .cornerRadius(10) // Adjust the radius value as needed
+
+        VStack(alignment: .leading){
+            HStack(spacing: 10){
+                image.imageScale(.large)
+                Text(label).font(.title3).bold()
+                Spacer()
             }
-            .foregroundColor(.black)
-        }
-        .frame(height: 70)
+        }.padding(.vertical)
     }
 }
 

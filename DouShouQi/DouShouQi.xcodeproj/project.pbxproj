@@ -16,6 +16,8 @@
 		C38044752BFCBBF400C88345 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044742BFCBBF400C88345 /* GamePage.swift */; };
 		C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044762BFCBC5200C88345 /* GridComponent.swift */; };
 		C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044782BFCBC9D00C88345 /* TileComponent.swift */; };
+		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
+		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		C38044742BFCBBF400C88345 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		C38044762BFCBC5200C88345 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		C38044782BFCBC9D00C88345 /* TileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileComponent.swift; sourceTree = "<group>"; };
+		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
+		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				C380446C2BF608D900C88345 /* RankingPage.swift */,
 				C380446E2BF60E0000C88345 /* PlayerPage.swift */,
 				C38044742BFCBBF400C88345 /* GamePage.swift */,
+				5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				C38044722BFC966D00C88345 /* HistoricComponent.swift */,
 				C38044762BFCBC5200C88345 /* GridComponent.swift */,
 				C38044782BFCBC9D00C88345 /* TileComponent.swift */,
+				5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -372,7 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */,
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
+				5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */,
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
 				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
