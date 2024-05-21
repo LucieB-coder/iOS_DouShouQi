@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct HistoricPage: View {
-   // var boards : [String]
-    //var selectedBoard : String
+    var game : [String]
     var body: some View {
-        Text("afaire")
+        VStack{
+            NavigationStack{
+                List(game, id: \.self){
+                    game in NavigationLink(value : game){
+                        UnfinishedGameComponent(gameType: "IA", date: "15-03-24")
+                    }
+                }.navigationTitle("Historique")
+                    .navigationDestination(for: String.self){
+                        game in
+                        UnfinishedGameComponent(gameType: "IA", date: "15-03-24")
+                    }
+            }
+        }
+        
 
     }
 }
 
 struct HistoricPage_Previews: PreviewProvider {
     static var previews: some View {
-        HistoricPage()
+        HistoricPage(game: ["toto","titi"])
     }
 }
