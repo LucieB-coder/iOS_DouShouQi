@@ -12,10 +12,11 @@ struct MenuPage: View {
         VStack{
             ZStack{
                 Rectangle().fill(.pinkPrimary).frame(height: 80)
-                Text("Menu".uppercased()).font(.title)
+                Text("Menu".uppercased()).font(.largeTitle)
             }
+            MenuItem(image: Image(systemName: "person"), label: "Profil").padding().cornerRadius(50)
             Spacer()
-        }
+        }.background(Colors.background)
     }
 }
 
