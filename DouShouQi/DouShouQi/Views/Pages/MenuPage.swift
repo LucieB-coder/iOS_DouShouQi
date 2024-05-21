@@ -20,6 +20,9 @@ struct MenuPage: View {
     }
 }
 
-#Preview {
-    MenuPage()
+struct MenuPage_Previews: PreviewProvider {
+    static var previews : some View {
+        MenuPage()
+    }
 }
+
