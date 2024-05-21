@@ -34,8 +34,13 @@ struct TopProfileComponent: View {
     }
 }
 
+<<<<<<< HEAD
 struct TopProfileComponent_Previews: PreviewProvider{
     static var previews: some View{
         TopProfileComponent()
     }
+=======
+#Preview {
+    TopProfileComponent()
+>>>>>>> f3df4cf (:sparkles: Ranking Page + Profil Page)
 }

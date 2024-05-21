@@ -32,9 +32,15 @@ struct HistoricComponent: View {
     }
 }
 
+<<<<<<< HEAD
 struct HistoricComponent_Previews: PreviewProvider{
     static var previews: some View{
         HistoricComponent()
     }
 }
 
+=======
+#Preview {
+    HistoricComponent()
+}
+>>>>>>> f3df4cf (:sparkles: Ranking Page + Profil Page)

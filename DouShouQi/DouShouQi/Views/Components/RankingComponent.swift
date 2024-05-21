@@ -23,9 +23,14 @@ struct RankingComponent: View {
     }
 }
 
+<<<<<<< HEAD
 
 struct RankingComponent_Previews: PreviewProvider{
     static var previews: some View{
         RankingComponent(name: "Toto")
     }
+=======
+#Preview {
+    RankingComponent(name: "Toto")
+>>>>>>> f3df4cf (:sparkles: Ranking Page + Profil Page)
 }

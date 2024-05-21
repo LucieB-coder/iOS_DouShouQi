@@ -78,8 +78,13 @@ struct PlayerPage: View {
     }
 }
 
+<<<<<<< HEAD
 struct PlayerPage_Previews: PreviewProvider{
     static var previews: some View{
         PlayerPage()
     }
+=======
+#Preview {
+    PlayerPage()
+>>>>>>> f3df4cf (:sparkles: Ranking Page + Profil Page)
 }

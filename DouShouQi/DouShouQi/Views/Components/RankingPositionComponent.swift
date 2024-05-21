@@ -22,8 +22,13 @@ struct RankingPositionComponent: View {
     }
 }
 
+<<<<<<< HEAD
 struct RankingPositionComponent_Previews: PreviewProvider{
     static var previews: some View{
         RankingPositionComponent(color: .yellow, number: 1, size: 30)
     }
+=======
+#Preview {
+    RankingPositionComponent(color: .yellow, number: 1, size: 30)
+>>>>>>> f3df4cf (:sparkles: Ranking Page + Profil Page)
 }
