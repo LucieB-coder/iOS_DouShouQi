@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044682BF5FF7200C88345 /* RankingComponent.swift */; };
+		C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */; };
+		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
+		C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446E2BF60E0000C88345 /* PlayerPage.swift */; };
+		C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044702BFC92D900C88345 /* TopProfileComponent.swift */; };
+		C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044722BFC966D00C88345 /* HistoricComponent.swift */; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
@@ -50,6 +56,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C38044682BF5FF7200C88345 /* RankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingComponent.swift; sourceTree = "<group>"; };
+		C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPositionComponent.swift; sourceTree = "<group>"; };
+		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
+		C380446E2BF60E0000C88345 /* PlayerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPage.swift; sourceTree = "<group>"; };
+		C38044702BFC92D900C88345 /* TopProfileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileComponent.swift; sourceTree = "<group>"; };
+		C38044722BFC966D00C88345 /* HistoricComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricComponent.swift; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,25 +101,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5AC684A32BF5FCB1000798B8 /* Views */ = {
+		C38044652BF5FF3500C88345 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AC684A52BF5FCD2000798B8 /* Pages */,
-				5AC684A42BF5FCC8000798B8 /* Components */,
+				C38044672BF5FF4900C88345 /* Pages */,
+				C38044662BF5FF3F00C88345 /* Components */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5AC684A42BF5FCC8000798B8 /* Components */ = {
+		C38044662BF5FF3F00C88345 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C38044682BF5FF7200C88345 /* RankingComponent.swift */,
+				C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */,
+				C38044702BFC92D900C88345 /* TopProfileComponent.swift */,
+				C38044722BFC966D00C88345 /* HistoricComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		5AC684A52BF5FCD2000798B8 /* Pages */ = {
+		C38044672BF5FF4900C88345 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				C380446C2BF608D900C88345 /* RankingPage.swift */,
+				C380446E2BF60E0000C88345 /* PlayerPage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -136,7 +154,7 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
-				5AC684A32BF5FCB1000798B8 /* Views */,
+				C38044652BF5FF3500C88345 /* Views */,
 				EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */,
 				EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */,
 				EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */,
@@ -310,7 +328,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
+				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
+				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
+				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
+				C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */,
+				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,
+				C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
