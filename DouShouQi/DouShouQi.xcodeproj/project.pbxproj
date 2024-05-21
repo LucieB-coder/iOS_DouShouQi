@@ -19,6 +19,9 @@
 		EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE302BF60A4700F5410C /* Colors.swift */; };
 		EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */; };
 		EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE382BFC94E800F5410C /* MenuPage.swift */; };
+		EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE3A2BFC9A1E00F5410C /* MenuItem.swift */; };
+		EC4FBE3E2BFCBE4700F5410C /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE3D2BFCBE4700F5410C /* Colors.xcassets */; };
+		EC4FBE402BFCBE5200F5410C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		EC4FBE302BF60A4700F5410C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewLayout.swift; sourceTree = "<group>"; };
 		EC4FBE382BFC94E800F5410C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
+		EC4FBE3A2BFC9A1E00F5410C /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		EC4FBE3D2BFCBE4700F5410C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
+				EC4FBE3C2BFCBE2C00F5410C /* Assets */,
 				EC4FBE322BFC93FC00F5410C /* Views */,
 				EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */,
 				EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */,
@@ -183,6 +190,7 @@
 		EC4FBE342BFC940B00F5410C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EC4FBE3A2BFC9A1E00F5410C /* MenuItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -193,6 +201,15 @@
 				EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		EC4FBE3C2BFCBE2C00F5410C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EC4FBE3D2BFCBE4700F5410C /* Colors.xcassets */,
+				EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC4FBE3E2BFCBE4700F5410C /* Colors.xcassets in Resources */,
+				EC4FBE402BFCBE5200F5410C /* Images.xcassets in Resources */,
 				EC4FBE052BF5FA9E00F5410C /* Preview Assets.xcassets in Resources */,
 				EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */,
 			);
@@ -329,6 +348,7 @@
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
+				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 				EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */,
 			);
