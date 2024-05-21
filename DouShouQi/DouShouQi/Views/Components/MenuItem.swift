@@ -26,6 +26,8 @@ struct MenuItem: View {
     }
 }
 
-#Preview {
-    MenuItem(image: Image(systemName: "house"), label: "Accueil")
+struct MenuItem_Previews: PreviewProvider {
+    static var previews : some View {
+        MenuItem(image: Image(systemName: "house"), label: "Accueil")
+    }
 }
