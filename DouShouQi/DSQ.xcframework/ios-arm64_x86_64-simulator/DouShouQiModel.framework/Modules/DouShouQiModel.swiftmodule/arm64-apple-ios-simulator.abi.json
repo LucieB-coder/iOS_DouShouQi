@@ -534,13 +534,41 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(DouShouQiModel.BoardResult.Type) -> DouShouQiModel.BoardResult",
+                "printedName": "(DouShouQiModel.BoardResult.Type) -> (DouShouQiModel.Piece?) -> DouShouQiModel.BoardResult",
                 "children": [
                   {
-                    "kind": "TypeNominal",
-                    "name": "BoardResult",
-                    "printedName": "DouShouQiModel.BoardResult",
-                    "usr": "s:14DouShouQiModel11BoardResultO"
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(DouShouQiModel.Piece?) -> DouShouQiModel.BoardResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BoardResult",
+                        "printedName": "DouShouQiModel.BoardResult",
+                        "usr": "s:14DouShouQiModel11BoardResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(piece: DouShouQiModel.Piece?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "DouShouQiModel.Piece?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Piece",
+                                "printedName": "DouShouQiModel.Piece",
+                                "usr": "s:14DouShouQiModel5PieceV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     "kind": "TypeNominal",
@@ -559,8 +587,8 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:14DouShouQiModel11BoardResultO2okyA2CmF",
-            "mangledName": "$s14DouShouQiModel11BoardResultO2okyA2CmF",
+            "usr": "s:14DouShouQiModel11BoardResultO2okyAcA5PieceVSg_tcACmF",
+            "mangledName": "$s14DouShouQiModel11BoardResultO2okyAcA5PieceVSg_tcACmF",
             "moduleName": "DouShouQiModel"
           },
           {
@@ -1074,17 +1102,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "DouShouQiModel.Move?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Move",
-                    "printedName": "DouShouQiModel.Move",
-                    "usr": "s:14DouShouQiModel4MoveV"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
@@ -1100,14 +1119,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel11HumanPlayerC10chooseMove2in4withAA0H0VSgAA5BoardV_AA5Rules_ptF",
-            "mangledName": "$s14DouShouQiModel11HumanPlayerC10chooseMove2in4withAA0H0VSgAA5BoardV_AA5Rules_ptF",
+            "usr": "s:14DouShouQiModel11HumanPlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
+            "mangledName": "$s14DouShouQiModel11HumanPlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
             "moduleName": "DouShouQiModel",
             "overriding": true,
             "declAttributes": [
               "Override",
               "AccessControl"
             ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -1155,6 +1175,41 @@
             "declAttributes": [
               "AccessControl"
             ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "chooseMove",
+            "printedName": "chooseMove(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DouShouQiModel.Move?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Move",
+                    "printedName": "DouShouQiModel.Move",
+                    "usr": "s:14DouShouQiModel4MoveV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14DouShouQiModel11HumanPlayerC10chooseMoveyyAA0H0VSgYaKF",
+            "mangledName": "$s14DouShouQiModel11HumanPlayerC10chooseMoveyyAA0H0VSgYaKF",
+            "moduleName": "DouShouQiModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -3346,17 +3401,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "DouShouQiModel.Move?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Move",
-                    "printedName": "DouShouQiModel.Move",
-                    "usr": "s:14DouShouQiModel4MoveV"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
@@ -3372,12 +3418,113 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel6PlayerC10chooseMove2in4withAA0G0VSgAA5BoardV_AA5Rules_ptF",
-            "mangledName": "$s14DouShouQiModel6PlayerC10chooseMove2in4withAA0G0VSgAA5BoardV_AA5Rules_ptF",
+            "usr": "s:14DouShouQiModel6PlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
+            "mangledName": "$s14DouShouQiModel6PlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
               "AccessControl"
             ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPlayedCallbacksListener",
+            "printedName": "addPlayedCallbacksListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DouShouQiModel.Move?, DouShouQiModel.Player) async throws -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(DouShouQiModel.Move?, DouShouQiModel.Player)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "DouShouQiModel.Move?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Move",
+                            "printedName": "DouShouQiModel.Move",
+                            "usr": "s:14DouShouQiModel4MoveV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Player",
+                        "printedName": "DouShouQiModel.Player",
+                        "usr": "s:14DouShouQiModel6PlayerC"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14DouShouQiModel6PlayerC26addPlayedCallbacksListeneryyyAA4MoveVSg_ACtYaKcF",
+            "mangledName": "$s14DouShouQiModel6PlayerC26addPlayedCallbacksListeneryyyAA4MoveVSg_ACtYaKcF",
+            "moduleName": "DouShouQiModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "notifyPlayed",
+            "printedName": "notifyPlayed(withMove:andPlayer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DouShouQiModel.Move?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Move",
+                    "printedName": "DouShouQiModel.Move",
+                    "usr": "s:14DouShouQiModel4MoveV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Player",
+                "printedName": "DouShouQiModel.Player",
+                "usr": "s:14DouShouQiModel6PlayerC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14DouShouQiModel6PlayerC12notifyPlayed8withMove03andE0yAA0I0VSg_ACtYaKF",
+            "mangledName": "$s14DouShouQiModel6PlayerC12notifyPlayed8withMove03andE0yAA0I0VSg_ACtYaKF",
+            "moduleName": "DouShouQiModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -3724,17 +3871,8 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "DouShouQiModel.Move?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Move",
-                    "printedName": "DouShouQiModel.Move",
-                    "usr": "s:14DouShouQiModel4MoveV"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Void",
+                "printedName": "()"
               },
               {
                 "kind": "TypeNominal",
@@ -3750,14 +3888,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel12RandomPlayerC10chooseMove2in4withAA0H0VSgAA5BoardV_AA5Rules_ptF",
-            "mangledName": "$s14DouShouQiModel12RandomPlayerC10chooseMove2in4withAA0H0VSgAA5BoardV_AA5Rules_ptF",
+            "usr": "s:14DouShouQiModel12RandomPlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
+            "mangledName": "$s14DouShouQiModel12RandomPlayerC10chooseMove2in4withyAA5BoardV_AA5Rules_ptYaKF",
             "moduleName": "DouShouQiModel",
             "overriding": true,
             "declAttributes": [
               "Override",
               "AccessControl"
             ],
+            "throwing": true,
             "funcSelfKind": "NonMutating"
           },
           {
@@ -3811,9 +3950,10 @@
         "declAttributes": [
           "AccessControl"
         ],
-        "superclassUsr": "s:14DouShouQiModel6PlayerC",
+        "superclassUsr": "s:14DouShouQiModel8IAPlayerC",
         "inheritsConvenienceInitializers": true,
         "superclassNames": [
+          "DouShouQiModel.IAPlayer",
           "DouShouQiModel.Player"
         ]
       },
@@ -5721,6 +5861,78 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "DouShouQiModel",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IAPlayer",
+        "printedName": "IAPlayer",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(withName:andId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DouShouQiModel.IAPlayer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IAPlayer",
+                    "printedName": "DouShouQiModel.IAPlayer",
+                    "usr": "s:14DouShouQiModel8IAPlayerC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Owner",
+                "printedName": "DouShouQiModel.Owner",
+                "usr": "s:14DouShouQiModel5OwnerO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14DouShouQiModel8IAPlayerC8withName5andIdACSgSS_AA5OwnerOtcfc",
+            "mangledName": "$s14DouShouQiModel8IAPlayerC8withName5andIdACSgSS_AA5OwnerOtcfc",
+            "moduleName": "DouShouQiModel",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14DouShouQiModel8IAPlayerC",
+        "mangledName": "$s14DouShouQiModel8IAPlayerC",
+        "moduleName": "DouShouQiModel",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:14DouShouQiModel6PlayerC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "DouShouQiModel.Player"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "DouShouQiModel"
       },
       {
@@ -6549,8 +6761,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:14DouShouQiModel4GameV5boardAA5BoardVvp",
-            "mangledName": "$s14DouShouQiModel4GameV5boardAA5BoardVvp",
+            "usr": "s:14DouShouQiModel4GameC5boardAA5BoardVvp",
+            "mangledName": "$s14DouShouQiModel4GameC5boardAA5BoardVvp",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
               "HasStorage",
@@ -6572,8 +6784,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14DouShouQiModel4GameV5boardAA5BoardVvg",
-                "mangledName": "$s14DouShouQiModel4GameV5boardAA5BoardVvg",
+                "usr": "s:14DouShouQiModel4GameC5boardAA5BoardVvg",
+                "mangledName": "$s14DouShouQiModel4GameC5boardAA5BoardVvg",
                 "moduleName": "DouShouQiModel",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6593,8 +6805,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:14DouShouQiModel4GameV5rulesAA5Rules_pvp",
-            "mangledName": "$s14DouShouQiModel4GameV5rulesAA5Rules_pvp",
+            "usr": "s:14DouShouQiModel4GameC5rulesAA5Rules_pvp",
+            "mangledName": "$s14DouShouQiModel4GameC5rulesAA5Rules_pvp",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
               "HasStorage",
@@ -6616,8 +6828,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14DouShouQiModel4GameV5rulesAA5Rules_pvg",
-                "mangledName": "$s14DouShouQiModel4GameV5rulesAA5Rules_pvg",
+                "usr": "s:14DouShouQiModel4GameC5rulesAA5Rules_pvg",
+                "mangledName": "$s14DouShouQiModel4GameC5rulesAA5Rules_pvg",
                 "moduleName": "DouShouQiModel",
                 "implicit": true,
                 "accessorKind": "get"
@@ -6651,10 +6863,11 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:14DouShouQiModel4GameV7playersSDyAA5OwnerOAA6PlayerCGvp",
-            "mangledName": "$s14DouShouQiModel4GameV7playersSDyAA5OwnerOAA6PlayerCGvp",
+            "usr": "s:14DouShouQiModel4GameC7playersSDyAA5OwnerOAA6PlayerCGvp",
+            "mangledName": "$s14DouShouQiModel4GameC7playersSDyAA5OwnerOAA6PlayerCGvp",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
+              "Final",
               "HasStorage",
               "AccessControl"
             ],
@@ -6688,10 +6901,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14DouShouQiModel4GameV7playersSDyAA5OwnerOAA6PlayerCGvg",
-                "mangledName": "$s14DouShouQiModel4GameV7playersSDyAA5OwnerOAA6PlayerCGvg",
+                "usr": "s:14DouShouQiModel4GameC7playersSDyAA5OwnerOAA6PlayerCGvg",
+                "mangledName": "$s14DouShouQiModel4GameC7playersSDyAA5OwnerOAA6PlayerCGvg",
                 "moduleName": "DouShouQiModel",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -6705,7 +6921,7 @@
                 "kind": "TypeNominal",
                 "name": "Game",
                 "printedName": "DouShouQiModel.Game",
-                "usr": "s:14DouShouQiModel4GameV"
+                "usr": "s:14DouShouQiModel4GameC"
               },
               {
                 "kind": "TypeNominal",
@@ -6727,8 +6943,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14DouShouQiModel4GameV9withRules10andPlayer10H7Player2AcA0G0_p_AA6PlayerCAItKcfc",
-            "mangledName": "$s14DouShouQiModel4GameV9withRules10andPlayer10H7Player2AcA0G0_p_AA6PlayerCAItKcfc",
+            "usr": "s:14DouShouQiModel4GameC9withRules10andPlayer10H7Player2AcA0G0_p_AA6PlayerCAItKcfc",
+            "mangledName": "$s14DouShouQiModel4GameC9withRules10andPlayer10H7Player2AcA0G0_p_AA6PlayerCAItKcfc",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
               "AccessControl"
@@ -6745,7 +6961,7 @@
                 "kind": "TypeNominal",
                 "name": "Game",
                 "printedName": "DouShouQiModel.Game",
-                "usr": "s:14DouShouQiModel4GameV"
+                "usr": "s:14DouShouQiModel4GameC"
               },
               {
                 "kind": "TypeNominal",
@@ -6773,11 +6989,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:14DouShouQiModel4GameV9withBoard8andRules0H7Player10H7Player2AcA0G0V_AA0I0_pAA6PlayerCALtKcfc",
-            "mangledName": "$s14DouShouQiModel4GameV9withBoard8andRules0H7Player10H7Player2AcA0G0V_AA0I0_pAA6PlayerCALtKcfc",
+            "usr": "s:14DouShouQiModel4GameC9withBoard8andRules0H7Player10H7Player2AcA0G0V_AA0I0_pAA6PlayerCALtKcfc",
+            "mangledName": "$s14DouShouQiModel4GameC9withBoard8andRules0H7Player10H7Player2AcA0G0V_AA0I0_pAA6PlayerCALtKcfc",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "throwing": true,
             "init_kind": "Designated"
@@ -6812,14 +7029,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV03addE15StartedListeneryyyAA5BoardVcF",
-            "mangledName": "$s14DouShouQiModel4GameV03addE15StartedListeneryyyAA5BoardVcF",
+            "usr": "s:14DouShouQiModel4GameC03addE15StartedListeneryyyAA5BoardVcF",
+            "mangledName": "$s14DouShouQiModel4GameC03addE15StartedListeneryyyAA5BoardVcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -6834,7 +7050,7 @@
               {
                 "kind": "TypeFunc",
                 "name": "Function",
-                "printedName": "(DouShouQiModel.Board, DouShouQiModel.Player) -> ()",
+                "printedName": "(DouShouQiModel.Board, DouShouQiModel.Player) async throws -> ()",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -6864,14 +7080,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV25addPlayerNotifiedListeneryyyAA5BoardV_AA0G0CtcF",
-            "mangledName": "$s14DouShouQiModel4GameV25addPlayerNotifiedListeneryyyAA5BoardV_AA0G0CtcF",
+            "usr": "s:14DouShouQiModel4GameC25addPlayerNotifiedListeneryyyAA5BoardV_AA0G0CtYaKcF",
+            "mangledName": "$s14DouShouQiModel4GameC25addPlayerNotifiedListeneryyyAA5BoardV_AA0G0CtYaKcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -6897,20 +7112,19 @@
                     "kind": "TypeNominal",
                     "name": "Game",
                     "printedName": "DouShouQiModel.Game",
-                    "usr": "s:14DouShouQiModel4GameV"
+                    "usr": "s:14DouShouQiModel4GameC"
                   }
                 ]
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV03addE15ChangedListeneryyyACYacF",
-            "mangledName": "$s14DouShouQiModel4GameV03addE15ChangedListeneryyyACYacF",
+            "usr": "s:14DouShouQiModel4GameC03addE15ChangedListeneryyyACYacF",
+            "mangledName": "$s14DouShouQiModel4GameC03addE15ChangedListeneryyyACYacF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -6969,14 +7183,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV03addE12OverListeneryyyAA5BoardV_AA6ResultOAA6PlayerCSgtcF",
-            "mangledName": "$s14DouShouQiModel4GameV03addE12OverListeneryyyAA5BoardV_AA6ResultOAA6PlayerCSgtcF",
+            "usr": "s:14DouShouQiModel4GameC03addE12OverListeneryyyAA5BoardV_AA6ResultOAA6PlayerCSgtcF",
+            "mangledName": "$s14DouShouQiModel4GameC03addE12OverListeneryyyAA5BoardV_AA6ResultOAA6PlayerCSgtcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -7027,14 +7240,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV30addMoveChosenCallbacksListeneryyyAA5BoardV_AA0G0VAA6PlayerCtcF",
-            "mangledName": "$s14DouShouQiModel4GameV30addMoveChosenCallbacksListeneryyyAA5BoardV_AA0G0VAA6PlayerCtcF",
+            "usr": "s:14DouShouQiModel4GameC30addMoveChosenCallbacksListeneryyyAA5BoardV_AA0G0VAA6PlayerCtcF",
+            "mangledName": "$s14DouShouQiModel4GameC30addMoveChosenCallbacksListeneryyyAA5BoardV_AA0G0VAA6PlayerCtcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -7091,14 +7303,13 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV31addInvalidMoveCallbacksListeneryyyAA5BoardV_AA0H0VAA6PlayerCSbtcF",
-            "mangledName": "$s14DouShouQiModel4GameV31addInvalidMoveCallbacksListeneryyyAA5BoardV_AA0H0VAA6PlayerCSbtcF",
+            "usr": "s:14DouShouQiModel4GameC31addInvalidMoveCallbacksListeneryyyAA5BoardV_AA0H0VAA6PlayerCSbtcF",
+            "mangledName": "$s14DouShouQiModel4GameC31addInvalidMoveCallbacksListeneryyyAA5BoardV_AA0H0VAA6PlayerCSbtcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -7130,14 +7341,111 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV23addBoardChangedListeneryyyAA0G0VcF",
-            "mangledName": "$s14DouShouQiModel4GameV23addBoardChangedListeneryyyAA0G0VcF",
+            "usr": "s:14DouShouQiModel4GameC23addBoardChangedListeneryyyAA0G0VcF",
+            "mangledName": "$s14DouShouQiModel4GameC23addBoardChangedListeneryyyAA0G0VcF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPieceRemovedListener",
+            "printedName": "addPieceRemovedListener(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Int, DouShouQiModel.Piece) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Int, DouShouQiModel.Piece)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Piece",
+                        "printedName": "DouShouQiModel.Piece",
+                        "usr": "s:14DouShouQiModel5PieceV"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14DouShouQiModel4GameC23addPieceRemovedListeneryyySi_SiAA0G0VtcF",
+            "mangledName": "$s14DouShouQiModel4GameC23addPieceRemovedListeneryyySi_SiAA0G0VtcF",
+            "moduleName": "DouShouQiModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPlayed",
+            "printedName": "onPlayed(with:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DouShouQiModel.Move?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Move",
+                    "printedName": "DouShouQiModel.Move",
+                    "usr": "s:14DouShouQiModel4MoveV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Player",
+                "printedName": "DouShouQiModel.Player",
+                "usr": "s:14DouShouQiModel6PlayerC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14DouShouQiModel4GameC8onPlayed4with4fromyAA4MoveVSg_AA6PlayerCtYaKF",
+            "mangledName": "$s14DouShouQiModel4GameC8onPlayed4with4fromyAA4MoveVSg_AA6PlayerCtYaKF",
+            "moduleName": "DouShouQiModel",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
@@ -7151,20 +7459,19 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14DouShouQiModel4GameV5startyyYaKF",
-            "mangledName": "$s14DouShouQiModel4GameV5startyyYaKF",
+            "usr": "s:14DouShouQiModel4GameC5startyyYaKF",
+            "mangledName": "$s14DouShouQiModel4GameC5startyyYaKF",
             "moduleName": "DouShouQiModel",
             "declAttributes": [
-              "Mutating",
               "AccessControl"
             ],
             "throwing": true,
-            "funcSelfKind": "Mutating"
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Struct",
-        "usr": "s:14DouShouQiModel4GameV",
-        "mangledName": "$s14DouShouQiModel4GameV",
+        "declKind": "Class",
+        "usr": "s:14DouShouQiModel4GameC",
+        "mangledName": "$s14DouShouQiModel4GameC",
         "moduleName": "DouShouQiModel",
         "declAttributes": [
           "AccessControl",
@@ -7176,998 +7483,1005 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
       "offset": 81,
-      "length": 2,
-      "value": "10"
+      "length": 1,
+      "value": "9"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 112,
+      "offset": 111,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 149,
+      "offset": 148,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 3231,
+      "offset": 3048,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 3271,
+      "offset": 3088,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 4124,
+      "offset": 3941,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Dictionary",
-      "offset": 4468,
+      "offset": 4285,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 4658,
+      "offset": 4475,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 4700,
+      "offset": 4517,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 4748,
+      "offset": 4565,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 5150,
+      "offset": 4967,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 6352,
+      "offset": 6169,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 6372,
+      "offset": 6189,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 6412,
+      "offset": 6229,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 9868,
+      "offset": 9685,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 10769,
+      "offset": 10586,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11089,
+      "offset": 10906,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11196,
+      "offset": 11013,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 11353,
+      "offset": 11170,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11371,
+      "offset": 11188,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11463,
+      "offset": 11280,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11508,
+      "offset": 11325,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11616,
+      "offset": 11433,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11660,
+      "offset": 11477,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11752,
+      "offset": 11569,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11815,
+      "offset": 11632,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 11923,
+      "offset": 11740,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 12449,
+      "offset": 12266,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12490,
+      "offset": 12307,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12502,
+      "offset": 12319,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12509,
+      "offset": 12326,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12886,
+      "offset": 12703,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12897,
+      "offset": 12714,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 12904,
+      "offset": 12721,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 13269,
+      "offset": 13086,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 13647,
+      "offset": 13464,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 15780,
+      "offset": 15597,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 15887,
+      "offset": 15704,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 15911,
+      "offset": 15728,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 16028,
+      "offset": 15845,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 16052,
+      "offset": 15869,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 16232,
+      "offset": 16049,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "BooleanLiteral",
-      "offset": 16332,
+      "offset": 16149,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 16762,
+      "offset": 16579,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "IntegerLiteral",
-      "offset": 16767,
+      "offset": 16584,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Dictionary",
-      "offset": 17131,
+      "offset": 16948,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/ClassicRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/ClassicRules.swift",
       "kind": "Array",
-      "offset": 17187,
+      "offset": 17004,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Cell.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Cell.swift",
       "kind": "StringLiteral",
       "offset": 122,
       "length": 81,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Cell.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Cell.swift",
       "kind": "StringLiteral",
       "offset": 147,
       "length": 4,
       "value": "\"ø\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Cell.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Cell.swift",
       "kind": "StringLiteral",
       "offset": 152,
       "length": 2,
       "value": "\" on \""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Cell.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Cell.swift",
       "kind": "StringLiteral",
       "offset": 167,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Cell.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Cell.swift",
       "kind": "StringLiteral",
       "offset": 202,
       "length": 1,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 89,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 119,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2067,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2107,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2267,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2277,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2419,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2429,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 2964,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 3004,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "Array",
       "offset": 3773,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 3793,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 3833,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 4182,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 4292,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "Array",
       "offset": 4531,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "Array",
       "offset": 4639,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 4773,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 4782,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 4800,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 4809,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 4925,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 5013,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 6962,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 7077,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 7105,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "IntegerLiteral",
       "offset": 7230,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 7258,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "BooleanLiteral",
       "offset": 7350,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "Dictionary",
       "offset": 8072,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/VerySimpleRules.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/VerySimpleRules.swift",
       "kind": "Array",
       "offset": 8128,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Player.swift",
+      "kind": "Array",
+      "offset": 418,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "BooleanLiteral",
       "offset": 475,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 570,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 694,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 981,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 996,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1015,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1049,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1212,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1278,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1548,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
       "offset": 1579,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
-      "offset": 1965,
+      "offset": 1979,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Board.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Board.swift",
       "kind": "IntegerLiteral",
-      "offset": 1996,
+      "offset": 2010,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Piece.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Piece.swift",
       "kind": "StringLiteral",
       "offset": 122,
       "length": 40,
       "value": "\"[\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Piece.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Piece.swift",
       "kind": "StringLiteral",
       "offset": 150,
       "length": 1,
       "value": "\":\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Piece.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Piece.swift",
       "kind": "StringLiteral",
       "offset": 160,
       "length": 1,
       "value": "\"]\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Owner.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Owner.swift",
       "kind": "StringLiteral",
       "offset": 183,
       "length": 3,
       "value": "\"x\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Owner.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Owner.swift",
       "kind": "StringLiteral",
       "offset": 229,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Owner.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Owner.swift",
       "kind": "StringLiteral",
       "offset": 275,
       "length": 3,
       "value": "\"2\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 616,
       "length": 87,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 625,
       "length": 1,
       "value": "\": [\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 640,
       "length": 1,
       "value": "\",\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 656,
       "length": 1,
       "value": "\"] -> [\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 679,
       "length": 1,
       "value": "\", \""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Move.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Move.swift",
       "kind": "StringLiteral",
       "offset": 701,
       "length": 1,
       "value": "\"]\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 60,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 63,
       "length": 3,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 68,
       "length": 3,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 73,
       "length": 4,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 79,
       "length": 7,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 88,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 95,
       "length": 4,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 101,
       "length": 8,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 60,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 63,
       "length": 3,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 68,
       "length": 3,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 73,
       "length": 4,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 79,
       "length": 7,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 88,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 95,
       "length": 4,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 101,
       "length": 8,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 60,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 63,
       "length": 3,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 68,
       "length": 3,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 73,
       "length": 4,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 79,
       "length": 7,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 88,
       "length": 5,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 95,
       "length": 4,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Animal.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Animal.swift",
       "kind": "IntegerLiteral",
       "offset": 101,
       "length": 8,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "StringLiteral",
-      "offset": 514,
+      "offset": 513,
       "length": 55,
       "value": "\"The ids of players are not .player1 and then .player2\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "StringLiteral",
-      "offset": 982,
+      "offset": 1477,
       "length": 55,
       "value": "\"The ids of players are not .player1 and then .player2\""
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 1253,
+      "offset": 1748,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 1585,
+      "offset": 2084,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 1966,
+      "offset": 2576,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 2405,
+      "offset": 3006,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 2818,
+      "offset": 3410,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 3238,
+      "offset": 3821,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
       "kind": "Array",
-      "offset": 3681,
+      "offset": 4255,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQiModel\/DouShouQiModel\/Game.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4097,
-      "length": 5,
-      "value": "false"
+      "filePath": "\/Users\/marcchevaldonne\/Documents\/temp\/depots2023\/DouShouQi_ModelPackage\/DouShouQiModel\/Game.swift",
+      "kind": "Array",
+      "offset": 4574,
+      "length": 2,
+      "value": "[]"
     }
   ]
 }

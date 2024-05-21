@@ -23,6 +23,9 @@ struct RankingComponent: View {
     }
 }
 
-#Preview {
-    RankingComponent(name: "Toto")
+
+struct RankingComponent_Previews: PreviewProvider{
+    static var previews: some View{
+        RankingComponent(name: "Toto")
+    }
 }

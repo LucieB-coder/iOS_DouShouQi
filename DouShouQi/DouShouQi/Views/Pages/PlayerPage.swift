@@ -78,6 +78,8 @@ struct PlayerPage: View {
     }
 }
 
-#Preview {
-    PlayerPage()
+struct PlayerPage_Previews: PreviewProvider{
+    static var previews: some View{
+        PlayerPage()
+    }
 }

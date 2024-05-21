@@ -24,7 +24,7 @@ public enum WinningReason {
 }
 public enum BoardResult : Swift.Equatable {
   case unknown
-  case ok
+  case ok(piece: DouShouQiModel.Piece?)
   case failed(reason: DouShouQiModel.BoardFailingReason)
   public static func == (a: DouShouQiModel.BoardResult, b: DouShouQiModel.BoardResult) -> Swift.Bool
 }
@@ -39,8 +39,13 @@ public enum BoardFailingReason {
 @_inheritsConvenienceInitializers public class HumanPlayer : DouShouQiModel.Player {
   public init?(withName name: Swift.String, andId id: DouShouQiModel.Owner, andInputMethod input: @escaping (_ hp: DouShouQiModel.HumanPlayer) -> DouShouQiModel.Move?)
   override public init?(withName name: Swift.String, andId id: DouShouQiModel.Owner)
-  override public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) -> DouShouQiModel.Move?
+  #if compiler(>=5.3) && $AsyncAwait
+  override public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) async throws
+  #endif
   public func changeInput(input: @escaping (_ hp: DouShouQiModel.HumanPlayer) -> DouShouQiModel.Move?)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func chooseMove(_ move: DouShouQiModel.Move?) async throws
+  #endif
   @objc deinit
 }
 public struct ClassicRules : DouShouQiModel.Rules {
@@ -108,14 +113,24 @@ public class Player {
   final public let name: Swift.String
   final public let id: DouShouQiModel.Owner
   public init?(withName name: Swift.String, andId id: DouShouQiModel.Owner)
-  public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) -> DouShouQiModel.Move?
+  #if compiler(>=5.3) && $AsyncAwait
+  public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func addPlayedCallbacksListener(_ listener: @escaping (DouShouQiModel.Move?, DouShouQiModel.Player) async throws -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func notifyPlayed(withMove move: DouShouQiModel.Move?, andPlayer player: DouShouQiModel.Player) async throws
+  #endif
   @objc deinit
 }
 public enum GameError : Swift.Error {
   case invalidMove, nextPlayerError, badPlayerId(message: Swift.String), invalidRules, invalidPlayer, invalidGame, invalidBoard
 }
-@_inheritsConvenienceInitializers public class RandomPlayer : DouShouQiModel.Player {
-  override public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) -> DouShouQiModel.Move?
+@_inheritsConvenienceInitializers public class RandomPlayer : DouShouQiModel.IAPlayer {
+  #if compiler(>=5.3) && $AsyncAwait
+  override public func chooseMove(in board: DouShouQiModel.Board, with rules: any DouShouQiModel.Rules) async throws
+  #endif
   override public init?(withName name: Swift.String, andId id: DouShouQiModel.Owner)
   @objc deinit
 }
@@ -181,6 +196,10 @@ public enum Owner {
     get
   }
 }
+@_inheritsConvenienceInitializers public class IAPlayer : DouShouQiModel.Player {
+  override public init?(withName name: Swift.String, andId id: DouShouQiModel.Owner)
+  @objc deinit
+}
 public struct Move : Swift.CustomStringConvertible, Swift.Equatable {
   public let owner: DouShouQiModel.Owner
   public let rowOrigin: Swift.Int
@@ -201,28 +220,35 @@ public enum Animal : Swift.Int {
     get
   }
 }
-public struct Game {
+public class Game {
   public var board: DouShouQiModel.Board {
     get
   }
   public var rules: any DouShouQiModel.Rules {
     get
   }
-  public let players: [DouShouQiModel.Owner : DouShouQiModel.Player]
+  final public let players: [DouShouQiModel.Owner : DouShouQiModel.Player]
   public init(withRules rules: any DouShouQiModel.Rules, andPlayer1 player1: DouShouQiModel.Player, andPlayer2 player2: DouShouQiModel.Player) throws
   public init(withBoard board: DouShouQiModel.Board, andRules rules: any DouShouQiModel.Rules, andPlayer1 player1: DouShouQiModel.Player, andPlayer2 player2: DouShouQiModel.Player) throws
-  public mutating func addGameStartedListener(_ listener: @escaping (DouShouQiModel.Board) -> Swift.Void)
-  public mutating func addPlayerNotifiedListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Player) -> Swift.Void)
+  public func addGameStartedListener(_ listener: @escaping (DouShouQiModel.Board) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
-  public mutating func addGameChangedListener(_ listener: @escaping (DouShouQiModel.Game) async -> Swift.Void)
+  public func addPlayerNotifiedListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Player) async throws -> Swift.Void)
   #endif
-  public mutating func addGameOverListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Result, DouShouQiModel.Player?) -> Swift.Void)
-  public mutating func addMoveChosenCallbacksListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Move, DouShouQiModel.Player) -> Swift.Void)
-  public mutating func addInvalidMoveCallbacksListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Move, DouShouQiModel.Player, Swift.Bool) -> Swift.Void)
-  public mutating func addBoardChangedListener(_ listener: @escaping (DouShouQiModel.Board) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
-  public mutating func start() async throws
+  public func addGameChangedListener(_ listener: @escaping (DouShouQiModel.Game) async -> Swift.Void)
   #endif
+  public func addGameOverListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Result, DouShouQiModel.Player?) -> Swift.Void)
+  public func addMoveChosenCallbacksListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Move, DouShouQiModel.Player) -> Swift.Void)
+  public func addInvalidMoveCallbacksListener(_ listener: @escaping (DouShouQiModel.Board, DouShouQiModel.Move, DouShouQiModel.Player, Swift.Bool) -> Swift.Void)
+  public func addBoardChangedListener(_ listener: @escaping (DouShouQiModel.Board) -> Swift.Void)
+  public func addPieceRemovedListener(_ listener: @escaping (Swift.Int, Swift.Int, DouShouQiModel.Piece) -> Swift.Void)
+  #if compiler(>=5.3) && $AsyncAwait
+  public func onPlayed(with move: DouShouQiModel.Move?, from player: DouShouQiModel.Player) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  public func start() async throws
+  #endif
+  @objc deinit
 }
 extension DouShouQiModel.WinningReason : Swift.Equatable {}
 extension DouShouQiModel.WinningReason : Swift.Hashable {}

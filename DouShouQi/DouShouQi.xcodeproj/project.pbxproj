@@ -13,6 +13,9 @@
 		C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446E2BF60E0000C88345 /* PlayerPage.swift */; };
 		C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044702BFC92D900C88345 /* TopProfileComponent.swift */; };
 		C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044722BFC966D00C88345 /* HistoricComponent.swift */; };
+		C38044752BFCBBF400C88345 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044742BFCBBF400C88345 /* GamePage.swift */; };
+		C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044762BFCBC5200C88345 /* GridComponent.swift */; };
+		C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044782BFCBC9D00C88345 /* TileComponent.swift */; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
@@ -62,6 +65,9 @@
 		C380446E2BF60E0000C88345 /* PlayerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPage.swift; sourceTree = "<group>"; };
 		C38044702BFC92D900C88345 /* TopProfileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileComponent.swift; sourceTree = "<group>"; };
 		C38044722BFC966D00C88345 /* HistoricComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricComponent.swift; sourceTree = "<group>"; };
+		C38044742BFCBBF400C88345 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
+		C38044762BFCBC5200C88345 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
+		C38044782BFCBC9D00C88345 /* TileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileComponent.swift; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 				C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */,
 				C38044702BFC92D900C88345 /* TopProfileComponent.swift */,
 				C38044722BFC966D00C88345 /* HistoricComponent.swift */,
+				C38044762BFCBC5200C88345 /* GridComponent.swift */,
+				C38044782BFCBC9D00C88345 /* TileComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			children = (
 				C380446C2BF608D900C88345 /* RankingPage.swift */,
 				C380446E2BF60E0000C88345 /* PlayerPage.swift */,
+				C38044742BFCBBF400C88345 /* GamePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -328,12 +337,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
+				C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */,
 				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
+				C38044752BFCBBF400C88345 /* GamePage.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 				C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */,
 				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,
+				C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */,
 				C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -480,7 +492,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -505,6 +517,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -533,6 +546,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

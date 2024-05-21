@@ -32,6 +32,9 @@ struct HistoricComponent: View {
     }
 }
 
-#Preview {
-    HistoricComponent()
+struct HistoricComponent_Previews: PreviewProvider{
+    static var previews: some View{
+        HistoricComponent()
+    }
 }
+

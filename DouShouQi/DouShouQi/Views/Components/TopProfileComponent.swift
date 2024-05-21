@@ -34,6 +34,8 @@ struct TopProfileComponent: View {
     }
 }
 
-#Preview {
-    TopProfileComponent()
+struct TopProfileComponent_Previews: PreviewProvider{
+    static var previews: some View{
+        TopProfileComponent()
+    }
 }

@@ -22,6 +22,8 @@ struct RankingPositionComponent: View {
     }
 }
 
-#Preview {
-    RankingPositionComponent(color: .yellow, number: 1, size: 30)
+struct RankingPositionComponent_Previews: PreviewProvider{
+    static var previews: some View{
+        RankingPositionComponent(color: .yellow, number: 1, size: 30)
+    }
 }
