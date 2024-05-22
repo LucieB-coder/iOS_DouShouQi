@@ -14,31 +14,32 @@ class GameScene : SKScene {
     
     let pieces: [Owner : [Animal:SpriteMeeple]] = [
         .player1: [
-            .rat: SpriteMeeple(imageNamed: "reval"),
-            .cat: SpriteMeeple(imageNamed: "reval"), 
-            .dog: SpriteMeeple(imageNamed: "reval"),
-            .wolf: SpriteMeeple(imageNamed: "reval"),
-            .leopard: SpriteMeeple(imageNamed: "reval"),
-            .lion: SpriteMeeple(imageNamed: "reval"),
-            .tiger: SpriteMeeple(imageNamed: "reval"),
-            .elephant: SpriteMeeple(imageNamed: "reval"),
+            .rat: SpriteMeeple(imageNamed: "rat"),
+            .cat: SpriteMeeple(imageNamed: "cat"),
+            .dog: SpriteMeeple(imageNamed: "dog"),
+            .wolf: SpriteMeeple(imageNamed: "wolf"),
+            .leopard: SpriteMeeple(imageNamed: "leopard"),
+            .lion: SpriteMeeple(imageNamed: "lion"),
+            .tiger: SpriteMeeple(imageNamed: "tiger"),
+            .elephant: SpriteMeeple(imageNamed: "elephant"),
         ],
         .player2: [
-            .rat: SpriteMeeple(imageNamed: "reval"),
-            .cat: SpriteMeeple(imageNamed: "reval"),
-            .dog: SpriteMeeple(imageNamed: "reval"),
-            .wolf: SpriteMeeple(imageNamed: "reval"),
-            .leopard: SpriteMeeple(imageNamed: "reval"),
-            .lion: SpriteMeeple(imageNamed: "reval"),
-            .tiger: SpriteMeeple(imageNamed: "reval"),
-            .elephant: SpriteMeeple(imageNamed: "reval"),
+            .rat: SpriteMeeple(imageNamed: "rat-inv"),
+            .cat: SpriteMeeple(imageNamed: "cat-inv"),
+            .dog: SpriteMeeple(imageNamed: "dog-inv"),
+            .wolf: SpriteMeeple(imageNamed: "wolf-inv"),
+            .leopard: SpriteMeeple(imageNamed: "leopard-inv"),
+            .lion: SpriteMeeple(imageNamed: "lion-inv"),
+            .tiger: SpriteMeeple(imageNamed: "tiger-inv"),
+            .elephant: SpriteMeeple(imageNamed: "elephant-inv"),
         ],
     ]
     
-    let imageBoard: SKSpriteNode = SKSpriteNode(imageNamed: "reval")
+    let imageBoard: SKSpriteNode = SKSpriteNode(imageNamed: "board")
     
     override init(size: CGSize) {
         super.init(size: size)
+        imageBoard.size = size
         self.scaleMode = .aspectFit
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         self.backgroundColor = .yellow

@@ -9,7 +9,7 @@ import SwiftUI
 import SpriteKit
 
 struct SpriteKitGameView: View {
-    var gameScene : GameScene = GameScene(size: CGSize(width: 940, height: 740))
+    var gameScene : GameScene = GameScene(size: CGSize(width: 1000, height: 800))
     
     var body: some View {
         SpriteView(scene: gameScene)
