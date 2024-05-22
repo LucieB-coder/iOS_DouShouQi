@@ -13,7 +13,7 @@ struct TabViewLayout: View {
     }
     var body: some View {
         TabView {
-            Text("Page d'accueil")
+            Text("Page accueil")
                 .tabItem {
                     Image(systemName: "house")
                     Text("Accueil")
@@ -23,7 +23,7 @@ struct TabViewLayout: View {
                     Image(systemName: "clock")
                     Text("Historique")
                 }
-            Text("Page classement")
+            RankingPage(players: ["Chloé", "Lucie", "Thomas"])
                 .tabItem {
                     Image(systemName: "star")
                     Text("Classement")
