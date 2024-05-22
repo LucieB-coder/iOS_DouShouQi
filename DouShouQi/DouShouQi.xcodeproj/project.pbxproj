@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
+		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
 		C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044682BF5FF7200C88345 /* RankingComponent.swift */; };
 		C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */; };
 		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
@@ -16,16 +18,17 @@
 		C38044752BFCBBF400C88345 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044742BFCBBF400C88345 /* GamePage.swift */; };
 		C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044762BFCBC5200C88345 /* GridComponent.swift */; };
 		C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044782BFCBC9D00C88345 /* TileComponent.swift */; };
-		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
-		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
+		EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */; };
+		EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEC2BFE132B00C22A55 /* GameScene.swift */; };
+		EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */; };
+		EC420CF12BFE183600C22A55 /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC420CF02BFE183600C22A55 /* DSQ.xcframework */; };
+		EC420CF22BFE183600C22A55 /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC420CF02BFE183600C22A55 /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
 		EC4FBE0F2BF5FA9E00F5410C /* DouShouQiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE0E2BF5FA9E00F5410C /* DouShouQiTests.swift */; };
 		EC4FBE192BF5FA9E00F5410C /* DouShouQiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE182BF5FA9E00F5410C /* DouShouQiUITests.swift */; };
 		EC4FBE1B2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */; };
-		EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; };
-		EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE302BF60A4700F5410C /* Colors.swift */; };
 		EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */; };
 		EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBE382BFC94E800F5410C /* MenuPage.swift */; };
@@ -53,13 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EC4FBE2B2BF5FAB700F5410C /* Embed Frameworks */ = {
+		EC420CF32BFE183600C22A55 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EC4FBE2F2BF6003F00F5410C /* DSQ.xcframework in Embed Frameworks */,
+				EC420CF22BFE183600C22A55 /* DSQ.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
+		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
 		C38044682BF5FF7200C88345 /* RankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingComponent.swift; sourceTree = "<group>"; };
 		C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPositionComponent.swift; sourceTree = "<group>"; };
 		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
@@ -76,8 +81,10 @@
 		C38044742BFCBBF400C88345 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		C38044762BFCBC5200C88345 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		C38044782BFCBC9D00C88345 /* TileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileComponent.swift; sourceTree = "<group>"; };
-		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
-		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
+		EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitGameView.swift; sourceTree = "<group>"; };
+		EC420CEC2BFE132B00C22A55 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteMeeple.swift; sourceTree = "<group>"; };
+		EC420CF02BFE183600C22A55 /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DSQ.xcframework; path = ../../SwiftUI_ARKit_2024/XCFramework/DSQ.xcframework; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4FBE2E2BF6003F00F5410C /* DSQ.xcframework in Frameworks */,
+				EC420CF12BFE183600C22A55 /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +130,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC420CEB2BFE131100C22A55 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				EC420CEC2BFE132B00C22A55 /* GameScene.swift */,
+				EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		EC4FBDF12BF5FA9D00F5410C = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +194,7 @@
 		EC4FBE2C2BF6003F00F5410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EC420CF02BFE183600C22A55 /* DSQ.xcframework */,
 				EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */,
 			);
 			name = Frameworks;
@@ -186,6 +203,7 @@
 		EC4FBE322BFC93FC00F5410C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC420CEB2BFE131100C22A55 /* Scene */,
 				EC4FBE352BFC941000F5410C /* Layout */,
 				EC4FBE342BFC940B00F5410C /* Components */,
 				EC4FBE332BFC940400F5410C /* Pages */,
@@ -201,6 +219,7 @@
 				C380446E2BF60E0000C88345 /* PlayerPage.swift */,
 				C38044742BFCBBF400C88345 /* GamePage.swift */,
 				5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */,
+				EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -255,7 +274,7 @@
 				EC4FBDF62BF5FA9D00F5410C /* Sources */,
 				EC4FBDF72BF5FA9D00F5410C /* Frameworks */,
 				EC4FBDF82BF5FA9D00F5410C /* Resources */,
-				EC4FBE2B2BF5FAB700F5410C /* Embed Frameworks */,
+				EC420CF32BFE183600C22A55 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,9 +414,12 @@
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
 				C38044752BFCBBF400C88345 /* GamePage.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
+				EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */,
 				C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */,
+				EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */,
 				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,
 				C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */,
+				EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */,
 				C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
