@@ -25,7 +25,7 @@ struct MenuItemData: Identifiable, Hashable {
 struct MenuPage: View {
     var items: [MenuItemData] = [
         MenuItemData(image: Image(systemName: "gearshape.fill"), label: "Paramètres"),
-        MenuItemData(image: Image(systemName: "person.fill"), label: "Profil")
+        MenuItemData(image: Image(systemName: "person.fill"), label: "Profil"),
     ]
     var body: some View {
         NavigationStack {
