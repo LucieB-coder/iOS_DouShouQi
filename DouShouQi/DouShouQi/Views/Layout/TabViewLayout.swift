@@ -18,7 +18,7 @@ struct TabViewLayout: View {
                     Image(systemName: "house")
                     Text("Accueil")
                 }
-            Text("Page historique")
+            HistoricPage(games: ["game1","game2"])
                 .tabItem {
                     Image(systemName: "clock")
                     Text("Historique")
