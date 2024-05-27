@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
 		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
+		5A933E562C046002002627F7 /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A933E552C046002002627F7 /* DSQ.xcframework */; };
 		C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044682BF5FF7200C88345 /* RankingComponent.swift */; };
 		C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */; };
 		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
@@ -18,8 +19,6 @@
 		C38044752BFCBBF400C88345 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044742BFCBBF400C88345 /* GamePage.swift */; };
 		C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044762BFCBC5200C88345 /* GridComponent.swift */; };
 		C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044782BFCBC9D00C88345 /* TileComponent.swift */; };
-		EC420CE62BFCDF8300C22A55 /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC420CE52BFCDF8300C22A55 /* DSQ.xcframework */; };
-		EC420CE72BFCDF8300C22A55 /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC420CE52BFCDF8300C22A55 /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */; };
 		EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */; };
 		EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */; };
@@ -52,23 +51,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EC420CE82BFCDF8300C22A55 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EC420CE72BFCDF8300C22A55 /* DSQ.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
 		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
+		5A933E552C046002002627F7 /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 		C38044682BF5FF7200C88345 /* RankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingComponent.swift; sourceTree = "<group>"; };
 		C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPositionComponent.swift; sourceTree = "<group>"; };
 		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
@@ -78,7 +64,6 @@
 		C38044742BFCBBF400C88345 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		C38044762BFCBC5200C88345 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
 		C38044782BFCBC9D00C88345 /* TileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileComponent.swift; sourceTree = "<group>"; };
-		EC420CE52BFCDF8300C22A55 /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DSQ.xcframework; path = ../../SwiftUI_ARKit_2024/XCFramework/DSQ.xcframework; sourceTree = "<group>"; };
 		EC4FBDFA2BF5FA9D00F5410C /* DouShouQi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouShouQi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBDFD2BF5FA9D00F5410C /* DouShouQiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiApp.swift; sourceTree = "<group>"; };
 		EC4FBDFF2BF5FA9D00F5410C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,7 +73,6 @@
 		EC4FBE142BF5FA9E00F5410C /* DouShouQiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DouShouQiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4FBE182BF5FA9E00F5410C /* DouShouQiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITests.swift; sourceTree = "<group>"; };
 		EC4FBE1A2BF5FA9E00F5410C /* DouShouQiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouShouQiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 		EC4FBE302BF60A4700F5410C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC4FBE362BFC942B00F5410C /* TabViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewLayout.swift; sourceTree = "<group>"; };
 		EC4FBE382BFC94E800F5410C /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
@@ -103,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC420CE62BFCDF8300C22A55 /* DSQ.xcframework in Frameworks */,
+				5A933E562C046002002627F7 /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +163,7 @@
 		EC4FBE2C2BF6003F00F5410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC420CE52BFCDF8300C22A55 /* DSQ.xcframework */,
-				EC4FBE2D2BF6003F00F5410C /* DSQ.xcframework */,
+				5A933E552C046002002627F7 /* DSQ.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -257,7 +240,6 @@
 				EC4FBDF62BF5FA9D00F5410C /* Sources */,
 				EC4FBDF72BF5FA9D00F5410C /* Frameworks */,
 				EC4FBDF82BF5FA9D00F5410C /* Resources */,
-				EC420CE82BFCDF8300C22A55 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
