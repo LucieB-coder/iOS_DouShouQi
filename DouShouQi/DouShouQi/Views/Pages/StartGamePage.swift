@@ -31,7 +31,11 @@ struct StartGamePage: View {
                 ChooseOpponentComponent(viewModel: viewModel.player2ViewModel)
             }
             Spacer()
-            Text("JOUER")
+            NavigationLink {
+                SpriteKitGameView()
+            } label: {
+                PlayButton()
+            }
         }
         .padding()
     }

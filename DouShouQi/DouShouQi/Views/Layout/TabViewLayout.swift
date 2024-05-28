@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TabViewLayout: View {
     init() {
-        UITabBar.appearance().backgroundColor = UIColor.background
+        UITabBar.appearance().backgroundColor = UIColor.systemGroupedBackground
     }
+    
     var body: some View {
         TabView {
-            Text("Page accueil")
+            HomePage(game: ["toto","titi"])
                 .tabItem {
                     Image(systemName: "house")
                     Text("Accueil")
