@@ -41,10 +41,6 @@ struct ChoosePlayerComponent: View {
     }
 }
 
-#Preview {
-    ChoosePlayerComponent(viewModel: ChoosePlayerViewModel(playerName: "Player1"))
-}
-
 struct ChoosePlayerComponent_Previews: PreviewProvider {
     static var previews: some View {
         ChoosePlayerComponent(viewModel: ChoosePlayerViewModel(playerName: "Player1"))

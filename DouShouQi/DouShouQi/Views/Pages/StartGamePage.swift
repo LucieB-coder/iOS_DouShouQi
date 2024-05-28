@@ -15,7 +15,7 @@ struct StartGamePage: View {
             Text("Choix des joueurs")
                 .font(.title)
                 .bold()
-            Image(.twoPlayers)
+            Image("two-players")
                 .resizable()
                 .frame(width: 100, height: 100)
             HStack(alignment: .center){

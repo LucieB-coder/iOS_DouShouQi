@@ -13,4 +13,5 @@ public struct Colors {
     static let primary = Color("PinkPrimary");
     static let text = Color("Text");
     static let secondary = Color("Secondary");
+    static let blueGreen = Color("BlueGreen");
 }
