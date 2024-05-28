@@ -33,32 +33,11 @@ struct PlayerPage: View {
                 
                 // Statistiques de l'utilisateur
                 HStack {
-                    VStack {
-                        Text("1,234")
-                            .font(.title)
-                            .bold()
-                        Text("Points")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
+                    PlayerDataComponent(boldData: "1,234", smallData: "Points")
                     Spacer()
-                    VStack {
-                        Text("567")
-                            .font(.title)
-                            .bold()
-                        Text("Parties")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
+                    PlayerDataComponent(boldData: "567", smallData: "Parties")
                     Spacer()
-                    VStack {
-                        Text("89%")
-                            .font(.title)
-                            .bold()
-                        Text("Victoire")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                    }
+                    PlayerDataComponent(boldData: "69%", smallData: "Victoire")
                 }
                 .padding(.horizontal)
                 
@@ -68,7 +47,7 @@ struct PlayerPage: View {
                         .padding(.leading)
                     
                     ForEach(0..<5) { index in
-                        HistoricComponent()
+                        HistoricComponent(name: "Vector", result: "Victoire",date: "27-05-2024")
                         .padding(.vertical, 5)
                     }
                 }
