@@ -12,6 +12,7 @@ struct MenuItemData: Identifiable, Hashable {
     var id = UUID()
     var image: Image
     var label: String
+    var linkTo: AnyView
     
     static func == (lhs: MenuItemData, rhs: MenuItemData) -> Bool {
             return lhs.id == rhs.id
@@ -24,20 +25,20 @@ struct MenuItemData: Identifiable, Hashable {
 
 struct MenuPage: View {
     var items: [MenuItemData] = [
-        MenuItemData(image: Image(systemName: "gearshape.fill"), label: "Paramètres"),
-        MenuItemData(image: Image(systemName: "person.fill"), label: "Profil"),
+        MenuItemData(image: Image(systemName: "gearshape.fill"), label: "Paramètres", linkTo: AnyView(TabViewLayout())),
+        MenuItemData(image: Image(systemName: "person.fill"), label: "Profil", linkTo: AnyView(PlayerPage())),
     ]
     var body: some View {
         NavigationStack {
             List(items, id: \.self) { item in
-                NavigationLink(value: item) {
+                NavigationLink {
+                    item.linkTo
+                } label: {
                     MenuItem(image: item.image, label: item.label)
                 }
             }
             .navigationTitle("Menu")
-            .navigationDestination(for: String.self) { item in
-                TabViewLayout()
-            }
+            
         }
     }
 }
