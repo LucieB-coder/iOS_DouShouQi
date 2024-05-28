@@ -10,18 +10,11 @@ import SwiftUI
 struct HistoricPage: View {
     var games : [String] //changer pour un type model game
     var body: some View {
-        ScrollView{
+        NavigationStack{
             VStack(alignment: .leading) {
-                Text("Historique des parties").bold().font(.title).padding()
-                    .font(.title2).bold()
-                    .padding(.leading)
-                
-                List {
-                      Text("A List Item")
-                      Text("A Second List Item")
-                      Text("A Third List Item")
-                  }
-                Text("test")
+                List(games,id:\.self){ game in
+                      HistoricComponent(name: "toto", result: "Victoire", date: "28-05-2019")
+                }.navigationTitle("Historique des Parties")
             }
         }
     }

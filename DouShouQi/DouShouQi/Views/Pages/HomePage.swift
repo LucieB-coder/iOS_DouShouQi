@@ -16,13 +16,13 @@ struct HomePage: View {
                 Text("Continuer une partie").font(.title).padding(.horizontal).padding(.bottom,0).padding(.top,10)
                 List(game, id: \.self) { game in
                     NavigationLink(value: game) {
-                        UnfinishedGameComponent(gameType: "IA", date: "15-03-24")
+                        UnfinishedGameComponent(opponentName: "Lucie", date: "15-03-24")
                 }.padding(.top,0)
                 }
                 .listStyle(DefaultListStyle())
                 .navigationTitle("Accueil")
                 .navigationDestination(for: String.self) { game in
-                    UnfinishedGameComponent(gameType: "IA", date: "15-03-24")
+                    SpriteKitGameView()
                 }
                 
                 ZStack {
