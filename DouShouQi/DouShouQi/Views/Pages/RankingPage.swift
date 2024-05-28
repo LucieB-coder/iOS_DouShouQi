@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
+import DouShouQiModel
+import ChtuluDSQ
 
 struct RankingPage: View {
-    var players: [String]
+    var users: [User]
     var body: some View {
         NavigationStack {
-            List(players, id: \.self) { player in
-                NavigationLink(value: player) {
-                    RankingComponent(name: player)
+            List(users, id: \.self) { user in
+                NavigationLink(value: user) {
+                    RankingComponent(user: user, ranking: users)
                 }
             }
             .navigationTitle("Ranking")
-            .navigationDestination(for: String.self) { player in
+            .navigationDestination(for: User.self) { user in
                 PlayerPage()
             }
         }
@@ -26,6 +28,6 @@ struct RankingPage: View {
 
 struct RankingPage_Previews: PreviewProvider{
     static var previews: some View{
-        RankingPage(players: ["Chloé", "Lucie", "Thomas"])
+        RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}))
     }
 }

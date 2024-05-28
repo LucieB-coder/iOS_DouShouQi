@@ -21,6 +21,8 @@
 		C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044722BFC966D00C88345 /* HistoricComponent.swift */; };
 		C38E28AE2C045CD800D3046A /* StartGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AD2C045CD800D3046A /* StartGamePage.swift */; };
 		C38E28B02C045DBC00D3046A /* ChoosePlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */; };
+		C3A5FBA72C06252300835012 /* ChtuluDSQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B99D7E2C06247B006FC026 /* ChtuluDSQ.framework */; };
+		C3A5FBA82C06252300835012 /* ChtuluDSQ.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3B99D7E2C06247B006FC026 /* ChtuluDSQ.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */; };
 		EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEC2BFE132B00C22A55 /* GameScene.swift */; };
 		EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */; };
@@ -45,6 +47,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C3B99D7D2C06247B006FC026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3B99D5E2C06247A006FC026;
+			remoteInfo = ChtuluDSQ;
+		};
+		C3B99D7F2C06247B006FC026 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3B99D682C06247A006FC026;
+			remoteInfo = ChtuluDSQTests;
+		};
 		EC4FBE0B2BF5FA9E00F5410C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC4FBDF22BF5FA9D00F5410C /* Project object */;
@@ -68,6 +84,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				C3A5FBA82C06252300835012 /* ChtuluDSQ.framework in Embed Frameworks */,
 				ECF915082C05CC360068C5BB /* DSQ.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -90,6 +107,7 @@
 		C38044722BFC966D00C88345 /* HistoricComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricComponent.swift; sourceTree = "<group>"; };
 		C38E28AD2C045CD800D3046A /* StartGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePage.swift; sourceTree = "<group>"; };
 		C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerComponent.swift; sourceTree = "<group>"; };
+		C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChtuluDSQ.xcodeproj; path = ../ChtuluDSQ/ChtuluDSQ.xcodeproj; sourceTree = "<group>"; };
 		EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitGameView.swift; sourceTree = "<group>"; };
 		EC420CEC2BFE132B00C22A55 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteMeeple.swift; sourceTree = "<group>"; };
@@ -120,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A5FBA72C06252300835012 /* ChtuluDSQ.framework in Frameworks */,
 				ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +169,15 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		C3B99D792C06247A006FC026 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3B99D7E2C06247B006FC026 /* ChtuluDSQ.framework */,
+				C3B99D802C06247B006FC026 /* ChtuluDSQTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EC420CEB2BFE131100C22A55 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +190,7 @@
 		EC4FBDF12BF5FA9D00F5410C = {
 			isa = PBXGroup;
 			children = (
+				C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */,
 				EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */,
 				EC4FBE0D2BF5FA9E00F5410C /* DouShouQiTests */,
 				EC4FBE172BF5FA9E00F5410C /* DouShouQiUITests */,
@@ -380,6 +409,12 @@
 			mainGroup = EC4FBDF12BF5FA9D00F5410C;
 			productRefGroup = EC4FBDFB2BF5FA9D00F5410C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C3B99D792C06247A006FC026 /* Products */;
+					ProjectRef = C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EC4FBDF92BF5FA9D00F5410C /* DouShouQi */,
@@ -388,6 +423,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C3B99D7E2C06247B006FC026 /* ChtuluDSQ.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChtuluDSQ.framework;
+			remoteRef = C3B99D7D2C06247B006FC026 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C3B99D802C06247B006FC026 /* ChtuluDSQTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChtuluDSQTests.xctest;
+			remoteRef = C3B99D7F2C06247B006FC026 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EC4FBDF82BF5FA9D00F5410C /* Resources */ = {

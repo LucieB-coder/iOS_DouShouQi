@@ -10,6 +10,8 @@ import SwiftUI
 struct StartGamePage: View {
     
     @StateObject private var viewModel = StartGameViewModel()
+    @State private var isShowingGameView = false
+
     var body: some View {
         VStack(alignment: .center){
             Text("Choose your players")
@@ -31,11 +33,30 @@ struct StartGamePage: View {
                 ChooseOpponentComponent(viewModel: viewModel.player2ViewModel)
             }
             Spacer()
-            NavigationLink {
-                SpriteKitGameView()
-            } label: {
+            Button(action: {
+                isShowingGameView = true
+            }) {
                 PlayButton()
             }
+            .fullScreenCover(isPresented: $isShowingGameView, content: {
+                ZStack(alignment: .topLeading){
+                    Button(action: {
+                        isShowingGameView = false
+                    }, label: {
+                        HStack{
+                            Image(systemName: "chevron.left")
+                                .foregroundStyle(Colors.primary)
+                            Text("Quitter la partie")
+                                .foregroundStyle(Colors.primary)
+                        }
+                        .padding()                        
+                    })
+                    .zIndex(3)
+                    SpriteKitGameView()
+                        .zIndex(1)
+                }
+                .ignoresSafeArea()
+            })
         }
         .padding()
     }
