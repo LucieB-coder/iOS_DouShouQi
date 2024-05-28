@@ -21,6 +21,8 @@ struct SpriteKitGameView: View {
 //    }
 }
 
-#Preview {
-    SpriteKitGameView()
+struct SpriteKitGameView_Previews: PreviewProvider {
+    static var previews: some View {
+        SpriteKitGameView()
+    }
 }

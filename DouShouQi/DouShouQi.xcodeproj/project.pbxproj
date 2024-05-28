@@ -9,15 +9,16 @@
 /* Begin PBXBuildFile section */
 		5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */; };
 		5A11F42F2BFCD16500199CE6 /* UnifinishedHistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */; };
+		C35A89502C04630D002E537A /* ChooseOpponentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */; };
+		C35A89532C05B9D8002E537A /* ChoosePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */; };
+		C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89542C05BE20002E537A /* StartGameViewModel.swift */; };
 		C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044682BF5FF7200C88345 /* RankingComponent.swift */; };
 		C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */; };
 		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
 		C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446E2BF60E0000C88345 /* PlayerPage.swift */; };
-		C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044702BFC92D900C88345 /* TopProfileComponent.swift */; };
 		C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044722BFC966D00C88345 /* HistoricComponent.swift */; };
-		C38044752BFCBBF400C88345 /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044742BFCBBF400C88345 /* GamePage.swift */; };
-		C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044762BFCBC5200C88345 /* GridComponent.swift */; };
-		C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044782BFCBC9D00C88345 /* TileComponent.swift */; };
+		C38E28AE2C045CD800D3046A /* StartGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AD2C045CD800D3046A /* StartGamePage.swift */; };
+		C38E28B02C045DBC00D3046A /* ChoosePlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */; };
 		EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */; };
 		EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEC2BFE132B00C22A55 /* GameScene.swift */; };
 		EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */; };
@@ -72,15 +73,16 @@
 /* Begin PBXFileReference section */
 		5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameComponent.swift; sourceTree = "<group>"; };
 		5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinishedHistoricPage.swift; sourceTree = "<group>"; };
+		C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOpponentComponent.swift; sourceTree = "<group>"; };
+		C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewModel.swift; sourceTree = "<group>"; };
+		C35A89542C05BE20002E537A /* StartGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
 		C38044682BF5FF7200C88345 /* RankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingComponent.swift; sourceTree = "<group>"; };
 		C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPositionComponent.swift; sourceTree = "<group>"; };
 		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
 		C380446E2BF60E0000C88345 /* PlayerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPage.swift; sourceTree = "<group>"; };
-		C38044702BFC92D900C88345 /* TopProfileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopProfileComponent.swift; sourceTree = "<group>"; };
 		C38044722BFC966D00C88345 /* HistoricComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricComponent.swift; sourceTree = "<group>"; };
-		C38044742BFCBBF400C88345 /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
-		C38044762BFCBC5200C88345 /* GridComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridComponent.swift; sourceTree = "<group>"; };
-		C38044782BFCBC9D00C88345 /* TileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileComponent.swift; sourceTree = "<group>"; };
+		C38E28AD2C045CD800D3046A /* StartGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePage.swift; sourceTree = "<group>"; };
+		C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerComponent.swift; sourceTree = "<group>"; };
 		EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitGameView.swift; sourceTree = "<group>"; };
 		EC420CEC2BFE132B00C22A55 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		EC420CEE2BFE167400C22A55 /* SpriteMeeple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteMeeple.swift; sourceTree = "<group>"; };
@@ -130,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C35A89512C05B9C3002E537A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */,
+				C35A89542C05BE20002E537A /* StartGameViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		EC420CEB2BFE131100C22A55 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +174,7 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
+				C35A89512C05B9C3002E537A /* ViewModels */,
 				EC4FBE412BFCC20C00F5410C /* Preview Content */,
 				EC4FBE3C2BFCBE2C00F5410C /* Assets */,
 				EC4FBE322BFC93FC00F5410C /* Views */,
@@ -217,9 +229,9 @@
 				EC4FBE382BFC94E800F5410C /* MenuPage.swift */,
 				C380446C2BF608D900C88345 /* RankingPage.swift */,
 				C380446E2BF60E0000C88345 /* PlayerPage.swift */,
-				C38044742BFCBBF400C88345 /* GamePage.swift */,
 				5A11F42E2BFCD16400199CE6 /* UnifinishedHistoricPage.swift */,
 				EC420CE92BFE12FD00C22A55 /* SpriteKitGameView.swift */,
+				C38E28AD2C045CD800D3046A /* StartGamePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -230,11 +242,10 @@
 				EC4FBE3A2BFC9A1E00F5410C /* MenuItem.swift */,
 				C38044682BF5FF7200C88345 /* RankingComponent.swift */,
 				C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */,
-				C38044702BFC92D900C88345 /* TopProfileComponent.swift */,
 				C38044722BFC966D00C88345 /* HistoricComponent.swift */,
-				C38044762BFCBC5200C88345 /* GridComponent.swift */,
-				C38044782BFCBC9D00C88345 /* TileComponent.swift */,
 				5A11F42C2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift */,
+				C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */,
+				C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -408,19 +419,20 @@
 				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
-				C38044772BFCBC5200C88345 /* GridComponent.swift in Sources */,
 				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
-				C38044752BFCBBF400C88345 /* GamePage.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
+				C38E28B02C045DBC00D3046A /* ChoosePlayerComponent.swift in Sources */,
 				EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */,
 				C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */,
+				C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */,
 				EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */,
 				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,
-				C38044792BFCBC9D00C88345 /* TileComponent.swift in Sources */,
 				EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */,
-				C38044712BFC92D900C88345 /* TopProfileComponent.swift in Sources */,
+				C38E28AE2C045CD800D3046A /* StartGamePage.swift in Sources */,
+				C35A89502C04630D002E537A /* ChooseOpponentComponent.swift in Sources */,
+				C35A89532C05B9D8002E537A /* ChoosePlayerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

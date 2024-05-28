@@ -5,7 +5,6 @@
 //  Created by Thomas Chazot on 16/05/2024.
 //
 
-import DouShouQiModel
 import SwiftUI
 
 struct RankingPage: View {

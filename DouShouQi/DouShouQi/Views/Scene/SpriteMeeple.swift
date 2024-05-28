@@ -24,12 +24,12 @@ class SpriteMeeple : SKNode {
         }
     }
     
-    init(imageNamed imageName : String){
+    init(imageNamed imageName : String, ellipseColor: UIColor){
         imageNode = SKSpriteNode(imageNamed: imageName)
         imageNode.size = CGSize(width: 90, height: 90)
         
         ellipseNode = SKShapeNode(ellipseOf: CGSize(width: 100, height: 100))
-        ellipseNode.fillColor = .pinkPrimary
+        ellipseNode.fillColor = ellipseColor
         
         cellPosition = CGPoint(x: 0, y: 0)
         
