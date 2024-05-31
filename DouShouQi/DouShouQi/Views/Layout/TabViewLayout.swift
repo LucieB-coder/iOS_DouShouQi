@@ -20,7 +20,7 @@ struct TabViewLayout: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            HistoricPage(games: ["game1","game2"])
+            HistoricPage(games: StubHistoric.getHistoric(), user: StubUser.getUsers()[3], users: StubUser.getUsers())
                 .tabItem {
                     Image(systemName: "clock")
                     Text("Historic")

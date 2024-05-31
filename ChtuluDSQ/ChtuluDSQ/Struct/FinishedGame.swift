@@ -12,11 +12,13 @@ public struct FinishedGame: Hashable, Equatable {
     public let player1Id: Int
     public let player2Id: Int
     public let winner: Int?
+    public let date: Date
     
-    public init(player1Id: Int, player2Id: Int, winner: Int? = nil){
+    public init(player1Id: Int, player2Id: Int, winner: Int? = nil,date: Date){
         self.player1Id = player1Id
         self.player2Id = player2Id
         self.winner = winner
+        self.date = date
     }
 
 }

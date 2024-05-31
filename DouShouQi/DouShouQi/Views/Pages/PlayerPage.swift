@@ -50,7 +50,7 @@ struct PlayerPage: View {
                         .padding(.leading)
                     
                     ForEach(0..<5) { index in
-                        HistoricComponent(name: "", result: "",date: "")
+                        HistoricComponent(finishedGame: StubHistoric.getHistoric()[1], user: StubUser.getUsers()[3], opponent: StubUser.getUsers()[1])
                         .padding(.vertical, 5)
                     }
                 }
