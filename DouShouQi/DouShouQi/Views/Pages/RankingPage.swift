@@ -11,6 +11,7 @@ import ChtuluDSQ
 
 struct RankingPage: View {
     var users: [User]
+    
     var body: some View {
         NavigationStack {
             List(users, id: \.self) { user in
@@ -20,7 +21,7 @@ struct RankingPage: View {
             }
             .navigationTitle("Ranking")
             .navigationDestination(for: User.self) { user in
-                PlayerPage(user: user, finishedGames: StubHistoric.getHistoric())
+                PlayerPage(user: user, finishedGames: StubHistoric.getHistoric(), users: StubUser.getUsers())
             }
         }
     }

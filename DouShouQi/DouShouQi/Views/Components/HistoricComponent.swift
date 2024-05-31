@@ -21,7 +21,7 @@ struct HistoricComponent: View {
                 .padding(.leading)
             
             VStack(alignment: .leading) {
-                Text((opponent != nil) ? opponent!.name : "bot")
+                Text((opponent != nil) ? opponent!.name : "BOT")
                     .font(.headline)
                 Text(finishedGame.date, format: .dateTime)
                     .font(.caption)

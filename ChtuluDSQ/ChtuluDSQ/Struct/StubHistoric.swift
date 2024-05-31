@@ -13,10 +13,10 @@ public struct StubHistoric{
         var finishedGames: [FinishedGame] = [
             FinishedGame(player1Id: 1, player2Id: 4, winner: 1, date: Date()),
             FinishedGame(player1Id: 1, player2Id: 4, winner: 1, date: Date()),
-            FinishedGame(player1Id: 2, player2Id: 4, winner: 1, date: Date()),
-            FinishedGame(player1Id: 2, player2Id: 4, winner: 1, date: Date()),
-            FinishedGame(player1Id: 2, player2Id: 4, winner: 1, date: Date()),
-            FinishedGame(player1Id: 3, player2Id: 4, winner: 1, date: Date()),
+            FinishedGame(player1Id: 2, player2Id: 4, winner: 2, date: Date()),
+            FinishedGame(player1Id: 2, player2Id: 4, winner: 2, date: Date()),
+            FinishedGame(player1Id: 2, player2Id: 4, winner: 2, date: Date()),
+            FinishedGame(player1Id: 3, player2Id: 4, winner: 3, date: Date()),
             FinishedGame(player1Id: 3, player2Id: 4, date: Date()),
         ]
         
