@@ -9,19 +9,11 @@ import SwiftUI
 
 struct SettingsPage: View {
     @EnvironmentObject var colorSchemeManager: ColorSchemeManager
-    @EnvironmentObject var languageManager: LanguageManager
 
     var body: some View {
         ZStack(alignment: .top){
             Rectangle().fill(Color(UIColor.systemGroupedBackground))
             VStack(alignment: .leading){
-                Text("Language").font(.title2).bold()
-                Picker("Select Language", selection: $languageManager.selectedLanguage) {
-                    Text("English").tag("en")
-                    Text("French").tag("fr")
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
                 Text("Theme").font(.title2).bold().padding(.top,30)
                 HStack{
                     Spacer()

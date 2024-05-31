@@ -20,38 +20,15 @@ class ColorSchemeManager: ObservableObject {
    }
 }
 
-class LanguageManager: ObservableObject {
-    static let shared = LanguageManager()
-        
-        @Published var selectedLanguage: String = "en" {
-            didSet {
-                UserDefaults.standard.set(selectedLanguage, forKey: "SelectedLanguage")
-                updateAppLanguage() // Update app's preferred language
-                refreshFlag.toggle() // Toggle the flag when language changes
-                 
-            }
-        }
-        
-        @Published var refreshFlag = false // Added refreshFlag
-        
-        private func updateAppLanguage() {
-            UserDefaults.standard.set([selectedLanguage], forKey: "AppleLanguages") // Set preferred language
-            UserDefaults.standard.synchronize() // Make sure changes are applied immediately
-        }
-}
-
 @main
 struct DouShouQiApp: App {
     @StateObject private var colorSchemeManager = ColorSchemeManager()
-    @StateObject private var languageManager = LanguageManager.shared
         
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(colorSchemeManager)
-                .environmentObject(languageManager)
                 .preferredColorScheme(colorSchemeManager.colorScheme)
-                .id(languageManager.refreshFlag) // Refresh the view when language changes
         }
     }
 }
