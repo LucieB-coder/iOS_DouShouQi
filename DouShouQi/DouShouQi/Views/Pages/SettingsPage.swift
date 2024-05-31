@@ -15,10 +15,6 @@ enum Language: String, CaseIterable, Identifiable {
 
 struct SettingsPage: View {
     @State private var language: Language = .french
-    
-    @State private var isDarkMode: Bool = false
-        
-    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var colorSchemeManager: ColorSchemeManager
     
     var body: some View {
@@ -35,8 +31,7 @@ struct SettingsPage: View {
                 Text("Thème").font(.title2).bold().padding(.top,30)
                 HStack{
                     Spacer()
-                    Button(action:{
-                        isDarkMode = true
+                    Button(action: {
                         colorSchemeManager.colorScheme = .dark
                     }){
                         Image(systemName: "moon.fill")
@@ -47,7 +42,6 @@ struct SettingsPage: View {
                     }
                     Spacer()
                     Button(action: {
-                        isDarkMode = false
                         colorSchemeManager.colorScheme = .light
                     }){
                         Image(systemName: "sun.max.fill")
