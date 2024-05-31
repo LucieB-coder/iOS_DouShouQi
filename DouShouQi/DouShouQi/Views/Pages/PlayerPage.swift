@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import ChtuluDSQ
 
 struct PlayerPage: View {
+    let user: User
+    let finishedGames: [FinishedGame]
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -20,7 +23,7 @@ struct PlayerPage: View {
                         .padding()
                     
                     VStack(alignment: .leading) {
-                        Text("")
+                        Text(user.name)
                             .font(.largeTitle)
                             .bold()
                         Text("")
@@ -33,9 +36,9 @@ struct PlayerPage: View {
                 
                 // Statistiques de l'utilisateur
                 HStack {
-                    PlayerDataComponent(boldData: "", smallData: "Points")
+                    PlayerDataComponent(boldData: "\(user.score)", smallData: "Points")
                     Spacer()
-                    PlayerDataComponent(boldData: "", smallData: "Games")
+                    PlayerDataComponent(boldData: "\(user.wins + user.looses)", smallData: "Parties")
                     Spacer()
                     PlayerDataComponent(boldData: "", smallData: "Victories")
                 }
@@ -59,6 +62,6 @@ struct PlayerPage: View {
 
 struct PlayerPage_Previews: PreviewProvider{
     static var previews: some View{
-        PlayerPage()
+        PlayerPage(user: StubUser.getUsers()[3], finishedGames: StubHistoric.getHistoric())
     }
 }

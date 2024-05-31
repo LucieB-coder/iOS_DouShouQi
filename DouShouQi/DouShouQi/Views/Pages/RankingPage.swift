@@ -20,7 +20,7 @@ struct RankingPage: View {
             }
             .navigationTitle("Ranking")
             .navigationDestination(for: User.self) { user in
-                PlayerPage()
+                PlayerPage(user: user, finishedGames: StubHistoric.getHistoric())
             }
         }
     }
