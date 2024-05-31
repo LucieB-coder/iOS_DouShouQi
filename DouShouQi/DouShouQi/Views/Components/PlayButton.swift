@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayButton: View {
     var body: some View {
         HStack {
-            Text("Jouer".uppercased())
+            Text("Play".uppercased())
                 .font(.title2)
                 .fontWeight(.black)
                 .foregroundStyle(.white)

@@ -38,6 +38,7 @@
 		EC4FBE402BFCBE5200F5410C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */; };
 		EC4FBE432BFCC23600F5410C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC4FBE422BFCC23600F5410C /* Preview Assets.xcassets */; };
 		EC886AE72C0622D300266CB8 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC886AE62C0622D300266CB8 /* SettingsPage.swift */; };
+		EC886AED2C09C9C700266CB8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EC886AEC2C09C9C700266CB8 /* Localizable.xcstrings */; };
 		ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6CC552C045FBE00F5F091 /* PlayButton.swift */; };
 		ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; };
 		ECF915082C05CC360068C5BB /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -109,6 +110,7 @@
 		EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EC4FBE422BFCC23600F5410C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EC886AE62C0622D300266CB8 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
+		EC886AEC2C09C9C700266CB8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ECF6CC552C045FBE00F5F091 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		ECF915032C05CBE10068C5BB /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,6 +275,7 @@
 			children = (
 				EC4FBE3D2BFCBE4700F5410C /* Colors.xcassets */,
 				EC4FBE3F2BFCBE5200F5410C /* Images.xcassets */,
+				EC886AEC2C09C9C700266CB8 /* Localizable.xcstrings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = EC4FBDF12BF5FA9D00F5410C;
 			productRefGroup = EC4FBDFB2BF5FA9D00F5410C /* Products */;
@@ -391,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC4FBE432BFCC23600F5410C /* Preview Assets.xcassets in Resources */,
+				EC886AED2C09C9C700266CB8 /* Localizable.xcstrings in Resources */,
 				EC4FBE3E2BFCBE4700F5410C /* Colors.xcassets in Resources */,
 				EC4FBE402BFCBE5200F5410C /* Images.xcassets in Resources */,
 				EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */,

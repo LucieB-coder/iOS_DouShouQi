@@ -7,28 +7,22 @@
 
 import SwiftUI
 
-enum Language: String, CaseIterable, Identifiable {
-    case french, english
-    var id: Self { self }
-}
-
-
 struct SettingsPage: View {
-    @State private var language: Language = .french
     @EnvironmentObject var colorSchemeManager: ColorSchemeManager
-    
+    @EnvironmentObject var languageManager: LanguageManager
+
     var body: some View {
         ZStack(alignment: .top){
             Rectangle().fill(Color(UIColor.systemGroupedBackground))
             VStack(alignment: .leading){
-                Text("Langue").font(.title2).bold()
-                List{
-                    Picker("Langue", selection: $language) {
-                        Text("Français").tag(Language.french)
-                        Text("English").tag(Language.english)
-                    }
-                }.listStyle(.inset).cornerRadius(15).frame(height: 43)
-                Text("Thème").font(.title2).bold().padding(.top,30)
+                Text("Language").font(.title2).bold()
+                Picker("Select Language", selection: $languageManager.selectedLanguage) {
+                    Text("English").tag("en")
+                    Text("French").tag("fr")
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                Text("Theme").font(.title2).bold().padding(.top,30)
                 HStack{
                     Spacer()
                     Button(action: {
@@ -55,12 +49,6 @@ struct SettingsPage: View {
                 Spacer()
             }.padding()
         }.background(Color(UIColor.systemGroupedBackground))
-            .navigationTitle("Paramètres")
-    }
-}
-
-struct SettingsPage_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsPage()
+            .navigationTitle("Settings")
     }
 }

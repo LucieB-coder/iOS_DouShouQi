@@ -13,8 +13,8 @@ struct HistoricPage: View {
         NavigationStack{
             VStack(alignment: .leading) {
                 List(games,id:\.self){ game in
-                      HistoricComponent(name: "toto", result: "Victoire", date: "28-05-2019")
-                }.navigationTitle("Historique des Parties")
+                      HistoricComponent(name: "", result: "", date: "")
+                }.navigationTitle("Historic")
             }
         }
     }

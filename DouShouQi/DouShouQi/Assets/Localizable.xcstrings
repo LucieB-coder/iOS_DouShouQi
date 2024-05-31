@@ -1,0 +1,166 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
+    },
+    "Choose your players" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choix des joueurs"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anglais"
+          }
+        }
+      }
+    },
+    "Enter name" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrez un nom"
+          }
+        }
+      }
+    },
+    "French" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Français"
+          }
+        }
+      }
+    },
+    "Historic" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Historique"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accueil"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Langue"
+          }
+        }
+      }
+    },
+    "Last games" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernières parties"
+          }
+        }
+      }
+    },
+    "Menu" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        }
+      }
+    },
+    "Player %lld" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Joueur %lld"
+          }
+        }
+      }
+    },
+    "Pursue a game" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer une partie"
+          }
+        }
+      }
+    },
+    "Ranking" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classement"
+          }
+        }
+      }
+    },
+    "Select Language" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez une langue"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paramètres"
+          }
+        }
+      }
+    },
+    "Theme" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thème"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

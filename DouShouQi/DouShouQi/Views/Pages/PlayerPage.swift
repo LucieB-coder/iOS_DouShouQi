@@ -20,10 +20,10 @@ struct PlayerPage: View {
                         .padding()
                     
                     VStack(alignment: .leading) {
-                        Text("Nom du Joueur")
+                        Text("")
                             .font(.largeTitle)
                             .bold()
-                        Text("Username123")
+                        Text("")
                             .font(.title3)
                             .foregroundColor(.gray)
                     }
@@ -33,21 +33,21 @@ struct PlayerPage: View {
                 
                 // Statistiques de l'utilisateur
                 HStack {
-                    PlayerDataComponent(boldData: "1,234", smallData: "Points")
+                    PlayerDataComponent(boldData: "", smallData: "Points")
                     Spacer()
-                    PlayerDataComponent(boldData: "567", smallData: "Parties")
+                    PlayerDataComponent(boldData: "", smallData: "Games")
                     Spacer()
-                    PlayerDataComponent(boldData: "69%", smallData: "Victoire")
+                    PlayerDataComponent(boldData: "", smallData: "Victories")
                 }
                 .padding(.horizontal)
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Dernières Parties")
+                    Text("Last games")
                         .font(.headline)
                         .padding(.leading)
                     
                     ForEach(0..<5) { index in
-                        HistoricComponent(name: "Vector", result: "Victoire",date: "27-05-2024")
+                        HistoricComponent(name: "", result: "",date: "")
                         .padding(.vertical, 5)
                     }
                 }

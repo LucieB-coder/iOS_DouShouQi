@@ -13,14 +13,14 @@ struct HomePage: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
-                Text("Continuer une partie").font(.title).padding(.horizontal).padding(.bottom,0).padding(.top,10)
+                Text("Pursue a game").font(.title).padding(.horizontal).padding(.bottom,0).padding(.top,10)
                 List(game, id: \.self) { game in
                     NavigationLink(value: game) {
-                        UnfinishedGameComponent(opponentName: "Lucie", date: "15-03-24")
+                        UnfinishedGameComponent(opponentName: "", date: "")
                 }.padding(.top,0)
                 }
                 .listStyle(DefaultListStyle())
-                .navigationTitle("Accueil")
+                .navigationTitle("Home")
                 .navigationDestination(for: String.self) { game in
                     SpriteKitGameView()
                 }
