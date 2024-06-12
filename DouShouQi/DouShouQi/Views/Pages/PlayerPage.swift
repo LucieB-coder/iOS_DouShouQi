@@ -44,7 +44,7 @@ struct PlayerPage: View {
             .padding(.horizontal)
             
             VStack(alignment: .leading) {
-                Text("Dernières Parties")
+                Text("Last Games")
                     .font(.headline)
                     .padding(.leading)
                 ForEach(StubHistoric.getHistoric().sorted(by: {$0.date < $1.date }).filter({ $0.player1Id == user.id || $0.player2Id == user.id}), id:\.self){ game in

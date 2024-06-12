@@ -46,7 +46,7 @@ struct StartGamePage: View {
                         HStack{
                             Image(systemName: "chevron.left")
                                 .foregroundStyle(Colors.primary)
-                            Text("Quitter la partie")
+                            Text("Quit the game")
                                 .foregroundStyle(Colors.primary)
                         }
                         .padding()                        
