@@ -53,7 +53,7 @@ struct StartGamePage: View {
                         .padding()                        
                     })
                     .zIndex(3)
-                    SpriteKitGameView(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "player1", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Player2", andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))))
+                    SpriteKitGameView(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: viewModel.player1ViewModel.playerName, andId: .player1)!, andPlayer2: viewModel.player2ViewModel.isBot ? RandomPlayer(withName: "IYAAAAAAAA", andId: .player2)! : HumanPlayer(withName: viewModel.player2ViewModel.playerName, andId: .player2)!)), gameScene: GameScene(size: CGSize(width: 940, height: 740), gameViewModel: nil))
                         .zIndex(1)
                 }
                 .ignoresSafeArea()
