@@ -16,7 +16,7 @@ struct RankingPage: View {
                     RankingComponent(name: player)
                 }
             }
-            .navigationTitle("Classement")
+            .navigationTitle("Ranking")
             .navigationDestination(for: String.self) { player in
                 PlayerPage()
             }

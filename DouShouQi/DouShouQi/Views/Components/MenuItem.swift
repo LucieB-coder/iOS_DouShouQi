@@ -15,7 +15,7 @@ struct MenuItem: View {
         VStack(alignment: .leading){
             HStack(spacing: 10){
                 image.imageScale(.large)
-                Text(label).font(.title3).bold()
+                Text(LocalizedStringKey(label)).font(.title3).bold()
                 Spacer()
             }
         }.padding(.vertical)

@@ -12,19 +12,19 @@ struct StartGamePage: View {
     @StateObject private var viewModel = StartGameViewModel()
     var body: some View {
         VStack(alignment: .center){
-            Text("Choix des joueurs")
+            Text("Choose your players")
                 .font(.title)
                 .bold()
             Image("two-players")
                 .resizable()
                 .frame(width: 100, height: 100)
             HStack(alignment: .center){
-                Text("Player 1")
+                Text("Player \(1)")
                     .bold()
                 ChoosePlayerComponent(viewModel: viewModel.player1ViewModel)
             }
             HStack(alignment: .top){
-                Text("Player 2")
+                Text("Player \(2)")
                     .bold()
                     .padding(.top, 20)
                     

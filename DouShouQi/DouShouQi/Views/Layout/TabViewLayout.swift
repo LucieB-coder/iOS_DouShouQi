@@ -17,17 +17,17 @@ struct TabViewLayout: View {
             HomePage(game: ["toto","titi"])
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Accueil")
+                    Text("Home")
                 }
             HistoricPage(games: ["game1","game2"])
                 .tabItem {
                     Image(systemName: "clock")
-                    Text("Historique")
+                    Text("Historic")
                 }
             RankingPage(players: ["Chloé", "Lucie", "Thomas"])
                 .tabItem {
                     Image(systemName: "star")
-                    Text("Classement")
+                    Text("Ranking")
                 }
 
             MenuPage()
