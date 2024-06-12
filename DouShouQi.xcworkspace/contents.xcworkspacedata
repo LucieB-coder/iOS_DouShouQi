@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:AR_Doushouqi/AR_Doushouqi.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DouShouQi/DouShouQi.xcodeproj">
    </FileRef>
 </Workspace>
