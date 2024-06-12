@@ -72,8 +72,12 @@ import DouShouQiModel
         }
     }
     
-    @MainActor func meepleMoved(spriteMeeple: SpriteMeeple){
-        
+    @MainActor func meepleMoved(spriteMeeple: SpriteMeeple, xStart: Int, yStart: Int, xEnd: Int, yEnd: Int){
+        let move: Move = Move(of: game!.board.grid[xStart][yStart].piece!.owner, fromRow: xStart, andFromColumn: yStart, toRow: xEnd, andToColumn: yEnd)
+        if(game!.rules.isMoveValid(onBoard: game!.board, withMove: move)){
+            let player: HumanPlayer = game?.players[.player1] as! HumanPlayer
+            try! player.chooseMove(move)
+        }
     }
 }
 
