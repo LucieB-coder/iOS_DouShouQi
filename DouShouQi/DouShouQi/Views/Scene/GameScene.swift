@@ -10,10 +10,9 @@ import SpriteKit
 import DouShouQiModel
 
 class GameScene : SKScene {
-    var gameViewModel: GameViewModel?
     var game: Game = try! Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "Rory", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Guillaume", andId: .player2)!)
     
-    let pieces: [Owner : [Animal:SpriteMeeple]] = [
+    @Published var pieces: [Owner : [Animal:SpriteMeeple]] = [
         .player1: [
             .rat: SpriteMeeple(imageNamed: "rat", ellipseColor: UIColor(Colors.primary)),
             .cat: SpriteMeeple(imageNamed: "cat", ellipseColor: UIColor(Colors.primary)),
@@ -38,8 +37,7 @@ class GameScene : SKScene {
     
     let imageBoard: SKSpriteNode = SKSpriteNode(imageNamed: "board")
     
-    init(size: CGSize, gameViewModel: GameViewModel?) {
-        self.gameViewModel = gameViewModel
+    override init(size: CGSize) {
         super.init(size: size)
         imageBoard.size = size
         self.scaleMode = .aspectFit
@@ -66,7 +64,6 @@ class GameScene : SKScene {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.gameViewModel = nil
         super.init(coder: aDecoder);
     }
 }

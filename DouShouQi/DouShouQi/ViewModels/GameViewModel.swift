@@ -15,8 +15,10 @@ import DouShouQiModel
     @Published var game: Game?
     @Published var playerTurn : String = ""
     @Published var moveText : String = ""
+    @Published var gameScene: GameScene
     
-    public init(game: Game?) {
+    public init(game: Game?, gameScene: GameScene) {
+        self.gameScene = gameScene
         self.game = game
         self.game?.addPlayerNotifiedListener(playerTurn)
         self.game?.addMoveChosenCallbacksListener(moveChosen)
@@ -38,8 +40,12 @@ import DouShouQiModel
     }
     
     @MainActor func moveChosen(board: Board, move: Move, player: Player) -> Void{
-        playerTurn = "Move played"
-        moveText = "Player \(player.id == .player1 ? "🟡 1" : "🔴 2") - \(player.name), has chosen: \(move)"
+        let piece = board.grid[move.rowOrigin][move.columnOrigin]
+        let meeples = gameScene.pieces[player.id]
+        let meeple = meeples?.first(where: {
+            $0.key == piece.piece?.animal
+        })
+        meeple?.value.cellPosition = CGPoint(x: move.rowDestination, y: move.columnDestination)
     }
     
     @MainActor func boardChanged(board: Board){
@@ -57,9 +63,16 @@ import DouShouQiModel
          */
     }
     
+    func subscribesToMeeple(){
+        for meeple in gameScene.pieces[.player1]!{
+            meeple.value.observers.append(meepleMoved)
+        }
+        for meeple in gameScene.pieces[.player1]!{
+            meeple.value.observers.append(meepleMoved)
+        }
+    }
     
-    
-    public func moveMeeple(startX: Int, startY: Int, newX: Int, newY: Int, owner: Owner, player: Player) async{
+    @MainActor func meepleMoved(spriteMeeple: SpriteMeeple){
         
     }
 }

@@ -17,6 +17,8 @@ class SpriteMeeple : SKNode {
     let imageNode: SKSpriteNode
     let ellipseNode: SKShapeNode
     
+    var observers : [(SpriteMeeple) -> Void] = []
+    
     public var cellPosition: CGPoint{
         didSet {
             self.position.x = SpriteMeeple.offset.x + SpriteMeeple.direction.dx*cellPosition.x
@@ -73,6 +75,13 @@ class SpriteMeeple : SKNode {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.position = touches.first?.location(in: parent!) ?? CGPoint(x:0, y: 0)
         
+    }
+    
+    
+    func meepleMoved(){
+        for observer in self.observers{
+            observer(self)
+        }
     }
     
 }
