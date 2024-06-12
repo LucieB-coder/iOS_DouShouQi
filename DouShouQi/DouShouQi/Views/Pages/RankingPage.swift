@@ -11,6 +11,7 @@ import ChtuluDSQ
 
 struct RankingPage: View {
     var users: [User]
+    var finishedGames: [FinishedGame]
     
     var body: some View {
         NavigationStack {
@@ -21,7 +22,7 @@ struct RankingPage: View {
             }
             .navigationTitle("Ranking")
             .navigationDestination(for: User.self) { user in
-                PlayerPage(user: user, finishedGames: StubHistoric.getHistoric(), users: StubUser.getUsers())
+                PlayerPage(user: user, finishedGames: finishedGames, users: users)
             }
         }
     }
@@ -29,6 +30,6 @@ struct RankingPage: View {
 
 struct RankingPage_Previews: PreviewProvider{
     static var previews: some View{
-        RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}))
+        RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}), finishedGames: StubHistoric.getHistoric())
     }
 }

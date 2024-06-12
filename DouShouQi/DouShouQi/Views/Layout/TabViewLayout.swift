@@ -25,7 +25,7 @@ struct TabViewLayout: View {
                     Image(systemName: "clock")
                     Text("Historic")
                 }
-            RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}))
+            RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}), finishedGames: StubHistoric.getHistoric())
                 .tabItem {
                     Image(systemName: "star")
                     Text("Ranking")

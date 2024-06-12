@@ -20,6 +20,7 @@
 		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
 		C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446E2BF60E0000C88345 /* PlayerPage.swift */; };
 		C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044722BFC966D00C88345 /* HistoricComponent.swift */; };
+		C3829AF62C0F50ED001243C2 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3829AF52C0F50ED001243C2 /* GameViewModel.swift */; };
 		C38E28AE2C045CD800D3046A /* StartGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AD2C045CD800D3046A /* StartGamePage.swift */; };
 		C38E28B02C045DBC00D3046A /* ChoosePlayerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */; };
 		C3A5FBA72C06252300835012 /* ChtuluDSQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B99D7E2C06247B006FC026 /* ChtuluDSQ.framework */; };
@@ -107,6 +108,7 @@
 		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
 		C380446E2BF60E0000C88345 /* PlayerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPage.swift; sourceTree = "<group>"; };
 		C38044722BFC966D00C88345 /* HistoricComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricComponent.swift; sourceTree = "<group>"; };
+		C3829AF52C0F50ED001243C2 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		C38E28AD2C045CD800D3046A /* StartGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGamePage.swift; sourceTree = "<group>"; };
 		C38E28AF2C045DBC00D3046A /* ChoosePlayerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerComponent.swift; sourceTree = "<group>"; };
 		C3B99D782C06247A006FC026 /* ChtuluDSQ.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChtuluDSQ.xcodeproj; path = ../ChtuluDSQ/ChtuluDSQ.xcodeproj; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */,
 				C35A89542C05BE20002E537A /* StartGameViewModel.swift */,
+				C3829AF52C0F50ED001243C2 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				5A11F42D2BFCD0FB00199CE6 /* UnfinishedGameComponent.swift in Sources */,
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
+				C3829AF62C0F50ED001243C2 /* GameViewModel.swift in Sources */,
 				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 				EC886AE72C0622D300266CB8 /* SettingsPage.swift in Sources */,

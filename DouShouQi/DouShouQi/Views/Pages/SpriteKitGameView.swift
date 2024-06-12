@@ -7,22 +7,34 @@
 
 import SwiftUI
 import SpriteKit
+import DouShouQiModel
 
 struct SpriteKitGameView: View {
-    var gameScene : GameScene = GameScene(size: CGSize(width: 940, height: 740))
+    
+    @ObservedObject var gameViewModel: GameViewModel
+    var gameScene : GameScene
+
     
     var body: some View {
         VStack(alignment: .center){
+            Text(gameViewModel.playerTurn)
+            Text(gameViewModel.moveText)
             SpriteView(scene: gameScene)
+            .task {
+                try! await gameViewModel.game?.start()
+            }
         }
     }
-//        .task {
-//        try: await gameScene.game.start()
-//    }
 }
+
+
 
 struct SpriteKitGameView_Previews: PreviewProvider {
     static var previews: some View {
-        SpriteKitGameView()
+        let gameViewModel: GameViewModel = try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "player1", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Player2", andId: .player2)!))
+        let gameScene = GameScene(size: CGSize(width: 940, height: 740), gameViewModel: gameViewModel)
+
+        return SpriteKitGameView(gameViewModel: gameViewModel, gameScene: gameScene)
+        
     }
 }

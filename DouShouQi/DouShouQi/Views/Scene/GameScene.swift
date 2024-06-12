@@ -10,6 +10,7 @@ import SpriteKit
 import DouShouQiModel
 
 class GameScene : SKScene {
+    var gameViewModel: GameViewModel?
     var game: Game = try! Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "Rory", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Guillaume", andId: .player2)!)
     
     let pieces: [Owner : [Animal:SpriteMeeple]] = [
@@ -37,7 +38,8 @@ class GameScene : SKScene {
     
     let imageBoard: SKSpriteNode = SKSpriteNode(imageNamed: "board")
     
-    override init(size: CGSize) {
+    init(size: CGSize, gameViewModel: GameViewModel?) {
+        self.gameViewModel = gameViewModel
         super.init(size: size)
         imageBoard.size = size
         self.scaleMode = .aspectFit
@@ -64,6 +66,7 @@ class GameScene : SKScene {
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.gameViewModel = nil
         super.init(coder: aDecoder);
     }
 }
