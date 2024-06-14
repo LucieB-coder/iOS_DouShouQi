@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
+import RealityKit
 
 struct BoardViewRepresentable : UIViewRepresentable {
-    func makeUIView(context: Context) -> BoardArView {
-        BoardArView()
+    func makeUIView(context: Context) -> BoardARView {
+        BoardARView()
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {}

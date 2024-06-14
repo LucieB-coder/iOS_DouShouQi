@@ -9,7 +9,7 @@ import Foundation
 import RealityKit
 import ARKit
 
-class BoardArView : ARView {
+class BoardARView : ARView {
     
     required init(frame frameRect: CGRect) {
             super.init(frame: frameRect)
@@ -37,9 +37,10 @@ class BoardArView : ARView {
     func addBoardToTheFloor(){
         let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
         scene.addAnchor(anchor)
-        let board = try? Entity.load(named: "pancakes")
+        let board = try? Entity.load(named: "board")
         if let board {
             anchor.addChild(board)
+            board.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
         }
     }
 
