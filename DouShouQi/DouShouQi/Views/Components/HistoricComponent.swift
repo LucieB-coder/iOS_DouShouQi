@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import ChtuluDSQ
 
 struct HistoricComponent: View {
-    var name : String
-    var result : String
-    var date : String
+    var finishedGame: FinishedGame
+    var user : User
+    var opponent : User?
     var body: some View {
         HStack {
             Image(systemName: "person.crop.circle")
@@ -20,24 +21,21 @@ struct HistoricComponent: View {
                 .padding(.leading)
             
             VStack(alignment: .leading) {
-                Text(name)
+                Text((opponent != nil) ? opponent!.name : "BOT")
                     .font(.headline)
-                Text(date)
+                Text(finishedGame.date, format: .dateTime)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
             Spacer()
-            Text(result)
-                .font(.headline)
-                .foregroundColor(.green) // ou .red pour les défaites
-                .padding(.trailing)
+            ResultComponent(result: finishedGame.winner == nil ? 2 : finishedGame.winner == user.id ? 0 : 1 )
         }
     }
 }
 
 struct HistoricComponent_Previews: PreviewProvider{
     static var previews: some View{
-        HistoricComponent(name: "Vector", result: "Victoire",date: "27-05-2024")
+        HistoricComponent(finishedGame: StubHistoric.getHistoric()[1], user: StubUser.getUsers()[3], opponent: StubUser.getUsers()[0])
     }
 }
 

@@ -17,6 +17,8 @@ class SpriteMeeple : SKNode {
     let imageNode: SKSpriteNode
     let ellipseNode: SKShapeNode
     
+    var observers : [(SpriteMeeple, Int, Int, Int, Int) async -> Void] = []
+    
     public var cellPosition: CGPoint{
         didSet {
             self.position.x = SpriteMeeple.offset.x + SpriteMeeple.direction.dx*cellPosition.x
@@ -54,9 +56,11 @@ class SpriteMeeple : SKNode {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.zPosition = 100;
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.zPosition = 1;
         if let parent = parent, let position = touches.first?.location(in: parent) {
             // Arrondir à la case la plus proche pour x et y
             let x = round(position.x / 100) * 100
@@ -65,14 +69,25 @@ class SpriteMeeple : SKNode {
             // Assurer que les coordonnées sont dans les limites
             let clampedX = min(max(x, -400), 400)
             let clampedY = min(max(y, -300), 300)
-
-            self.position = CGPoint(x: clampedX, y: clampedY)
+            
+            let newXPosition = (clampedX - SpriteMeeple.offset.x) / SpriteMeeple.direction.dx;
+            let newYPosition = (clampedY - SpriteMeeple.offset.y) / SpriteMeeple.direction.dy;
+            Task{
+                await meepleMoved(xStart: Int(cellPosition.x), yStart: Int(cellPosition.y), xEnd: Int(newXPosition), yEnd: Int(newYPosition));
+            }
         }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.position = touches.first?.location(in: parent!) ?? CGPoint(x:0, y: 0)
         
+    }
+    
+    
+    func meepleMoved(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int) async{
+        for observer in self.observers{
+            await observer(self, xStart, yStart, xEnd, yEnd)
+        }
     }
     
 }

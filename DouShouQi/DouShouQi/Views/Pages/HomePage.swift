@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DouShouQiModel
 
 struct HomePage: View {
     var game : [String]
@@ -22,7 +23,7 @@ struct HomePage: View {
                 .listStyle(DefaultListStyle())
                 .navigationTitle("Home")
                 .navigationDestination(for: String.self) { game in
-                    SpriteKitGameView()
+                    SpriteKitGameView(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: IAPlayer(withName: "player1", andId: .player1)!, andPlayer2: IAPlayer(withName: "Player2", andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))))
                 }
                 
                 ZStack {

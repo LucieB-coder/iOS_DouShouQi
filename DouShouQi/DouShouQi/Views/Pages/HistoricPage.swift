@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import ChtuluDSQ
 
 struct HistoricPage: View {
-    var games : [String] //changer pour un type model game
+    var games : [FinishedGame]
+    var user : User
+    var users : [User]
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
-                List(games,id:\.self){ game in
-                      HistoricComponent(name: "", result: "", date: "")
+                List(games.filter({$0.player1Id == user.id || $0.player2Id==user.id}),id:\.self){ game in
+                    HistoricComponent(finishedGame: game, user: user, opponent: users.first(where: { $0.id != user.id && ($0.id == game.player1Id || $0.id == game.player2Id) }))
                 }.navigationTitle("Historic")
             }
         }
@@ -21,7 +24,8 @@ struct HistoricPage: View {
     
     struct HistoricPage_Previews: PreviewProvider {
         static var previews: some View {
-            HistoricPage(games: ["game1","game2"])
+            HistoricPage(games: StubHistoric.getHistoric(), user: StubUser.getUsers()[3], users: StubUser.getUsers())
+            //HistoricPage(games: StubHistoric.getHistoric())
         }
     }
 }

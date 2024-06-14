@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ChtuluDSQ
 
 
 struct MenuItemData: Identifiable, Hashable {
@@ -26,7 +27,7 @@ struct MenuItemData: Identifiable, Hashable {
 struct MenuPage: View {
     var items: [MenuItemData] = [
         MenuItemData(image: Image(systemName: "gearshape.fill"), label: "Settings", linkTo: AnyView(SettingsPage())),
-        MenuItemData(image: Image(systemName: "person.fill"), label: "Profile", linkTo: AnyView(PlayerPage())),
+        MenuItemData(image: Image(systemName: "person.fill"), label: "Profile", linkTo: AnyView(PlayerPage(user: StubUser.getUsers()[3], finishedGames: StubHistoric.getHistoric(), users: StubUser.getUsers()))),
     ]
     var body: some View {
         NavigationStack {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ChtuluDSQ
 
 struct TabViewLayout: View {
     init() {
@@ -19,12 +20,12 @@ struct TabViewLayout: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            HistoricPage(games: ["game1","game2"])
+            HistoricPage(games: StubHistoric.getHistoric(), user: StubUser.getUsers()[3], users: StubUser.getUsers())
                 .tabItem {
                     Image(systemName: "clock")
                     Text("Historic")
                 }
-            RankingPage(players: ["Chloé", "Lucie", "Thomas"])
+            RankingPage(users: StubUser.getUsers().sorted(by: {$0.score > $1.score}), finishedGames: StubHistoric.getHistoric())
                 .tabItem {
                     Image(systemName: "star")
                     Text("Ranking")

@@ -12,7 +12,7 @@ import DouShouQiModel
 class GameScene : SKScene {
     var game: Game = try! Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "Rory", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Guillaume", andId: .player2)!)
     
-    let pieces: [Owner : [Animal:SpriteMeeple]] = [
+    @Published var pieces: [Owner : [Animal:SpriteMeeple]] = [
         .player1: [
             .rat: SpriteMeeple(imageNamed: "rat", ellipseColor: UIColor(Colors.primary)),
             .cat: SpriteMeeple(imageNamed: "cat", ellipseColor: UIColor(Colors.primary)),
