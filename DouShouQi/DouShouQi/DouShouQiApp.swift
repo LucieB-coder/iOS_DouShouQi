@@ -23,12 +23,15 @@ class ColorSchemeManager: ObservableObject {
 @main
 struct DouShouQiApp: App {
     @StateObject private var colorSchemeManager = ColorSchemeManager()
-        
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(colorSchemeManager)
                 .preferredColorScheme(colorSchemeManager.colorScheme)
+                .task {
+                    MusicHelper.playLaunchAppMusic()
+                }
+            
         }
     }
 }

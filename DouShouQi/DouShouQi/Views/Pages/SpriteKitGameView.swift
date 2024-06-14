@@ -19,6 +19,7 @@ struct SpriteKitGameView: View {
             Text(gameViewModel.moveText)
             SpriteView(scene: gameViewModel.gameScene)
             .task {
+                MusicHelper.stopBackgroundMusic()
                 try! await gameViewModel.game?.start()
             }
         }

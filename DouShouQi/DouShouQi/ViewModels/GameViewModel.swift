@@ -10,12 +10,14 @@ import SwiftUI
 import Combine
 import UIKit
 import DouShouQiModel
+import AVFoundation
 
 @MainActor class GameViewModel: ObservableObject{
     @Published var game: Game?
     @Published var playerTurn : String = ""
     @Published var moveText : String = ""
     @Published var gameScene: GameScene
+    var audioPlayer: AVAudioPlayer?
     
     public init(game: Game?, gameScene: GameScene) {
         self.gameScene = gameScene
@@ -24,6 +26,7 @@ import DouShouQiModel
         self.game?.addMoveChosenCallbacksListener(moveChosen)
         self.game?.addInvalidMoveCallbacksListener(invalideMoveChosen)
         self.game?.addBoardChangedListener(boardChanged)
+        self.game?.addGameOverListener(gameOver)
         self.subscribesToMeeple()
     }
     
@@ -49,8 +52,12 @@ import DouShouQiModel
         meeple?.value.cellPosition = CGPoint(x: move.rowDestination, y: move.columnDestination)
     }
     
+    @MainActor func gameOver(board: Board, result: Result, player: Player?){
+        MusicHelper.playSound(filePath: "victory")
+    }
+    
     @MainActor func boardChanged(board: Board){
-        _ = board
+        
     }
     
     @MainActor func invalideMoveChosen(board: Board, move: Move, player: Player, result: Bool) {
@@ -62,6 +69,7 @@ import DouShouQiModel
                     $0.key == piece.animal
                 })
                 meeple?.value.parent?.removeChildren(in: [meeple!.value])
+                MusicHelper.playSound(filePath: "minecraft-eat")
             }
             return
         }
@@ -72,6 +80,7 @@ import DouShouQiModel
         })
         
         meeple?.value.cellPosition = CGPoint(x: move.rowOrigin, y: move.columnOrigin);
+        MusicHelper.playSound(filePath: "looser")
     }
     
     func subscribesToMeeple(){
@@ -98,5 +107,6 @@ import DouShouQiModel
             try! await player.chooseMove(move)
         }
     }
+    
 }
 

@@ -19,6 +19,7 @@ struct SettingsPage: View {
                     Spacer()
                     Button(action: {
                         colorSchemeManager.colorScheme = .dark
+                        MusicHelper.playSound(filePath: "nuit")
                     }){
                         Image(systemName: "moon.fill")
                             .resizable()
@@ -29,6 +30,7 @@ struct SettingsPage: View {
                     Spacer()
                     Button(action: {
                         colorSchemeManager.colorScheme = .light
+                        MusicHelper.playSound(filePath: "jour")
                     }){
                         Image(systemName: "sun.max.fill")
                             .resizable()
