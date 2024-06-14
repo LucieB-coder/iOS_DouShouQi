@@ -12,6 +12,10 @@ class ChoosePlayerViewModel : ObservableObject {
         self.playerName = playerName
         self.isBot = isBot
     }
+    
+    func toggleIsBot(){
+        self.isBot = !self.isBot
+    }
 
     
     func selectImage() {

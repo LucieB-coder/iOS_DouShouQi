@@ -24,6 +24,7 @@ import DouShouQiModel
         self.game?.addMoveChosenCallbacksListener(moveChosen)
         self.game?.addInvalidMoveCallbacksListener(invalideMoveChosen)
         self.game?.addBoardChangedListener(boardChanged)
+        self.subscribesToMeeple()
     }
     
     
@@ -41,7 +42,7 @@ import DouShouQiModel
     
     @MainActor func moveChosen(board: Board, move: Move, player: Player) -> Void{
         let piece = board.grid[move.rowOrigin][move.columnOrigin]
-        let meeples = gameScene.pieces[player.id]
+        let meeples = gameScene.pieces[move.owner]
         let meeple = meeples?.first(where: {
             $0.key == piece.piece?.animal
         })
@@ -54,29 +55,47 @@ import DouShouQiModel
     
     @MainActor func invalideMoveChosen(board: Board, move: Move, player: Player, result: Bool) {
         if result {
+            if let piece = board.grid[move.rowDestination][move.columnDestination].piece{
+                // Delete le meeple
+                let meeples = gameScene.pieces[player.id == .player1 ? .player2 : .player1]
+                let meeple = meeples?.first(where: {
+                    $0.key == piece.animal
+                })
+                meeple?.value.parent?.removeChildren(in: [meeple!.value])
+            }
             return
         }
-        /*
-        print("**************************************")
-        print("⚠️⚠️⚠️⚠️ Invalid Move detected: \(move) by \(player.name) (\(player.id))")
-        print("**************************************")
-         */
+        let piece = board.grid[move.rowOrigin][move.columnOrigin]
+        let meeples = gameScene.pieces[move.owner]
+        let meeple = meeples?.first(where: {
+            $0.key == piece.piece?.animal
+        })
+        
+        meeple?.value.cellPosition = CGPoint(x: move.rowOrigin, y: move.columnOrigin);
     }
     
     func subscribesToMeeple(){
         for meeple in gameScene.pieces[.player1]!{
             meeple.value.observers.append(meepleMoved)
         }
-        for meeple in gameScene.pieces[.player1]!{
+        for meeple in gameScene.pieces[.player2]!{
             meeple.value.observers.append(meepleMoved)
         }
     }
     
-    @MainActor func meepleMoved(spriteMeeple: SpriteMeeple, xStart: Int, yStart: Int, xEnd: Int, yEnd: Int){
-        let move: Move = Move(of: game!.board.grid[xStart][yStart].piece!.owner, fromRow: xStart, andFromColumn: yStart, toRow: xEnd, andToColumn: yEnd)
-        if(game!.rules.isMoveValid(onBoard: game!.board, withMove: move)){
+    @MainActor func meepleMoved(spriteMeeple: SpriteMeeple, xStart: Int, yStart: Int, xEnd: Int, yEnd: Int) async{
+        let owner = game!.board.grid[xStart][yStart].piece!.owner
+        let playerToPlay : Owner = self.game!.rules.getNextPlayer()
+        let move: Move = Move(of: owner, fromRow: xStart, andFromColumn: yStart, toRow: xEnd, andToColumn: yEnd)
+        if(playerToPlay != owner){
+            invalideMoveChosen(board: game!.board, move: move, player: game!.players[playerToPlay]!, result: false)
+            return
+        }
+        if let player: HumanPlayer = game?.players[owner] as? HumanPlayer{
+            try! await player.chooseMove(move)
+        } else {
             let player: HumanPlayer = game?.players[.player1] as! HumanPlayer
-            try! player.chooseMove(move)
+            try! await player.chooseMove(move)
         }
     }
 }

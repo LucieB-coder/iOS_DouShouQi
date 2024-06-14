@@ -56,9 +56,11 @@ class SpriteMeeple : SKNode {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.zPosition = 100;
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?){
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.zPosition = 1;
         if let parent = parent, let position = touches.first?.location(in: parent) {
             // Arrondir à la case la plus proche pour x et y
             let x = round(position.x / 100) * 100
@@ -70,7 +72,9 @@ class SpriteMeeple : SKNode {
             
             let newXPosition = (clampedX - SpriteMeeple.offset.x) / SpriteMeeple.direction.dx;
             let newYPosition = (clampedY - SpriteMeeple.offset.y) / SpriteMeeple.direction.dy;
-            meepleMoved(xStart: Int(cellPosition.x), yStart: Int(cellPosition.y), xEnd: Int(newXPosition), yEnd: Int(newYPosition))
+            Task{
+                await meepleMoved(xStart: Int(cellPosition.x), yStart: Int(cellPosition.y), xEnd: Int(newXPosition), yEnd: Int(newYPosition));
+            }
         }
     }
     
@@ -80,9 +84,9 @@ class SpriteMeeple : SKNode {
     }
     
     
-    func meepleMoved(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int){
+    func meepleMoved(xStart: Int, yStart: Int, xEnd: Int, yEnd: Int) async{
         for observer in self.observers{
-            observer(self, xStart, yStart, xEnd, yEnd)
+            await observer(self, xStart, yStart, xEnd, yEnd)
         }
     }
     

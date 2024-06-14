@@ -16,7 +16,7 @@ struct ChooseOpponentComponent: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .onChange(of: selectedOption) { newValue in
-                    viewModel.isBot = (newValue == "BOT")
+                    viewModel.toggleIsBot()
                 }
             }
             
