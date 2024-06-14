@@ -11,7 +11,9 @@ import RealityKit
 
 struct BoardViewRepresentable : UIViewRepresentable {
     func makeUIView(context: Context) -> BoardARView {
-        BoardARView()
+        let board = BoardARView()
+        board.addMeepleOnTheBoard(modele3d: "3dModels/pancakes", position: SIMD3<Float>(x: 0.1, y: 0.0, z: 0.1))
+        return board
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {}

@@ -11,6 +11,8 @@ import ARKit
 
 class BoardARView : ARView {
     
+    var boardAnchor: AnchorEntity?
+    
     required init(frame frameRect: CGRect) {
             super.init(frame: frameRect)
     }
@@ -29,21 +31,29 @@ class BoardARView : ARView {
         session.run(configuration)
     }
     
-    func defineAnchors(){
-        let anchor = AnchorEntity(world: .zero)
-        scene.addAnchor(anchor)
-    }
-    
     func addBoardToTheFloor(){
-        let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
-        scene.addAnchor(anchor)
-        let board = try? Entity.load(named: "board")
-        if let board {
-            anchor.addChild(board)
-            board.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
+        boardAnchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
+        if let boardAnchor = boardAnchor {
+                    scene.addAnchor(boardAnchor)
+                    let board = try? Entity.load(named: "3dModels/board")
+                    if let board {
+                        boardAnchor.addChild(board)
+                        board.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
+                    }
         }
     }
+    
+    func addMeepleOnTheBoard(modele3d: String, position: SIMD3<Float>){
+        let meeple = try? Entity.loadModel(named: modele3d)
+        if let meeple {
+            meeple.position = position
+            meeple.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
+            meeple.generateCollisionShapes(recursive: true)
+            boardAnchor?.addChild(meeple)
+            self.installGestures([.translation], for: meeple as Entity & HasCollision)
+        }
 
+    }
 
     
 }
