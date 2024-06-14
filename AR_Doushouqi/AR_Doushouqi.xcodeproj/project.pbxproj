@@ -18,8 +18,8 @@
 		5A3B57282C19775B00BDAD32 /* BoardViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B57272C19775B00BDAD32 /* BoardViewRepresentable.swift */; };
 		5A3B572B2C197C2D00BDAD32 /* BoardARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B572A2C197C2D00BDAD32 /* BoardARView.swift */; };
 		5A3B57302C1980AD00BDAD32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3B572F2C1980AD00BDAD32 /* Images.xcassets */; };
+		5A5E16192C1C621700E9F65F /* board.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A5E16182C1C621700E9F65F /* board.usdz */; };
 		5AA8BBD52C1C1C570029D46D /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8BBD42C1C1C570029D46D /* pancakes.usdz */; };
-		5AA8BBDB2C1C20930029D46D /* board.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8BBDA2C1C20930029D46D /* board.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		5A3B57272C19775B00BDAD32 /* BoardViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewRepresentable.swift; sourceTree = "<group>"; };
 		5A3B572A2C197C2D00BDAD32 /* BoardARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardARView.swift; sourceTree = "<group>"; };
 		5A3B572F2C1980AD00BDAD32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5A5E16182C1C621700E9F65F /* board.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = board.usdz; sourceTree = "<group>"; };
 		5AA8BBD42C1C1C570029D46D /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
-		5AA8BBDA2C1C20930029D46D /* board.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = board.usdz; path = ../../../../Downloads/board.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		5A3B56F72C19742900BDAD32 /* AR_Doushouqi */ = {
 			isa = PBXGroup;
 			children = (
-				5AA8BBDA2C1C20930029D46D /* board.usdz */,
+				5A5E16182C1C621700E9F65F /* board.usdz */,
 				5AA8BBD42C1C1C570029D46D /* pancakes.usdz */,
 				5A3B572C2C19808900BDAD32 /* Assets */,
 				5A3B57292C197C1A00BDAD32 /* ARView */,
@@ -273,7 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AA8BBDB2C1C20930029D46D /* board.usdz in Resources */,
+				5A5E16192C1C621700E9F65F /* board.usdz in Resources */,
 				5A3B57302C1980AD00BDAD32 /* Images.xcassets in Resources */,
 				5A3B57022C19742B00BDAD32 /* Preview Assets.xcassets in Resources */,
 				5A3B56FF2C19742B00BDAD32 /* Assets.xcassets in Resources */,
