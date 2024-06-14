@@ -11,7 +11,7 @@ import DouShouQiModel
 struct StartGamePage: View {
     
     @StateObject private var viewModel = StartGameViewModel()
-    @State private var isShowingGameView = false
+    @State public var isShowingGameView = false
 
     var body: some View {
         VStack(alignment: .center){
@@ -41,18 +41,7 @@ struct StartGamePage: View {
             }
             .fullScreenCover(isPresented: $isShowingGameView, content: {
                 ZStack(alignment: .topLeading){
-                    Button(action: {
-                        isShowingGameView = false
-                    }, label: {
-                        HStack{
-                            Image(systemName: "chevron.left")
-                                .foregroundStyle(Colors.primary)
-                            Text("Quit the game")
-                                .foregroundStyle(Colors.primary)
-                        }
-                        .padding()                        
-                    })
-                    .zIndex(3)
+                    QuitGameButton(isShowingGameView: self.$isShowingGameView)
                     SpriteKitGameView(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: viewModel.player1ViewModel.playerName, andId: .player1)!, andPlayer2: viewModel.player2ViewModel.isBot ? RandomPlayer(withName: "IYAAAAAAAA", andId: .player2)! : HumanPlayer(withName: viewModel.player2ViewModel.playerName, andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))))
                         .zIndex(1)
                 }

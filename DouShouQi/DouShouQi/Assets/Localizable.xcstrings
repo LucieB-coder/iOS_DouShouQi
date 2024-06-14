@@ -33,6 +33,16 @@
         }
       }
     },
+    "Do not save the game" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne pas enregistrer la partie"
+          }
+        }
+      }
+    },
     "Enter name" : {
       "localizations" : {
         "en" : {
@@ -175,6 +185,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Continuer une partie"
+          }
+        }
+      }
+    },
+    "Pursue the game later" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuer la partie plus tard"
           }
         }
       }
