@@ -28,6 +28,7 @@
 		5A5E162E2C1C7A0700E9F65F /* lion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A5E16262C1C7A0700E9F65F /* lion.usdz */; };
 		5A5E162F2C1C7A0700E9F65F /* rat.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A5E16272C1C7A0700E9F65F /* rat.usdz */; };
 		5AA8BBD52C1C1C570029D46D /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8BBD42C1C1C570029D46D /* pancakes.usdz */; };
+		5AC76E602C20654100B35C74 /* MeepleARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC76E5F2C20654100B35C74 /* MeepleARView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		5A5E16262C1C7A0700E9F65F /* lion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = lion.usdz; sourceTree = "<group>"; };
 		5A5E16272C1C7A0700E9F65F /* rat.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = rat.usdz; sourceTree = "<group>"; };
 		5AA8BBD42C1C1C570029D46D /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
+		5AC76E5F2C20654100B35C74 /* MeepleARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeepleARView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				5A3B572A2C197C2D00BDAD32 /* BoardARView.swift */,
+				5AC76E5F2C20654100B35C74 /* MeepleARView.swift */,
 			);
 			path = ARView;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 		5A5E161F2C1C793A00E9F65F /* 3dModels */ = {
 			isa = PBXGroup;
 			children = (
+				5A5E16182C1C621700E9F65F /* board.usdz */,
 				5A5E16232C1C7A0600E9F65F /* cat.usdz */,
 				5A5E16212C1C7A0500E9F65F /* dog.usdz */,
 				5A5E16252C1C7A0700E9F65F /* elephant.usdz */,
@@ -196,7 +200,6 @@
 				5A5E16242C1C7A0700E9F65F /* tiger.usdz */,
 				5A5E16202C1C7A0500E9F65F /* wolf.usdz */,
 				5AA8BBD42C1C1C570029D46D /* pancakes.usdz */,
-				5A5E16182C1C621700E9F65F /* board.usdz */,
 			);
 			path = 3dModels;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				5A3B56F92C19742900BDAD32 /* AppDelegate.swift in Sources */,
 				5A3B57282C19775B00BDAD32 /* BoardViewRepresentable.swift in Sources */,
 				5A3B56FD2C19742900BDAD32 /* Experience.rcproject in Sources */,
+				5AC76E602C20654100B35C74 /* MeepleARView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +506,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AR_Doushouqi/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DRCMU7YM68;
+				DEVELOPMENT_TEAM = 44CKVLDP22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "camera needed for Doushouqi VR";
@@ -525,7 +528,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.uca.iut.AR-Doushouqi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = tpiOS_2023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -537,12 +539,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AR_Doushouqi/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = DRCMU7YM68;
+				DEVELOPMENT_TEAM = 44CKVLDP22;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "camera needed for Doushouqi VR";
@@ -560,7 +561,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fr.uca.iut.AR-Doushouqi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = tpiOS_2023;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
