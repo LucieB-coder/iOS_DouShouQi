@@ -15,7 +15,7 @@ struct TabViewLayout: View {
     
     var body: some View {
         TabView {
-            HomePage(game: ["toto","titi"])
+            HomePage()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")

@@ -18,7 +18,7 @@ import AVFoundation
     @Published var moveText : String = ""
     @Published var gameScene: GameScene
     @ObservedObject var musicHelper = MusicHelper.getMusicHelper()
-    
+    @Published var isGameOver: Bool = false
     
     public init(game: Game?, gameScene: GameScene) {
         self.gameScene = gameScene
@@ -54,9 +54,8 @@ import AVFoundation
     }
     
     @MainActor func gameOver(board: Board, result: Result, player: Player?){
-
-        musicHelper.playSound(filePath: "victory")
-
+        MusicHelper.playSound(filePath: "victory")
+        isGameOver = true
     }
     
     @MainActor func boardChanged(board: Board){

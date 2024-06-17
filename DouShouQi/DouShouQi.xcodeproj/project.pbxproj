@@ -52,6 +52,9 @@
 		EC886AE72C0622D300266CB8 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC886AE62C0622D300266CB8 /* SettingsPage.swift */; };
 		EC886AED2C09C9C700266CB8 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EC886AEC2C09C9C700266CB8 /* Localizable.xcstrings */; };
 		ECAF9EC32C1C68410047706B /* QuitGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9EC22C1C68410047706B /* QuitGameButton.swift */; };
+		ECAF9ECB2C1C6DB10047706B /* SaveGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */; };
+		ECAF9ED42C205F330047706B /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED32C205F330047706B /* GamePage.swift */; };
+		ECAF9ED82C2066DE0047706B /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED72C2066DE0047706B /* GameOver.swift */; };
 		ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6CC552C045FBE00F5F091 /* PlayButton.swift */; };
 		ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; };
 		ECF915082C05CC360068C5BB /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -151,6 +154,9 @@
 		EC886AE62C0622D300266CB8 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		EC886AEC2C09C9C700266CB8 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ECAF9EC22C1C68410047706B /* QuitGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitGameButton.swift; sourceTree = "<group>"; };
+		ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameViewModel.swift; sourceTree = "<group>"; };
+		ECAF9ED32C205F330047706B /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
+		ECAF9ED72C2066DE0047706B /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		ECF6CC552C045FBE00F5F091 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		ECF915032C05CBE10068C5BB /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = DSQ.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,6 +194,7 @@
 				C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */,
 				C35A89542C05BE20002E537A /* StartGameViewModel.swift */,
 				C3829AF52C0F50ED001243C2 /* GameViewModel.swift */,
+				ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -302,6 +309,7 @@
 				5A11F42E2BFCD16400199CE6 /* HomePage.swift */,
 				5A5EEF112C0469E2005AD9C5 /* HistoricPage.swift */,
 				EC886AE62C0622D300266CB8 /* SettingsPage.swift */,
+				ECAF9ED32C205F330047706B /* GamePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -320,6 +328,7 @@
 				5A5EEF0F2C04656F005AD9C5 /* PlayerDataComponent.swift */,
 				5A3A0A742C09CC4800917B0F /* ResultComponent.swift */,
 				ECAF9EC22C1C68410047706B /* QuitGameButton.swift */,
+				ECAF9ED72C2066DE0047706B /* GameOver.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -516,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A11F42F2BFCD16500199CE6 /* HomePage.swift in Sources */,
+				ECAF9ECB2C1C6DB10047706B /* SaveGameViewModel.swift in Sources */,
 				5A5EEF102C04656F005AD9C5 /* PlayerDataComponent.swift in Sources */,
 				5A11F42F2BFCD16500199CE6 /* HomePage.swift in Sources */,
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
@@ -538,10 +548,12 @@
 				ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
+				ECAF9ED82C2066DE0047706B /* GameOver.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 				C38E28B02C045DBC00D3046A /* ChoosePlayerComponent.swift in Sources */,
 				EC420CED2BFE132B00C22A55 /* GameScene.swift in Sources */,
 				C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */,
+				ECAF9ED42C205F330047706B /* GamePage.swift in Sources */,
 				C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */,
 				EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */,
 				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import DouShouQiModel
 
 public struct QuitGameButton: View {
     @State private var confirmationShown = false
@@ -30,6 +31,10 @@ public struct QuitGameButton: View {
             {
                 Button("Pursue the game later") {
                     withAnimation {
+                        // Save the game into
+//                        Task{
+//                            try! await Persistance.saveGame(withName: "game", andGame: nil)
+//                        }
                         self.isShowingGameView = false
                     }
                 }

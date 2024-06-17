@@ -17,8 +17,6 @@
         }
       }
     },
-    "Background Music" : {
-
     },
     "Choose your players" : {
       "localizations" : {
@@ -143,8 +141,6 @@
         }
       }
     },
-    "Music" : {
-
     },
     "PLAY" : {
       "extractionState" : "manual",
