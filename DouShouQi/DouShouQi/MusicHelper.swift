@@ -8,11 +8,37 @@
 import Foundation
 import AVFoundation
 
-class MusicHelper {
-    static var backgroundAudioPlayer: AVAudioPlayer?
-    static var audioPlayer: AVAudioPlayer?
+public class MusicHelper : ObservableObject{
+    private var backgroundAudioPlayer: AVAudioPlayer?
+    private var audioPlayer: AVAudioPlayer?
     
-    static func playBackgroundMusic() {
+    private static var musicHelper = MusicHelper()
+    
+    @Published public var backgroundMusic: Bool = false{
+        didSet{
+            if (backgroundMusic){
+                self.playBackgroundMusic()
+            }
+            else{
+                self.stopBackgroundMusic()
+            }
+        }
+    }
+    @Published public var soundEffects: Bool = true
+
+    private init(){
+        
+    }
+    
+    static func getMusicHelper() -> MusicHelper {
+        return self.musicHelper
+    }
+    
+    func playBackgroundMusic() {
+        guard backgroundMusic else{
+            return
+        }
+        
         let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3")!)
         do {
             backgroundAudioPlayer = try AVAudioPlayer(contentsOf:aSound as URL)
@@ -24,7 +50,10 @@ class MusicHelper {
         }
     }
     
-    static func playLaunchAppMusic() {
+    func playLaunchAppMusic() {
+        guard backgroundMusic else{
+            return
+        }
         let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "launchAppMusic", ofType: "mp3")!)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf:aSound as URL)
@@ -36,15 +65,18 @@ class MusicHelper {
         }
     }
     
-    static func stopBackgroundMusic(){
+    func stopBackgroundMusic(){
         backgroundAudioPlayer?.stop()
     }
     
-    static func stopSound(){
+    func stopSound(){
         audioPlayer?.stop()
     }
     
-    static func playSound(filePath: String) {
+    func playSound(filePath: String) {
+        guard soundEffects else{
+            return
+        }
         guard let path = Bundle.main.path(forResource: filePath, ofType: "mp3") else {
             return
         }

@@ -21,11 +21,12 @@ struct HistoricPage: View {
             }
         }
     }
-    
-    struct HistoricPage_Previews: PreviewProvider {
-        static var previews: some View {
-            HistoricPage(games: StubHistoric.getHistoric(), user: StubUser.getUsers()[3], users: StubUser.getUsers())
-            //HistoricPage(games: StubHistoric.getHistoric())
-        }
+}
+
+
+struct HistoricPage_Previews: PreviewProvider {
+    static var previews: some View {
+        HistoricPage(games: StubHistoric.getHistoric(), user: StubUser.getUsers()[3], users: StubUser.getUsers())
+        //HistoricPage(games: StubHistoric.getHistoric())
     }
 }

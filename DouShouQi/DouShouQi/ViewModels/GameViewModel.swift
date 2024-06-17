@@ -17,7 +17,8 @@ import AVFoundation
     @Published var playerTurn : String = ""
     @Published var moveText : String = ""
     @Published var gameScene: GameScene
-    var audioPlayer: AVAudioPlayer?
+    @ObservedObject var musicHelper = MusicHelper.getMusicHelper()
+    
     
     public init(game: Game?, gameScene: GameScene) {
         self.gameScene = gameScene
@@ -53,7 +54,9 @@ import AVFoundation
     }
     
     @MainActor func gameOver(board: Board, result: Result, player: Player?){
-        MusicHelper.playSound(filePath: "victory")
+
+        musicHelper.playSound(filePath: "victory")
+
     }
     
     @MainActor func boardChanged(board: Board){
@@ -69,7 +72,8 @@ import AVFoundation
                     $0.key == piece.animal
                 })
                 meeple?.value.parent?.removeChildren(in: [meeple!.value])
-                MusicHelper.playSound(filePath: "minecraft-eat")
+                musicHelper.playSound(filePath: "minecraft-eat")
+
             }
             return
         }
@@ -80,7 +84,8 @@ import AVFoundation
         })
         
         meeple?.value.cellPosition = CGPoint(x: move.rowOrigin, y: move.columnOrigin);
-        MusicHelper.playSound(filePath: "looser")
+        musicHelper.playSound(filePath: "looser")
+
     }
     
     func subscribesToMeeple(){

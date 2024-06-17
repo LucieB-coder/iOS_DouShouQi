@@ -17,6 +17,9 @@
         }
       }
     },
+    "Background Music" : {
+
+    },
     "Choose your players" : {
       "localizations" : {
         "en" : {
@@ -140,6 +143,9 @@
         }
       }
     },
+    "Music" : {
+
+    },
     "PLAY" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -246,6 +252,9 @@
           }
         }
       }
+    },
+    "Sound Effects" : {
+
     },
     "Theme" : {
       "localizations" : {

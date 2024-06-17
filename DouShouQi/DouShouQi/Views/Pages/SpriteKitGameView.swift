@@ -12,14 +12,14 @@ import DouShouQiModel
 struct SpriteKitGameView: View {
     
     @ObservedObject var gameViewModel: GameViewModel
-    
+    @ObservedObject var musicHelper = MusicHelper.getMusicHelper()
     var body: some View {
         VStack(alignment: .center){
             Text(gameViewModel.playerTurn)
             Text(gameViewModel.moveText)
             SpriteView(scene: gameViewModel.gameScene)
             .task {
-                MusicHelper.stopBackgroundMusic()
+                musicHelper.stopBackgroundMusic()
                 try! await gameViewModel.game?.start()
             }
         }
