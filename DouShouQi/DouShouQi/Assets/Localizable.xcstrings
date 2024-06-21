@@ -2,34 +2,34 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
+
+    },
+    "%@ won" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " "
+            "value" : "%@ a gagné"
           }
         }
       }
     },
-    },
-    "Choose your players" : {
+    "Background Music" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose your player"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Choix des joueurs"
+            "value" : "Musique de fond"
+          }
+        }
+      }
+    },
+    "Choose your players" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez vos joueurs"
           }
         }
       }
@@ -46,28 +46,16 @@
     },
     "Enter name" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entrez un nom"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Entrez un nom"
+            "value" : "Entrez un prénom"
           }
         }
       }
     },
     "Historic" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Historic"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -78,12 +66,6 @@
     },
     "Home" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Home"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -92,31 +74,8 @@
         }
       }
     },
-    "Last games" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Last games"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dernières parties"
-          }
-        }
-      }
-    },
     "Last Games" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Last Games"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -127,12 +86,6 @@
     },
     "Menu" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Menu"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -141,16 +94,28 @@
         }
       }
     },
-    },
-    "PLAY" : {
-      "extractionState" : "manual",
+    "Music" : {
       "localizations" : {
-        "en" : {
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PLAY"
+            "value" : "Musique"
           }
-        },
+        }
+      }
+    },
+    "NEW GAME" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NOUVELLE PARTIE"
+          }
+        }
+      }
+    },
+    "PLAY" : {
+      "localizations" : {
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -161,12 +126,6 @@
     },
     "Player %lld" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Player %lld"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -177,12 +136,6 @@
     },
     "Pursue a game" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pursue a game"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -203,12 +156,6 @@
     },
     "Quit the game" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quit the game"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -219,12 +166,6 @@
     },
     "Ranking" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ranking"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -235,12 +176,6 @@
     },
     "Settings" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -250,20 +185,21 @@
       }
     },
     "Sound Effects" : {
-
-    },
-    "Theme" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Theme"
-          }
-        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thème"
+            "value" : "Effets sonores"
+          }
+        }
+      }
+    },
+    "Theme" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode"
           }
         }
       }
