@@ -54,7 +54,8 @@ import AVFoundation
     }
     
     @MainActor func gameOver(board: Board, result: Result, player: Player?){
-        MusicHelper.playSound(filePath: "victory")
+        let musicHelper = MusicHelper.getMusicHelper()
+        musicHelper.playSound(filePath: "victory")
         isGameOver = true
     }
     
