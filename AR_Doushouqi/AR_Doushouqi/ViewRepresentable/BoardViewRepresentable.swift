@@ -8,23 +8,20 @@
 import Foundation
 import SwiftUI
 import RealityKit
+import DouShouQiModel
 
 struct BoardViewRepresentable : UIViewRepresentable {
     func makeUIView(context: Context) -> BoardARView {
         let board = BoardARView()
-        board.addMeepleOnTheBoard(modele3d: "lion", position: SIMD3<Float>(x: 0.105, y: 0.0, z: 0.135), owner: .player1, animal: .lion)
-        board.addMeepleOnTheBoard(modele3d: "tiger", position: SIMD3<Float>(x: -0.105, y: 0.0, z: 0.135), owner: .player1, animal: .tiger)
-        board.addMeepleOnTheBoard(modele3d: "cat", position: SIMD3<Float>(x: 0.105, y: 0.0, z: -0.135), owner: .player1, animal: .tiger)
-
+        let game = try! Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: "Test", andId: .player1)!, andPlayer2: HumanPlayer(withName: "Test", andId: .player2)!)
+        let gameViewModel = GameViewModel(game: game, boardArView: board)
+        gameViewModel.boardArView.displayBoard(game.board)
         
-        board.addMeepleOnTheBoard(modele3d: "wolf", position: SIMD3<Float>(x: -0.070, y: 0.0, z: 0.105), owner: .player1, animal: .wolf)
+        Task{
+            try! await gameViewModel.game!.start()
+        }
         
-        board.addMeepleOnTheBoard(modele3d: "dog", position: SIMD3<Float>(x: 0.070, y: 0.0, z: 0.105), owner: .player1, animal: .dog)
-        
-        board.addMeepleOnTheBoard(modele3d: "lion", position: SIMD3<Float>(x: -0.105, y: 0.0, z: -0.135), owner: .player1, animal: .lion)
-
-        
-        return board
+        return gameViewModel.boardArView
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {}

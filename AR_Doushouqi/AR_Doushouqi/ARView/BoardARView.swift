@@ -15,18 +15,17 @@ class BoardARView : ARView {
     
     var boardAnchor: AnchorEntity?
     
-    var observers : [(HasCollision, Transform, Transform) async -> Void] = []
+    var observers : [(HasCollision, Int, Int, Int, Int) async -> Void] = []
 
     @Published var pieces: [Owner : [Animal:HasCollision]] = [.player1 : [:], .player2 : [:]]
     
     var initialTransform: Transform = Transform()
     
-    let caseSize: Double = 0.300 * 0.1145
+    static let caseSize: Double = 0.1145
+    
+    static let offset = CGPoint(x:-4 * caseSize, y: 3 * caseSize)
 
 
-    // Offset initial
-    let initialXOffset: Double = 0.135
-    let initialYOffset: Double = -0.105
 
         required init(frame frameRect: CGRect) {
                 super.init(frame: frameRect)
@@ -49,22 +48,31 @@ class BoardARView : ARView {
         func addBoardToTheFloor(){
             boardAnchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
             if let boardAnchor = boardAnchor {
+                        boardAnchor.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
                         scene.addAnchor(boardAnchor)
                         let board = try? Entity.load(named: "board")
                         if let board {
                             boardAnchor.addChild(board)
-                            board.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
                         }
             }
         }
         
-        func addMeepleOnTheBoard(modele3d: String, position: SIMD3<Float>, owner: Owner, animal: Animal){
+    func addMeepleOnTheBoard(modele3d: String, x: Int, y: Int, owner: Owner, animal: Animal){
             let meeple = try? Entity.loadModel(named: modele3d)
             if let meeple {
+                let x_p = (Double(x) * BoardARView.caseSize + BoardARView.offset.x) * -1
+                let y_p = Double(y) * BoardARView.caseSize - BoardARView.offset.y
+                let position = SIMD3<Float>(x: Float(y_p), y: 0.0, z: Float(x_p))
                 meeple.position = position
-                meeple.scale = SIMD3<Float>(x: 0.3, y: 0.3, z: 0.3)
+                if owner == .player1 {
+                    let initialRotationQuat = simd_quatf(angle: -.pi / 2, axis: simd_float3(1, 0, 0))
+                    let rotationQuat180 = simd_quatf(angle: .pi, axis: simd_float3(0, 1, 0))
+                    let combinedRotation = simd_mul(rotationQuat180, initialRotationQuat)
+                    meeple.transform.rotation = combinedRotation
+                }
                 meeple.generateCollisionShapes(recursive: true)
                 boardAnchor?.addChild(meeple)
+                pieces[owner]![animal] = meeple
                 self.installGestures([.all], for: meeple as Entity & HasCollision).forEach { gestureRecognizer in
                     gestureRecognizer.addTarget(self, action: #selector(handleGesture(_:)))
                 }
@@ -79,46 +87,43 @@ class BoardARView : ARView {
                     self.initialTransform = entity.transform
                 case .ended:
                     let positions = entity.transform.translation
+                    let iniX = self.initialTransform.translation.z
+                    let iniY = self.initialTransform.translation.x
+                
+                    let clampedStartX = min(max(CGFloat(iniX), BoardARView.offset.x), -BoardARView.offset.x)
+                    let clampedStartY = min(max(CGFloat(iniY), -BoardARView.offset.y), BoardARView.offset.y)
+                
+                    let x_start = round(abs(Double(clampedStartX) + BoardARView.offset.x) / BoardARView.caseSize )
+                    let y_start = round(abs(Double(clampedStartY) + BoardARView.offset.y) / BoardARView.caseSize )
                                 
-                    let clampedX = min(max(positions.z, -0.135), 0.135)
-                    let clampedY = min(max(positions.x, -0.105), 0.105)
+                    let clampedX = min(max(CGFloat(positions.z), BoardARView.offset.x), -BoardARView.offset.x)
+                    let clampedY = min(max(CGFloat(positions.x), -BoardARView.offset.y), BoardARView.offset.y)
    
                     //Pixels to case
-                    var x_t = round(abs(initialXOffset - Double(clampedX)) * caseSize * 1000)
-                    var y_t = round(abs(initialYOffset - Double(clampedY)) * caseSize * 1000)
-                
-                    x_t = min(x_t, 8)
-                    y_t = min(y_t, 6)
-                
-                    print("\(x_t)/\(y_t)")
-                                
-                    let x_p = initialXOffset - x_t * caseSize
-                    let y_p = initialYOffset + y_t * caseSize
-                
-                    print("\(x_p)/\(y_p)")
-                
-                    x_t = round(abs(initialXOffset - x_p) * caseSize * 1000)
-                    y_t = round(abs(initialYOffset - y_p) * caseSize * 1000)
-                
-                    print("\(x_t)/\(y_t)")
-
-                
-                //await meepleMoved(meeple: entity, initialTransform: self.initialTransform, finalTransform: entity.transform)
-             
-                    entity.transform.translation.z = Float(x_p)
-                    entity.transform.translation.x = Float(y_p)
-            //entity.move(to: initialTransform, relativeTo: boardAnchor, duration: 1)
-                 
-                
-             
+                    let x_t = round(abs(Double(clampedX) + BoardARView.offset.x) / BoardARView.caseSize )
+                    let y_t = round(abs(Double(clampedY) + BoardARView.offset.y) / BoardARView.caseSize )
+        
+                    Task{
+                        await meepleMoved(meeple: entity, xStart: Int(x_start), yStart: Int(y_start), xEnd: Int(x_t), yEnd: Int(y_t))
+                    }
             default:
                 break
         }
     }
     
-    func meepleMoved(meeple: HasCollision, initialTransform: Transform, finalTransform: Transform) async{
+    func meepleMoved(meeple: HasCollision, xStart: Int, yStart: Int, xEnd: Int, yEnd: Int) async{
         for observer in self.observers{
-            await observer(meeple, initialTransform, finalTransform)
+            await observer(meeple, xStart, yStart, xEnd, yEnd)
+        }
+    }
+    
+    func displayBoard(_ board: Board) {
+        for row in 0..<board.nbRows {
+            for col in 0..<board.nbColumns {
+                if let p = board.grid[row][col].piece {
+                    self.addMeepleOnTheBoard(modele3d: "\(p.animal)", x: row, y: col, owner: p.owner, animal: p.animal)
+                }
+            }
         }
     }
 

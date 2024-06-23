@@ -28,8 +28,12 @@
 		5A5E162E2C1C7A0700E9F65F /* lion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A5E16262C1C7A0700E9F65F /* lion.usdz */; };
 		5A5E162F2C1C7A0700E9F65F /* rat.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A5E16272C1C7A0700E9F65F /* rat.usdz */; };
 		5AA8BBD52C1C1C570029D46D /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8BBD42C1C1C570029D46D /* pancakes.usdz */; };
-		C3EA6EEB2C206A4B00A7E500 /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EEA2C206A4B00A7E500 /* DSQ.xcframework */; };
-		C3EA6EEC2C206A4B00A7E500 /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EEA2C206A4B00A7E500 /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C32F37622C281F640002C8C3 /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EEA2C206A4B00A7E500 /* DSQ.xcframework */; };
+		C32F37632C281F640002C8C3 /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EEA2C206A4B00A7E500 /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C32F37682C282F660002C8C3 /* looser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C32F37652C282F660002C8C3 /* looser.mp3 */; };
+		C32F37692C282F660002C8C3 /* minecraft-eat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C32F37662C282F660002C8C3 /* minecraft-eat.mp3 */; };
+		C32F376A2C282F660002C8C3 /* victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C32F37672C282F660002C8C3 /* victory.mp3 */; };
+		C32F376C2C2834BA0002C8C3 /* MusicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32F376B2C2834BA0002C8C3 /* MusicHelper.swift */; };
 		C3EA6EF02C206CC500A7E500 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EA6EEF2C206CC500A7E500 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,13 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C3EA6EED2C206A4B00A7E500 /* Embed Frameworks */ = {
+		C32F37642C281F640002C8C3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C3EA6EEC2C206A4B00A7E500 /* DSQ.xcframework in Embed Frameworks */,
+				C32F37632C281F640002C8C3 /* DSQ.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +93,10 @@
 		5A5E16262C1C7A0700E9F65F /* lion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = lion.usdz; sourceTree = "<group>"; };
 		5A5E16272C1C7A0700E9F65F /* rat.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = rat.usdz; sourceTree = "<group>"; };
 		5AA8BBD42C1C1C570029D46D /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = pancakes.usdz; sourceTree = "<group>"; };
+		C32F37652C282F660002C8C3 /* looser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = looser.mp3; path = ../DouShouQi/DouShouQi/looser.mp3; sourceTree = "<group>"; };
+		C32F37662C282F660002C8C3 /* minecraft-eat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "minecraft-eat.mp3"; path = "../DouShouQi/DouShouQi/minecraft-eat.mp3"; sourceTree = "<group>"; };
+		C32F37672C282F660002C8C3 /* victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = victory.mp3; path = ../DouShouQi/DouShouQi/victory.mp3; sourceTree = "<group>"; };
+		C32F376B2C2834BA0002C8C3 /* MusicHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicHelper.swift; sourceTree = "<group>"; };
 		C3EA6EEA2C206A4B00A7E500 /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DSQ.xcframework; path = ../../SwiftUI_ARKit_2024/XCFramework/DSQ.xcframework; sourceTree = "<group>"; };
 		C3EA6EEF2C206CC500A7E500 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3EA6EEB2C206A4B00A7E500 /* DSQ.xcframework in Frameworks */,
+				C32F37622C281F640002C8C3 /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +130,10 @@
 		5A3B56EC2C19742900BDAD32 = {
 			isa = PBXGroup;
 			children = (
+				C32F376B2C2834BA0002C8C3 /* MusicHelper.swift */,
+				C32F37652C282F660002C8C3 /* looser.mp3 */,
+				C32F37662C282F660002C8C3 /* minecraft-eat.mp3 */,
+				C32F37672C282F660002C8C3 /* victory.mp3 */,
 				5A3B56F72C19742900BDAD32 /* AR_Doushouqi */,
 				5A3B570A2C19742B00BDAD32 /* AR_DoushouqiTests */,
 				5A3B57142C19742B00BDAD32 /* AR_DoushouqiUITests */,
@@ -249,7 +261,7 @@
 				5A3B56F12C19742900BDAD32 /* Sources */,
 				5A3B56F22C19742900BDAD32 /* Frameworks */,
 				5A3B56F32C19742900BDAD32 /* Resources */,
-				C3EA6EED2C206A4B00A7E500 /* Embed Frameworks */,
+				C32F37642C281F640002C8C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,15 +358,18 @@
 			files = (
 				5A5E162D2C1C7A0700E9F65F /* elephant.usdz in Resources */,
 				5A5E162F2C1C7A0700E9F65F /* rat.usdz in Resources */,
+				C32F37682C282F660002C8C3 /* looser.mp3 in Resources */,
 				5A5E16192C1C621700E9F65F /* board.usdz in Resources */,
 				5A5E16282C1C7A0700E9F65F /* wolf.usdz in Resources */,
 				5A5E162B2C1C7A0700E9F65F /* cat.usdz in Resources */,
 				5A5E162C2C1C7A0700E9F65F /* tiger.usdz in Resources */,
 				5A3B57302C1980AD00BDAD32 /* Images.xcassets in Resources */,
 				5A3B57022C19742B00BDAD32 /* Preview Assets.xcassets in Resources */,
+				C32F376A2C282F660002C8C3 /* victory.mp3 in Resources */,
 				5A3B56FF2C19742B00BDAD32 /* Assets.xcassets in Resources */,
 				5A5E16292C1C7A0700E9F65F /* dog.usdz in Resources */,
 				5AA8BBD52C1C1C570029D46D /* pancakes.usdz in Resources */,
+				C32F37692C282F660002C8C3 /* minecraft-eat.mp3 in Resources */,
 				5A5E162A2C1C7A0700E9F65F /* leopard.usdz in Resources */,
 				5A5E162E2C1C7A0700E9F65F /* lion.usdz in Resources */,
 			);
@@ -387,6 +402,7 @@
 				5A3B57282C19775B00BDAD32 /* BoardViewRepresentable.swift in Sources */,
 				5A3B56FD2C19742900BDAD32 /* Experience.rcproject in Sources */,
 				C3EA6EF02C206CC500A7E500 /* GameViewModel.swift in Sources */,
+				C32F376C2C2834BA0002C8C3 /* MusicHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
