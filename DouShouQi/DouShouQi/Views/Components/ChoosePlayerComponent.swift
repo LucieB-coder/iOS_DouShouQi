@@ -25,7 +25,7 @@ struct ChoosePlayerComponent: View {
                             viewModel.selectImage()
                         }
                 } else {
-                    Image(systemName: "photo.artframe.circle")
+                    Image(systemName: "camera.circle")
                         .resizable()
                         .frame(width: 40, height: 40)
                         .onTapGesture {
@@ -35,8 +35,11 @@ struct ChoosePlayerComponent: View {
             }
             .padding()
             .sheet(isPresented: $viewModel.showImagePicker) {
-                ImagePicker(selectedImage: $viewModel.selectedImage, sourceType: .photoLibrary)
+                ImagePicker(selectedImage: $viewModel.selectedImage, sourceType: .camera)
             }
+            .alert(isPresented: $viewModel.showNoFaceAlert) {
+               Alert(title: Text("No Face Detected"), message: Text("Please try again with a different photo."), dismissButton: .default(Text("OK")))
+           }
         }
     }
 }
