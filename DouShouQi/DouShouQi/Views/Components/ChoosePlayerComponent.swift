@@ -19,6 +19,7 @@ struct ChoosePlayerComponent: View {
                 if let selectedImage = viewModel.selectedImage {
                     Image(uiImage: selectedImage)
                         .resizable()
+                        .scaledToFill()
                         .frame(width: 40, height: 40)
                         .clipShape(Circle())
                         .onTapGesture {

@@ -131,6 +131,12 @@
         }
       }
     },
+    "No Face Detected" : {
+
+    },
+    "OK" : {
+
+    },
     "PLAY" : {
       "localizations" : {
         "fr" : {
@@ -160,6 +166,9 @@
           }
         }
       }
+    },
+    "Please try again with a different photo." : {
+
     },
     "Pursue a game" : {
       "localizations" : {
