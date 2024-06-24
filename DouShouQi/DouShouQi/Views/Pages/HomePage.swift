@@ -9,22 +9,26 @@ import SwiftUI
 import DouShouQiModel
 
 struct HomePage: View {
-    
+    @State var isShowingGameViewTest = false
+
     var body: some View {
+
         NavigationStack {
             VStack(alignment: .leading, spacing: 0) {
                 Text("Pursue a game").font(.title).padding(.horizontal).padding(.bottom,0).padding(.top,10)
-//                List(game, id: \.self) { game in
-//                    NavigationLink(value: game) {
-//                        UnfinishedGameComponent(opponentName: "", date: "")
-//                }.padding(.top,0)
-//                }
-//                .listStyle(DefaultListStyle())
                 .navigationTitle("Home")
+                
+                List(UnfinishedGameStub.getHistoric(), id: \.self) { game in
+                    UnfinishedGameComponent(date: "21-05-2024", player1Name: "\(game.game.players[.player1]!.name)", player2Name: "\(game.game.players[.player2]!.name)")
+                        .onTapGesture {
+                            isShowingGameViewTest = true
+                        }
+                        .fullScreenCover(isPresented: $isShowingGameViewTest, content: {
+                            AnyView(GamePage(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: game.game.players[.player1]!, andPlayer2: game.game.players[.player2]!), gameScene: GameScene(size: CGSize(width: 940, height: 740))), isShowingGameView: $isShowingGameViewTest))
+                        })
+                }
                 Spacer()
-//                .navigationDestination(for: String.self) { game in
-//                    SpriteKitGameView(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: IAPlayer(withName: "player1", andId: .player1)!, andPlayer2: IAPlayer(withName: "Player2", andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))))
-//                }
+
                 
                 ZStack {
                     Rectangle()
@@ -40,6 +44,8 @@ struct HomePage: View {
             .background(Color(UIColor.systemGroupedBackground))
         }
         .background(Color(UIColor.systemGroupedBackground))
+        
+        .padding()
     }
 }
 

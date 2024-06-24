@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct UnfinishedGameComponent: View {
-    //prendra une partie au final
-    var opponentName : String
     var date : String
+    var player1Name: String
+    var player2Name: String
     var body: some View {
         VStack{
             Spacer()
@@ -18,7 +18,7 @@ struct UnfinishedGameComponent: View {
                 Image("board").resizable().aspectRatio(contentMode: .fit).frame(height: 100)
                 VStack(alignment: .leading){
                     Text(date).padding(5)
-                    Text(opponentName).padding(5)
+                    Text("\(player1Name) VS \(player2Name)").padding(5)
                 }
             }
             Spacer()
@@ -28,6 +28,6 @@ struct UnfinishedGameComponent: View {
 
 struct UnfinishedGameComponent_Previews: PreviewProvider {
     static var previews: some View {
-        UnfinishedGameComponent(opponentName: "Cloporte", date: "21-05-2024")
+        UnfinishedGameComponent(date: "21-05-2024", player1Name: "Pifou", player2Name: "Pif")
     }
 }
