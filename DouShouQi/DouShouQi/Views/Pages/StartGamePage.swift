@@ -44,10 +44,10 @@ struct StartGamePage: View {
                 PlayButton()
             }
             .fullScreenCover(isPresented: $isShowingGameView, content: {
-               $playAR ?
-               BoardViewRepresentable()
+               playAR ?
+               AnyView(BoardViewRepresentable())
                :
-               GamePage(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: viewModel.player1ViewModel.playerName, andId: .player1)!, andPlayer2: viewModel.player2ViewModel.isBot ? RandomPlayer(withName: "IYAAAAAAAA", andId: .player2)! : HumanPlayer(withName: viewModel.player2ViewModel.playerName, andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))), isShowingGameView: $isShowingGameView)
+               AnyView(GamePage(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: viewModel.player1ViewModel.playerName, andId: .player1)!, andPlayer2: viewModel.player2ViewModel.isBot ? RandomPlayer(withName: "IYAAAAAAAA", andId: .player2)! : HumanPlayer(withName: viewModel.player2ViewModel.playerName, andId: .player2)!), gameScene: GameScene(size: CGSize(width: 940, height: 740))), isShowingGameView: $isShowingGameView))
 
             })
             .padding()
