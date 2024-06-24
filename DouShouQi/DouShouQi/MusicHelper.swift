@@ -51,7 +51,7 @@ public class MusicHelper : ObservableObject{
     }
     
     func playLaunchAppMusic() {
-        guard backgroundMusic else{
+        guard soundEffects else{
             return
         }
         let aSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "launchAppMusic", ofType: "mp3")!)

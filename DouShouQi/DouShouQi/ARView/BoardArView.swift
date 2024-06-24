@@ -69,6 +69,9 @@ class BoardARView : ARView {
                     let rotationQuat180 = simd_quatf(angle: .pi, axis: simd_float3(0, 1, 0))
                     let combinedRotation = simd_mul(rotationQuat180, initialRotationQuat)
                     meeple.transform.rotation = combinedRotation
+                    let material = SimpleMaterial(color: .blue, isMetallic: true) // Utilisez la couleur de votre choix
+                    meeple.model?.materials = [material]
+
                 }
                 meeple.generateCollisionShapes(recursive: true)
                 boardAnchor?.addChild(meeple)
