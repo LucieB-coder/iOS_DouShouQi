@@ -23,6 +23,21 @@
 		C35A89502C04630D002E537A /* ChooseOpponentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */; };
 		C35A89532C05B9D8002E537A /* ChoosePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */; };
 		C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89542C05BE20002E537A /* StartGameViewModel.swift */; };
+		C36A91752C2973B700D4E43D /* lion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A916B2C2973B700D4E43D /* lion.usdz */; };
+		C36A91762C2973B700D4E43D /* cat.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A916C2C2973B700D4E43D /* cat.usdz */; };
+		C36A91772C2973B700D4E43D /* board.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A916D2C2973B700D4E43D /* board.usdz */; };
+		C36A91782C2973B700D4E43D /* leopard.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A916E2C2973B700D4E43D /* leopard.usdz */; };
+		C36A91792C2973B700D4E43D /* elephant.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A916F2C2973B700D4E43D /* elephant.usdz */; };
+		C36A917A2C2973B700D4E43D /* pancakes.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A91702C2973B700D4E43D /* pancakes.usdz */; };
+		C36A917B2C2973B700D4E43D /* rat.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A91712C2973B700D4E43D /* rat.usdz */; };
+		C36A917C2C2973B700D4E43D /* tiger.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A91722C2973B700D4E43D /* tiger.usdz */; };
+		C36A917D2C2973B700D4E43D /* wolf.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A91732C2973B700D4E43D /* wolf.usdz */; };
+		C36A917E2C2973B700D4E43D /* dog.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C36A91742C2973B700D4E43D /* dog.usdz */; };
+		C36A91802C2973D200D4E43D /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36A917F2C2973D200D4E43D /* ARKit.framework */; };
+		C36A91822C2973DC00D4E43D /* RealityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36A91812C2973DC00D4E43D /* RealityKit.framework */; };
+		C36A91842C29740300D4E43D /* ARGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A91832C29740300D4E43D /* ARGameViewModel.swift */; };
+		C36A91872C29743E00D4E43D /* BoardViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A91862C29743E00D4E43D /* BoardViewRepresentable.swift */; };
+		C36A918A2C29745C00D4E43D /* BoardArView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36A91892C29745C00D4E43D /* BoardArView.swift */; };
 		C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38044682BF5FF7200C88345 /* RankingComponent.swift */; };
 		C380446B2BF607CA00C88345 /* RankingPositionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */; };
 		C380446D2BF608D900C88345 /* RankingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C380446C2BF608D900C88345 /* RankingPage.swift */; };
@@ -123,6 +138,21 @@
 		C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOpponentComponent.swift; sourceTree = "<group>"; };
 		C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewModel.swift; sourceTree = "<group>"; };
 		C35A89542C05BE20002E537A /* StartGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
+		C36A916B2C2973B700D4E43D /* lion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = lion.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/lion.usdz; sourceTree = "<group>"; };
+		C36A916C2C2973B700D4E43D /* cat.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cat.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/cat.usdz; sourceTree = "<group>"; };
+		C36A916D2C2973B700D4E43D /* board.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = board.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/board.usdz; sourceTree = "<group>"; };
+		C36A916E2C2973B700D4E43D /* leopard.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = leopard.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/leopard.usdz; sourceTree = "<group>"; };
+		C36A916F2C2973B700D4E43D /* elephant.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = elephant.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/elephant.usdz; sourceTree = "<group>"; };
+		C36A91702C2973B700D4E43D /* pancakes.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = pancakes.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/pancakes.usdz; sourceTree = "<group>"; };
+		C36A91712C2973B700D4E43D /* rat.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = rat.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/rat.usdz; sourceTree = "<group>"; };
+		C36A91722C2973B700D4E43D /* tiger.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = tiger.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/tiger.usdz; sourceTree = "<group>"; };
+		C36A91732C2973B700D4E43D /* wolf.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = wolf.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/wolf.usdz; sourceTree = "<group>"; };
+		C36A91742C2973B700D4E43D /* dog.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = dog.usdz; path = ../../../AR_Doushouqi/AR_Doushouqi/3dModels/dog.usdz; sourceTree = "<group>"; };
+		C36A917F2C2973D200D4E43D /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
+		C36A91812C2973DC00D4E43D /* RealityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealityKit.framework; path = System/Library/Frameworks/RealityKit.framework; sourceTree = SDKROOT; };
+		C36A91832C29740300D4E43D /* ARGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGameViewModel.swift; sourceTree = "<group>"; };
+		C36A91862C29743E00D4E43D /* BoardViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewRepresentable.swift; sourceTree = "<group>"; };
+		C36A91892C29745C00D4E43D /* BoardArView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardArView.swift; sourceTree = "<group>"; };
 		C38044682BF5FF7200C88345 /* RankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingComponent.swift; sourceTree = "<group>"; };
 		C380446A2BF607CA00C88345 /* RankingPositionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPositionComponent.swift; sourceTree = "<group>"; };
 		C380446C2BF608D900C88345 /* RankingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingPage.swift; sourceTree = "<group>"; };
@@ -166,7 +196,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36A91802C2973D200D4E43D /* ARKit.framework in Frameworks */,
 				C3A5FBA72C06252300835012 /* ChtuluDSQ.framework in Frameworks */,
+				C36A91822C2973DC00D4E43D /* RealityKit.framework in Frameworks */,
 				ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,8 +227,42 @@
 				C35A89542C05BE20002E537A /* StartGameViewModel.swift */,
 				C3829AF52C0F50ED001243C2 /* GameViewModel.swift */,
 				ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */,
+				C36A91832C29740300D4E43D /* ARGameViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C36A91682C29739F00D4E43D /* 3dModels */ = {
+			isa = PBXGroup;
+			children = (
+				C36A916D2C2973B700D4E43D /* board.usdz */,
+				C36A916C2C2973B700D4E43D /* cat.usdz */,
+				C36A91742C2973B700D4E43D /* dog.usdz */,
+				C36A916F2C2973B700D4E43D /* elephant.usdz */,
+				C36A916E2C2973B700D4E43D /* leopard.usdz */,
+				C36A916B2C2973B700D4E43D /* lion.usdz */,
+				C36A91702C2973B700D4E43D /* pancakes.usdz */,
+				C36A91712C2973B700D4E43D /* rat.usdz */,
+				C36A91722C2973B700D4E43D /* tiger.usdz */,
+				C36A91732C2973B700D4E43D /* wolf.usdz */,
+			);
+			path = 3dModels;
+			sourceTree = "<group>";
+		};
+		C36A91852C29742100D4E43D /* ViewRepresentables */ = {
+			isa = PBXGroup;
+			children = (
+				C36A91862C29743E00D4E43D /* BoardViewRepresentable.swift */,
+			);
+			path = ViewRepresentables;
+			sourceTree = "<group>";
+		};
+		C36A91882C29745100D4E43D /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				C36A91892C29745C00D4E43D /* BoardArView.swift */,
+			);
+			path = ARView;
 			sourceTree = "<group>";
 		};
 		C3B99D792C06247A006FC026 /* Products */ = {
@@ -242,6 +308,9 @@
 		EC4FBDFC2BF5FA9D00F5410C /* DouShouQi */ = {
 			isa = PBXGroup;
 			children = (
+				C36A91882C29745100D4E43D /* ARView */,
+				C36A91852C29742100D4E43D /* ViewRepresentables */,
+				C36A91682C29739F00D4E43D /* 3dModels */,
 				C310287C2C1C76880050DB24 /* jour.mp3 */,
 				C310287D2C1C76880050DB24 /* nuit.mp3 */,
 				C31028762C1C70D40050DB24 /* launchAppMusic.mp3 */,
@@ -282,6 +351,8 @@
 		EC4FBE2C2BF6003F00F5410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C36A91812C2973DC00D4E43D /* RealityKit.framework */,
+				C36A917F2C2973D200D4E43D /* ARKit.framework */,
 				ECF915032C05CBE10068C5BB /* DSQ.xcframework */,
 			);
 			name = Frameworks;
@@ -488,17 +559,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36A91772C2973B700D4E43D /* board.usdz in Resources */,
 				EC4FBE432BFCC23600F5410C /* Preview Assets.xcassets in Resources */,
+				C36A917E2C2973B700D4E43D /* dog.usdz in Resources */,
 				C310287F2C1C76880050DB24 /* nuit.mp3 in Resources */,
+				C36A917A2C2973B700D4E43D /* pancakes.usdz in Resources */,
 				EC6BFD212C25709C00D1F623 /* Localizable.xcstrings in Resources */,
+				C36A91752C2973B700D4E43D /* lion.usdz in Resources */,
+				C36A917B2C2973B700D4E43D /* rat.usdz in Resources */,
 				C31028752C1C6EDE0050DB24 /* backgroundMusic.mp3 in Resources */,
 				EC4FBE3E2BFCBE4700F5410C /* Colors.xcassets in Resources */,
+				C36A91782C2973B700D4E43D /* leopard.usdz in Resources */,
+				C36A917D2C2973B700D4E43D /* wolf.usdz in Resources */,
 				C310286B2C1C6BE40050DB24 /* victory.mp3 in Resources */,
 				C310286F2C1C6D460050DB24 /* looser.mp3 in Resources */,
 				EC4FBE402BFCBE5200F5410C /* Images.xcassets in Resources */,
+				C36A917C2C2973B700D4E43D /* tiger.usdz in Resources */,
 				C31028772C1C70D40050DB24 /* launchAppMusic.mp3 in Resources */,
+				C36A91762C2973B700D4E43D /* cat.usdz in Resources */,
 				EC4FBE022BF5FA9E00F5410C /* Assets.xcassets in Resources */,
 				C310287E2C1C76880050DB24 /* jour.mp3 in Resources */,
+				C36A91792C2973B700D4E43D /* elephant.usdz in Resources */,
 				C31028712C1C6D990050DB24 /* minecraft-eat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +616,7 @@
 				C3829AF62C0F50ED001243C2 /* GameViewModel.swift in Sources */,
 				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
 				C31028732C1C6E640050DB24 /* MusicHelper.swift in Sources */,
+				C36A91872C29743E00D4E43D /* BoardViewRepresentable.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
 				EC886AE72C0622D300266CB8 /* SettingsPage.swift in Sources */,
 				EC4FBE392BFC94E800F5410C /* MenuPage.swift in Sources */,
@@ -543,6 +625,7 @@
 				ECAF9EC32C1C68410047706B /* QuitGameButton.swift in Sources */,
 				5A5EEF122C0469E2005AD9C5 /* HistoricPage.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
+				C36A91842C29740300D4E43D /* ARGameViewModel.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
 				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
 				ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */,
@@ -556,6 +639,7 @@
 				ECAF9ED42C205F330047706B /* GamePage.swift in Sources */,
 				C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */,
 				EC420CEF2BFE167400C22A55 /* SpriteMeeple.swift in Sources */,
+				C36A918A2C29745C00D4E43D /* BoardArView.swift in Sources */,
 				C380446F2BF60E0000C88345 /* PlayerPage.swift in Sources */,
 				EC420CEA2BFE12FD00C22A55 /* SpriteKitGameView.swift in Sources */,
 				C38E28AE2C045CD800D3046A /* StartGamePage.swift in Sources */,
@@ -724,8 +808,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
+				DEVELOPMENT_TEAM = 7448M944LP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARKit I guess ?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -737,7 +823,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.DouShouQi;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.ChthluDSQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -753,8 +839,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
+				DEVELOPMENT_TEAM = 7448M944LP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "ARKit I guess ?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -766,7 +854,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.DouShouQi;
+				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.ChthluDSQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
