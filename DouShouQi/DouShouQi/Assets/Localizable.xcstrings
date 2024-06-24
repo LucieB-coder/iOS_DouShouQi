@@ -2,7 +2,14 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " "
+          }
+        }
+      }
     },
     "%@ won" : {
       "localizations" : {
@@ -120,6 +127,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "JOUER"
+          }
+        }
+      }
+    },
+    "Play in AR" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jouer en RA"
           }
         }
       }

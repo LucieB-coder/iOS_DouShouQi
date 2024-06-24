@@ -67,7 +67,6 @@
 		EC6BFD212C25709C00D1F623 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EC6BFD202C25709C00D1F623 /* Localizable.xcstrings */; };
 		EC886AE72C0622D300266CB8 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC886AE62C0622D300266CB8 /* SettingsPage.swift */; };
 		ECAF9EC32C1C68410047706B /* QuitGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9EC22C1C68410047706B /* QuitGameButton.swift */; };
-		ECAF9ECB2C1C6DB10047706B /* SaveGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */; };
 		ECAF9ED42C205F330047706B /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED32C205F330047706B /* GamePage.swift */; };
 		ECAF9ED82C2066DE0047706B /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED72C2066DE0047706B /* GameOver.swift */; };
 		ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6CC552C045FBE00F5F091 /* PlayButton.swift */; };
@@ -184,7 +183,6 @@
 		EC6BFD202C25709C00D1F623 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		EC886AE62C0622D300266CB8 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		ECAF9EC22C1C68410047706B /* QuitGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitGameButton.swift; sourceTree = "<group>"; };
-		ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGameViewModel.swift; sourceTree = "<group>"; };
 		ECAF9ED32C205F330047706B /* GamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		ECAF9ED72C2066DE0047706B /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		ECF6CC552C045FBE00F5F091 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */,
 				C35A89542C05BE20002E537A /* StartGameViewModel.swift */,
 				C3829AF52C0F50ED001243C2 /* GameViewModel.swift */,
-				ECAF9ECA2C1C6DB10047706B /* SaveGameViewModel.swift */,
 				C36A91832C29740300D4E43D /* ARGameViewModel.swift */,
 			);
 			path = ViewModels;
@@ -606,7 +603,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A11F42F2BFCD16500199CE6 /* HomePage.swift in Sources */,
-				ECAF9ECB2C1C6DB10047706B /* SaveGameViewModel.swift in Sources */,
 				5A5EEF102C04656F005AD9C5 /* PlayerDataComponent.swift in Sources */,
 				5A11F42F2BFCD16500199CE6 /* HomePage.swift in Sources */,
 				EC4FBE002BF5FA9D00F5410C /* ContentView.swift in Sources */,
