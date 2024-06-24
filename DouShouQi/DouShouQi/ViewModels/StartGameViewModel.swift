@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 import UIKit
 
-public class StartGameViewModel: ObservableObject{
+@MainActor public class StartGameViewModel: ObservableObject{
     @Published var player1ViewModel = ChoosePlayerViewModel(playerName: "Player1")
     @Published var player2ViewModel = ChoosePlayerViewModel(playerName: "Player2", isBot: true)
 }

@@ -16,8 +16,8 @@ struct ChoosePlayerComponent: View {
                 TextField("Enter name", text: $viewModel.playerName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Spacer()
-                if let selectedImage = viewModel.selectedImage {
-                    Image(uiImage: selectedImage)
+                if let croppedImage = viewModel.croppedImage {
+                    Image(uiImage: croppedImage)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 40, height: 40)
@@ -41,6 +41,10 @@ struct ChoosePlayerComponent: View {
             .alert(isPresented: $viewModel.showNoFaceAlert) {
                Alert(title: Text("No Face Detected"), message: Text("Please try again with a different photo."), dismissButton: .default(Text("OK")))
            }
+            .alert(isPresented: $viewModel.showErrorAlert) {
+               Alert(title: Text("An error occured"), message: Text("Please try again."), dismissButton: .default(Text("OK")))
+           }
+
         }
     }
 }

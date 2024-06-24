@@ -31,6 +31,16 @@
         }
       }
     },
+    "An error occured" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une erreur est survenue"
+          }
+        }
+      }
+    },
     "Background Music" : {
       "localizations" : {
         "fr" : {
@@ -132,10 +142,24 @@
       }
     },
     "No Face Detected" : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun visage n'a été détecté"
+          }
+        }
+      }
     },
     "OK" : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
     },
     "PLAY" : {
       "localizations" : {
@@ -168,7 +192,24 @@
       }
     },
     "Please try again with a different photo." : {
-
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veuillez ressayer avec une autre photo"
+          }
+        }
+      }
+    },
+    "Please try again." : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veuillez ressayer"
+          }
+        }
+      }
     },
     "Pursue a game" : {
       "localizations" : {

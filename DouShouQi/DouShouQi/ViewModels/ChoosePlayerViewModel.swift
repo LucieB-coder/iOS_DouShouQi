@@ -3,8 +3,10 @@ import Vision
 import Combine
 import UIKit
 
+@MainActor
 class ChoosePlayerViewModel : ObservableObject {
     @Published var showImagePicker: Bool = false
+    @Published var croppedImage: UIImage? = nil
     @Published var selectedImage: UIImage? = nil {
         didSet {
             if let image = selectedImage {
@@ -15,6 +17,7 @@ class ChoosePlayerViewModel : ObservableObject {
     @Published var playerName: String
     @Published var isBot: Bool
     @Published var showNoFaceAlert: Bool = false
+    @Published var showErrorAlert: Bool = false
     
     init(playerName: String, isBot: Bool = false){
         self.playerName = playerName
@@ -29,51 +32,81 @@ class ChoosePlayerViewModel : ObservableObject {
     func selectImage() {
         showImagePicker = true
     }
-    
+
     private func detectFace(in image: UIImage) {
-        guard let cgImage = image.cgImage else { return }
+        guard let cgImage = image.cgImage else {
+            self.showErrorAlert = true
+            self.croppedImage = image
+            return
+        }
+
+        // Correct the orientation of the image before passing it to Vision
+        let orientedImage = UIImage(cgImage: cgImage, scale: image.scale, orientation: .up)
 
         let request = VNDetectFaceRectanglesRequest { (request, error) in
-            if let error = error {
-                self.showNoFaceAlert = true
+            if error != nil {
+                self.showErrorAlert = true
+                self.croppedImage = image
+                return
+            }
+            
+            guard request.results != nil else{
+                self.showErrorAlert = true
+                self.croppedImage = image
                 return
             }
 
+            
             guard let results = request.results as? [VNFaceObservation], !results.isEmpty else {
-                self.showNoFaceAlert = true
+                DispatchQueue.main.async {
+                    self.showNoFaceAlert = true
+                    self.showImagePicker = false
+                    self.croppedImage = image
+                }
                 return
             }
 
             if let firstFace = results.first {
-                self.cropImage(to: firstFace.boundingBox, in: image)
+                self.cropImage(to: firstFace.boundingBox, in: orientedImage)
             }
         }
 
-        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
+        let handler = VNImageRequestHandler(cgImage: orientedImage.cgImage!, options: [:])
         do {
             try handler.perform([request])
         } catch {
-            print("Failed to perform request: \(error)")
-            self.showNoFaceAlert = true
+            self.showErrorAlert = true
         }
     }
-    
+
     private func cropImage(to boundingBox: CGRect, in image: UIImage) {
+        // Calculate the cropping rectangle in the CGImage coordinate space (origin at bottom left corner)
         let width = boundingBox.width * CGFloat(image.size.width)
         let height = boundingBox.height * CGFloat(image.size.height)
         let x = boundingBox.origin.x * CGFloat(image.size.width)
         let y = (1 - boundingBox.origin.y - boundingBox.height) * CGFloat(image.size.height)
 
-        let croppingRect = CGRect(x: x, y: y, width: width, height: height).integral
+        let cropRect = CGRect(x: x, y: y, width: width, height: height).integral
 
-        guard let cgImage = image.cgImage?.cropping(to: croppingRect) else {
-            self.showNoFaceAlert = true
+        guard let sourceCGImage = image.cgImage else {
+            self.showErrorAlert = true
             return
         }
 
-        let croppedImage = UIImage(cgImage: cgImage)
+        guard let croppedCGImage = sourceCGImage.cropping(to: cropRect) else {
+            self.showErrorAlert = true
+            return
+        }
+
+        // Create a UIImage from the cropped CGImage
+        let croppedImage = UIImage(
+            cgImage: croppedCGImage,
+            scale: image.scale,
+            orientation: .right // Ensure the cropped image is oriented correctly
+        )
+
         DispatchQueue.main.async {
-            self.selectedImage = croppedImage
+            self.croppedImage = croppedImage
         }
     }
 
