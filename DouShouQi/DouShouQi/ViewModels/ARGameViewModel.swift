@@ -16,6 +16,9 @@ import AVFoundation
 @MainActor class ARGameViewModel: ObservableObject{
     @Published var game: Game?
     @Published var boardArView: BoardARView
+    @Published var isGameOver: Bool = false
+    @Published var playerTurn : String = ""
+
 
     
     public init(game: Game?, boardArView: BoardARView) {
@@ -34,6 +37,7 @@ import AVFoundation
     
     
     @MainActor func playerTurn(board: Board, player: Player) async{
+        playerTurn = "\(player.name)"
         if (player is IAPlayer){
             do{
                 _ = try await player.chooseMove(in: board, with: self.game!.rules)
@@ -47,6 +51,7 @@ import AVFoundation
     @MainActor func gameOver(board: Board, result: Result, player: Player?){
         let musicHelper = MusicHelper.getMusicHelper()
         musicHelper.playSound(filePath: "victory")
+        isGameOver = true
     }
     
     @MainActor func moveChosen(board: Board, move: Move, player: Player) -> Void{
@@ -100,11 +105,16 @@ import AVFoundation
     
     @MainActor func meepleMoved(meeple: HasCollision, xStart: Int, yStart: Int, xEnd: Int, yEnd: Int) async{
         let piece = game!.board.grid[xStart][yStart].piece
+        
         guard piece != nil else{
-            let x_p = (Double(xStart) * BoardARView.caseSize + BoardARView.offset.x) * -1
-            let y_p = Double(yStart) * BoardARView.caseSize - BoardARView.offset.y
-            meeple.transform.translation.z = Float(x_p)
-            meeple.transform.translation.x = Float(y_p)
+            
+            if let rowAndCol: (Int, Int) = findPieceByMeeple(meeple: meeple){
+                let x_p = (Double(rowAndCol.0) * BoardARView.caseSize + BoardARView.offset.x) * -1
+                let y_p = Double(rowAndCol.1) * BoardARView.caseSize - BoardARView.offset.y
+                meeple.transform.translation.z = Float(x_p)
+                meeple.transform.translation.x = Float(y_p)
+            }
+        
             return
         }
         let owner = piece!.owner
@@ -122,6 +132,19 @@ import AVFoundation
         }
     }
     
+    
+    @MainActor func findPieceByMeeple(meeple: HasCollision) -> (Int, Int)?{
+        for row in 0..<game!.board.nbRows {
+            for col in 0..<game!.board.nbColumns {
+                if let p = game!.board.grid[row][col].piece {
+                    if ("\(p.animal)/\(p.owner)" == meeple.name){
+                        return (row, col)
+                    }
+                }
+            }
+        }
+        return nil
+    }
      
 }
 

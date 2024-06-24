@@ -64,14 +64,18 @@ class BoardARView : ARView {
                 let y_p = Double(y) * BoardARView.caseSize - BoardARView.offset.y
                 let position = SIMD3<Float>(x: Float(y_p), y: 0.0, z: Float(x_p))
                 meeple.position = position
+                meeple.name = "\(animal)/\(owner)"
                 if owner == .player1 {
                     let initialRotationQuat = simd_quatf(angle: -.pi / 2, axis: simd_float3(1, 0, 0))
                     let rotationQuat180 = simd_quatf(angle: .pi, axis: simd_float3(0, 1, 0))
                     let combinedRotation = simd_mul(rotationQuat180, initialRotationQuat)
                     meeple.transform.rotation = combinedRotation
-                    let material = SimpleMaterial(color: .blue, isMetallic: true) // Utilisez la couleur de votre choix
+                    let material = SimpleMaterial(color: .blueGreen, isMetallic: true)
                     meeple.model?.materials = [material]
-
+                }
+                else{
+                    let material = SimpleMaterial(color: .pinkPrimary, isMetallic: true)
+                    meeple.model?.materials = [material]
                 }
                 meeple.generateCollisionShapes(recursive: true)
                 boardAnchor?.addChild(meeple)

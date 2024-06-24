@@ -11,17 +11,19 @@ import RealityKit
 import DouShouQiModel
 
 struct BoardViewRepresentable : UIViewRepresentable {
+    
+    @ObservedObject var arGameViewModel: ARGameViewModel
+
+    init(arGameViewModel: ARGameViewModel){
+        self.arGameViewModel = arGameViewModel
+    }
+    
     func makeUIView(context: Context) -> BoardARView {
-        let board = BoardARView()
-        let game = try! Game(withRules: ClassicRules(), andPlayer1: HumanPlayer(withName: "Test", andId: .player1)!, andPlayer2: HumanPlayer(withName: "Test", andId: .player2)!)
-        let gameViewModel = ARGameViewModel(game: game, boardArView: board)
-        gameViewModel.boardArView.displayBoard(game.board)
-        
+        arGameViewModel.boardArView.displayBoard(arGameViewModel.game!.board)
         Task{
-            try! await gameViewModel.game!.start()
+            try! await arGameViewModel.game!.start()
         }
-        
-        return gameViewModel.boardArView
+        return arGameViewModel.boardArView
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {}

@@ -20,6 +20,7 @@
 		C31028772C1C70D40050DB24 /* launchAppMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31028762C1C70D40050DB24 /* launchAppMusic.mp3 */; };
 		C310287E2C1C76880050DB24 /* jour.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310287C2C1C76880050DB24 /* jour.mp3 */; };
 		C310287F2C1C76880050DB24 /* nuit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310287D2C1C76880050DB24 /* nuit.mp3 */; };
+		C31D43052C29A1AA00DCFA75 /* ARKitGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D43042C29A1AA00DCFA75 /* ARKitGamePage.swift */; };
 		C35A89502C04630D002E537A /* ChooseOpponentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */; };
 		C35A89532C05B9D8002E537A /* ChoosePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */; };
 		C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89542C05BE20002E537A /* StartGameViewModel.swift */; };
@@ -134,6 +135,7 @@
 		C31028762C1C70D40050DB24 /* launchAppMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = launchAppMusic.mp3; sourceTree = "<group>"; };
 		C310287C2C1C76880050DB24 /* jour.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jour.mp3; sourceTree = "<group>"; };
 		C310287D2C1C76880050DB24 /* nuit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nuit.mp3; sourceTree = "<group>"; };
+		C31D43042C29A1AA00DCFA75 /* ARKitGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitGamePage.swift; sourceTree = "<group>"; };
 		C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOpponentComponent.swift; sourceTree = "<group>"; };
 		C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewModel.swift; sourceTree = "<group>"; };
 		C35A89542C05BE20002E537A /* StartGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 				5A5EEF112C0469E2005AD9C5 /* HistoricPage.swift */,
 				EC886AE62C0622D300266CB8 /* SettingsPage.swift */,
 				ECAF9ED32C205F330047706B /* GamePage.swift */,
+				C31D43042C29A1AA00DCFA75 /* ARKitGamePage.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				C380446D2BF608D900C88345 /* RankingPage.swift in Sources */,
 				ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */,
 				C38044732BFC966D00C88345 /* HistoricComponent.swift in Sources */,
+				C31D43052C29A1AA00DCFA75 /* ARKitGamePage.swift in Sources */,
 				C38044692BF5FF7200C88345 /* RankingComponent.swift in Sources */,
 				ECAF9ED82C2066DE0047706B /* GameOver.swift in Sources */,
 				EC4FBDFE2BF5FA9D00F5410C /* DouShouQiApp.swift in Sources */,
