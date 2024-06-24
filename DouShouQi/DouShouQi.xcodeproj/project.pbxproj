@@ -12,6 +12,8 @@
 		5A3A0A752C09CC4800917B0F /* ResultComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3A0A742C09CC4800917B0F /* ResultComponent.swift */; };
 		5A5EEF102C04656F005AD9C5 /* PlayerDataComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EEF0F2C04656F005AD9C5 /* PlayerDataComponent.swift */; };
 		5A5EEF122C0469E2005AD9C5 /* HistoricPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EEF112C0469E2005AD9C5 /* HistoricPage.swift */; };
+		5A5EEF1D2C29B70F00747782 /* UnfinishedGameStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5EEF1C2C29B70F00747782 /* UnfinishedGameStub.swift */; };
+		5AB7C92B2C29BF1F00AC335F /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB7C92A2C29BF1E00AC335F /* DSQ.xcframework */; };
 		C310286B2C1C6BE40050DB24 /* victory.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310286A2C1C6BE40050DB24 /* victory.mp3 */; };
 		C310286F2C1C6D460050DB24 /* looser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310286E2C1C6D460050DB24 /* looser.mp3 */; };
 		C31028712C1C6D990050DB24 /* minecraft-eat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C31028702C1C6D990050DB24 /* minecraft-eat.mp3 */; };
@@ -71,8 +73,6 @@
 		ECAF9ED42C205F330047706B /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED32C205F330047706B /* GamePage.swift */; };
 		ECAF9ED82C2066DE0047706B /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAF9ED72C2066DE0047706B /* GameOver.swift */; };
 		ECF6CC562C045FBE00F5F091 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6CC552C045FBE00F5F091 /* PlayButton.swift */; };
-		ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; };
-		ECF915082C05CC360068C5BB /* DSQ.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECF915032C05CBE10068C5BB /* DSQ.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,7 +114,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C3A5FBA82C06252300835012 /* ChtuluDSQ.framework in Embed Frameworks */,
-				ECF915082C05CC360068C5BB /* DSQ.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +126,8 @@
 		5A3A0A742C09CC4800917B0F /* ResultComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultComponent.swift; sourceTree = "<group>"; };
 		5A5EEF0F2C04656F005AD9C5 /* PlayerDataComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDataComponent.swift; sourceTree = "<group>"; };
 		5A5EEF112C0469E2005AD9C5 /* HistoricPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricPage.swift; sourceTree = "<group>"; };
+		5A5EEF1C2C29B70F00747782 /* UnfinishedGameStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnfinishedGameStub.swift; sourceTree = "<group>"; };
+		5AB7C92A2C29BF1E00AC335F /* DSQ.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DSQ.xcframework; path = ../../SwiftUI_ARKit_2024/XCFramework/DSQ.xcframework; sourceTree = "<group>"; };
 		C310286A2C1C6BE40050DB24 /* victory.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = victory.mp3; sourceTree = "<group>"; };
 		C310286E2C1C6D460050DB24 /* looser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = looser.mp3; sourceTree = "<group>"; };
 		C31028702C1C6D990050DB24 /* minecraft-eat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "minecraft-eat.mp3"; sourceTree = "<group>"; };
@@ -198,8 +199,8 @@
 			files = (
 				C36A91802C2973D200D4E43D /* ARKit.framework in Frameworks */,
 				C3A5FBA72C06252300835012 /* ChtuluDSQ.framework in Frameworks */,
+				5AB7C92B2C29BF1F00AC335F /* DSQ.xcframework in Frameworks */,
 				C36A91822C2973DC00D4E43D /* RealityKit.framework in Frameworks */,
-				ECF915072C05CC360068C5BB /* DSQ.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +221,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A5EEF1B2C29B6F000747782 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				5A5EEF1C2C29B70F00747782 /* UnfinishedGameStub.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
 		C35A89512C05B9C3002E537A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +326,7 @@
 				C31028702C1C6D990050DB24 /* minecraft-eat.mp3 */,
 				C310286E2C1C6D460050DB24 /* looser.mp3 */,
 				C310286A2C1C6BE40050DB24 /* victory.mp3 */,
+				5A5EEF1B2C29B6F000747782 /* Persistance */,
 				C35A89512C05B9C3002E537A /* ViewModels */,
 				EC4FBE412BFCC20C00F5410C /* Preview Content */,
 				EC4FBE3C2BFCBE2C00F5410C /* Assets */,
@@ -350,6 +360,7 @@
 		EC4FBE2C2BF6003F00F5410C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AB7C92A2C29BF1E00AC335F /* DSQ.xcframework */,
 				C36A91812C2973DC00D4E43D /* RealityKit.framework */,
 				C36A917F2C2973D200D4E43D /* ARKit.framework */,
 				ECF915032C05CBE10068C5BB /* DSQ.xcframework */,
@@ -613,6 +624,7 @@
 				EC4FBE312BF60A4700F5410C /* Colors.swift in Sources */,
 				EC4FBE372BFC942B00F5410C /* TabViewLayout.swift in Sources */,
 				C3829AF62C0F50ED001243C2 /* GameViewModel.swift in Sources */,
+				5A5EEF1D2C29B70F00747782 /* UnfinishedGameStub.swift in Sources */,
 				EC4FBE3B2BFC9A1E00F5410C /* MenuItem.swift in Sources */,
 				C31028732C1C6E640050DB24 /* MusicHelper.swift in Sources */,
 				C36A91872C29743E00D4E43D /* BoardViewRepresentable.swift in Sources */,
@@ -805,10 +817,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
-				DEVELOPMENT_TEAM = 7448M944LP;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 67U885533Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ARKit I guess ?";
@@ -823,8 +837,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.ChthluDSQ;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.uca.iut.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = tpiOS_2024_06_21_off;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,10 +852,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
-				DEVELOPMENT_TEAM = 7448M944LP;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 67U885533Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "ARKit I guess ?";
@@ -854,8 +872,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = fr.uca.iut.ChthluDSQ;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.uca.iut.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = tpiOS_2024_06_21_off;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

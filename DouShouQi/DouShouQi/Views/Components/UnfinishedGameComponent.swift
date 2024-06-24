@@ -6,19 +6,18 @@
 //
 
 import SwiftUI
+import DouShouQiModel
 
 struct UnfinishedGameComponent: View {
     //prendra une partie au final
-    var opponentName : String
-    var date : String
+    var game : Game
     var body: some View {
         VStack{
             Spacer()
             HStack{
                 Image("board").resizable().aspectRatio(contentMode: .fit).frame(height: 100)
                 VStack(alignment: .leading){
-                    Text(date).padding(5)
-                    Text(opponentName).padding(5)
+                    Text(game.players.description).padding(5)
                 }
             }
             Spacer()
@@ -28,6 +27,6 @@ struct UnfinishedGameComponent: View {
 
 struct UnfinishedGameComponent_Previews: PreviewProvider {
     static var previews: some View {
-        UnfinishedGameComponent(opponentName: "Cloporte", date: "21-05-2024")
+        UnfinishedGameComponent(game: UnfinishedGameStub.getHistoric()[1])
     }
 }
