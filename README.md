@@ -57,6 +57,10 @@ The following text is a detailed explanation of the video, which presents our sc
 There are a few bugs we are aware of in the app, here they are:
 * When you want to continue a game (from the home page), the pieces of the player who played last are buggy (you can move them as you want, without them being replaced correctly on the board).
 * The button "Pursue the game later" when you want to go back from a game does nothing on click. We haven't implemented the logic to save a game in the stub.
+* When you take a photo of a player, the alerts are not correctly displayed when an error occured or when there are no faces detected
+* There isn't any authentification system, you can only be "Pifou D'Amour"
+* Your profile is not editable
+* The finished games are not saved in the historic and does not influence the ranking
 
 ## What is this?
 
