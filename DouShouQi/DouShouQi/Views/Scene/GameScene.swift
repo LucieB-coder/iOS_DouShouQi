@@ -10,7 +10,6 @@ import SpriteKit
 import DouShouQiModel
 
 class GameScene : SKScene {
-    var game: Game = try! Game(withRules: ClassicRules(), andPlayer1: RandomPlayer(withName: "Rory", andId: .player1)!, andPlayer2: RandomPlayer(withName: "Guillaume", andId: .player2)!)
     
     @Published var pieces: [Owner : [Animal:SpriteMeeple]] = [
         .player1: [
@@ -50,7 +49,6 @@ class GameScene : SKScene {
             self.addChild(piece)
         }
         
-        displayBoard(game.board)
     }
     
     func displayBoard(_ board: Board) {

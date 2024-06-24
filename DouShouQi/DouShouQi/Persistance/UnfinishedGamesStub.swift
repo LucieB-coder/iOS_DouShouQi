@@ -80,7 +80,8 @@ public struct UnfinishedGameStub{
                 ]
         var games : [GameWithId] = []
         
-        let myGame = try! Game(withBoard: Board(withGrid: grid)!, andRules: ClassicRules(), andPlayer1: HumanPlayer(withName: "Paulpatine", andId: Owner.player1)!, andPlayer2: HumanPlayer(withName: "LaCalvitie", andId: Owner.player2)!) 
+        let myGame = try! Game(withBoard: Board(withGrid: grid)!, andRules: ClassicRules(), andPlayer1: HumanPlayer(withName: "Paulpatine", andId: Owner.player1)!, andPlayer2: HumanPlayer(withName: "LaCalvitie", andId: Owner.player2)!)
+        
         games.append(GameWithId(id: 1, game: myGame))
 
         return games

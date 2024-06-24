@@ -28,6 +28,7 @@ import AVFoundation
         self.game?.addInvalidMoveCallbacksListener(invalideMoveChosen)
         self.game?.addBoardChangedListener(boardChanged)
         self.game?.addGameOverListener(gameOver)
+        self.gameScene.displayBoard(game!.board)
         self.subscribesToMeeple()
     }
     

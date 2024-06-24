@@ -9,7 +9,7 @@ import SwiftUI
 import DouShouQiModel
 
 struct HomePage: View {
-    @State var isShowingGameViewTest = false
+    @State var isShowingGameView = false
 
     var body: some View {
 
@@ -21,10 +21,10 @@ struct HomePage: View {
                 List(UnfinishedGameStub.getHistoric(), id: \.self) { game in
                     UnfinishedGameComponent(date: "21-05-2024", player1Name: "\(game.game.players[.player1]!.name)", player2Name: "\(game.game.players[.player2]!.name)")
                         .onTapGesture {
-                            isShowingGameViewTest = true
+                            isShowingGameView = true
                         }
-                        .fullScreenCover(isPresented: $isShowingGameViewTest, content: {
-                            AnyView(GamePage(gameViewModel: try! GameViewModel(game: Game(withRules: ClassicRules(), andPlayer1: game.game.players[.player1]!, andPlayer2: game.game.players[.player2]!), gameScene: GameScene(size: CGSize(width: 940, height: 740))), isShowingGameView: $isShowingGameViewTest))
+                        .fullScreenCover(isPresented: $isShowingGameView, content: {
+                            AnyView(GamePage(gameViewModel: GameViewModel(game: game.game, gameScene: GameScene(size: CGSize(width: 940, height: 740))), isShowingGameView: $isShowingGameView))
                         })
                 }
                 Spacer()
@@ -44,8 +44,6 @@ struct HomePage: View {
             .background(Color(UIColor.systemGroupedBackground))
         }
         .background(Color(UIColor.systemGroupedBackground))
-        
-        .padding()
     }
 }
 
