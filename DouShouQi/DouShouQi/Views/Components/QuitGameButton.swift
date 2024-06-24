@@ -29,14 +29,8 @@ public struct QuitGameButton: View {
                 isPresented: $confirmationShown
             )
             {
-                Button("Pursue the game later") {
-                    withAnimation {
-                        // Save the game into
-//                        Task{
-//                            try! await Persistance.saveGame(withName: "game", andGame: nil)
-//                        }
-                        self.isShowingGameView = false
-                    }
+                Button("Pursue the game later"){
+                    // TODO
                 }
                 Button("Do not save the game") {
                     withAnimation {
