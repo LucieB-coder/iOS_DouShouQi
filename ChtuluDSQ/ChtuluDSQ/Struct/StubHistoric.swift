@@ -10,7 +10,7 @@ import Foundation
 public struct StubHistoric{
     
     public static func getHistoric() -> [FinishedGame]{
-        var finishedGames: [FinishedGame] = [
+        let finishedGames: [FinishedGame] = [
             FinishedGame(player1Id: 1, player2Id: 4, winner: 1, date: Date()),
             FinishedGame(player1Id: 1, player2Id: 4, winner: 1, date: Date()),
             FinishedGame(player1Id: 2, player2Id: 4, winner: 2, date: Date()),

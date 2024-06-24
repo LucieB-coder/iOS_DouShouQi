@@ -21,6 +21,7 @@
 		C310287E2C1C76880050DB24 /* jour.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310287C2C1C76880050DB24 /* jour.mp3 */; };
 		C310287F2C1C76880050DB24 /* nuit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C310287D2C1C76880050DB24 /* nuit.mp3 */; };
 		C31D43052C29A1AA00DCFA75 /* ARKitGamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31D43042C29A1AA00DCFA75 /* ARKitGamePage.swift */; };
+		C31D43092C29BC5500DCFA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31D43082C29BC5500DCFA75 /* LaunchScreen.storyboard */; };
 		C35A89502C04630D002E537A /* ChooseOpponentComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */; };
 		C35A89532C05B9D8002E537A /* ChoosePlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */; };
 		C35A89552C05BE20002E537A /* StartGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35A89542C05BE20002E537A /* StartGameViewModel.swift */; };
@@ -136,6 +137,7 @@
 		C310287C2C1C76880050DB24 /* jour.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jour.mp3; sourceTree = "<group>"; };
 		C310287D2C1C76880050DB24 /* nuit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nuit.mp3; sourceTree = "<group>"; };
 		C31D43042C29A1AA00DCFA75 /* ARKitGamePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitGamePage.swift; sourceTree = "<group>"; };
+		C31D43082C29BC5500DCFA75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C35A894F2C04630D002E537A /* ChooseOpponentComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseOpponentComponent.swift; sourceTree = "<group>"; };
 		C35A89522C05B9D8002E537A /* ChoosePlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewModel.swift; sourceTree = "<group>"; };
 		C35A89542C05BE20002E537A /* StartGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameViewModel.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				EC4FBE012BF5FA9E00F5410C /* Assets.xcassets */,
 				EC4FBE302BF60A4700F5410C /* Colors.swift */,
 				C31028722C1C6E640050DB24 /* MusicHelper.swift */,
+				C31D43082C29BC5500DCFA75 /* LaunchScreen.storyboard */,
 			);
 			path = DouShouQi;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				C36A91752C2973B700D4E43D /* lion.usdz in Resources */,
 				C36A917B2C2973B700D4E43D /* rat.usdz in Resources */,
 				C31028752C1C6EDE0050DB24 /* backgroundMusic.mp3 in Resources */,
+				C31D43092C29BC5500DCFA75 /* LaunchScreen.storyboard in Resources */,
 				EC4FBE3E2BFCBE4700F5410C /* Colors.xcassets in Resources */,
 				C36A91782C2973B700D4E43D /* leopard.usdz in Resources */,
 				C36A917D2C2973B700D4E43D /* wolf.usdz in Resources */,
@@ -805,6 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
@@ -815,6 +820,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -836,6 +842,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DouShouQi/Preview Content\"";
@@ -846,6 +853,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
