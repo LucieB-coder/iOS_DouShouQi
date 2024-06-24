@@ -36,9 +36,9 @@ git clone https://codefirst.iut.uca.fr/git/chthlu/IOS_Arkit_doushouqi.git
 
 ### Features and screens
 
-*Insert video here*
+:camera_flash: [Watch the demo video](https://codefirst.iut.uca.fr/git/chthlu/IOS_Arkit_doushouqi/src/branch/master/Demo.mp4) :camera_flash: 
 
-The following text is an explanation of the video:
+The following text is a detailed explanation of the video, which presents our screens and navigation:
 
 * **Home page:** This page contains all the games that were started and then saved in the stub (there are no API calls in our app). You can continue a game from here. Click on the play button to create a new game.
 * **Create a new game:** Configure a new game on this page. You can choose to play against the BOT or against a friend. Choose the names of the players and take photos of the players. You can choose to play a 2D game or an AR game with the toggle.
